@@ -12,16 +12,16 @@ sources:
 
   # EasyPrivacy (filter 118)
   easyprivacy:                "https://filters.adtidy.org/extension/ublock/filters/118.txt"
-  easyprivacy_optimized:      "https://filters.adtidy.org/extension/ublock/filters/118_optmized.txt"
+  easyprivacy_optimized:      "https://filters.adtidy.org/extension/ublock/filters/118_optimized.txt"
 
   # AdGuard Mail Tracking Protection (filter 25)
   adg_mail:                   "https://filters.adtidy.org/extension/ublock/filters/25.txt"
   adg_mail_optimized:         "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt"
 
-  # DDG Tracker Radar
+  # DDG Tracker Radar - sparse-cloned fresh on each build
   ddg_tracker_radar_repo:     "https://github.com/duckduckgo/tracker-radar.git"
 
-  # All available regions - union gives maximum coverage
+  # All available regions - union gives maximum global coverage
   ddg_tracker_radar_regions:
     - "US"
     - "AU"
@@ -33,8 +33,12 @@ sources:
     - "NL"
     - "NO"
 
-# Full list: all tracking categories + unknown (no category) domains
-# Used by advanced_tracking_protection.txt
+  # Privacy Badger seed.json - curated, shipped with the extension
+  privacy_badger_seed: "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json"
+
+# ── DDG category configs per variant ──────────────────────────────────────────
+
+# Extended + Complete share these base tracking categories
 ddg_all_tracking_categories:
   - "Ad Motivated Tracking"
   - "Advertising"
@@ -48,12 +52,18 @@ ddg_all_tracking_categories:
   - "Tracking"
   - "Ad Fraud"
   - "Email Tracking"
-  # Note: domains with NO category are also included in the full list (unknown = assume tracking)
+  # Domains with NO category are also included in extended/complete (unknown = assume tracking)
 
-# Safe-only categories for the optimized list
-# Excludes: Embedded Content, Social, CDN, Badge, Online Payment, Tag Manager, Utility
-# These are known to break sites when blocked - DDG itself does not block them by default
-# Used by advanced_tracking_protection_optimized.txt
+# Categories excluded from the complete (default) variant only
+# "Embedded Content" breaks YouTube/Vimeo embeds, iframes, comment widgets
+# "Social" breaks social login (Sign in with Google/Facebook) and share buttons
+ddg_complete_excluded_categories:
+  - "Embedded Content"
+  - "Social"
+
+# Safe-only categories for the optimized variant
+# Everything else (Embedded Content, Social, CDN, Badge, Online Payment, Tag Manager, Utility)
+# is excluded because DDG itself does not block these by default
 ddg_safe_categories:
   - "Advertising"
   - "Ad Motivated Tracking"
@@ -67,17 +77,49 @@ ddg_safe_categories:
   - "Ad Fraud"
   - "Email Tracking"
 
-# Minimum prevalence (0.0 to 1.0) for the optimized DDG list
+# Minimum prevalence threshold for the optimized DDG list only
 # 0.01 = tracker must appear on at least 1% of crawled sites
-# Full list uses 0.0 (no threshold)
+# Extended and complete use 0.0 (no threshold)
 ddg_optimized_prevalence_threshold: 0.01
+
+# ── Privacy Badger filter configs ─────────────────────────────────────────────
+
+# Domain substrings/suffixes to always exclude from Privacy Badger rules
+# These are functional endpoints that would break real site features if blocked
+pb_risky_domain_patterns:
+  # CDN and cloud infrastructure
+  - ".azurefd.net"
+  - ".cloudfront.net"
+  - ".akamaized.net"
+  - ".fastly.net"
+  - ".fastlylb.net"
+  - ".edgekey.net"
+  - ".edgesuite.net"
+  # Major platform APIs that serve functional content
+  - "spotify.com"
+  - "dropbox.com"
+  - "twitch.tv"
+  - "pinterest.com"
+  - "alicdn.com"
+  - "aliyuncs.com"
+  - "amazonaws.com"
+  - "azure.com"
+  - "azurewebsites.net"
+  - "windows.net"
+
+# Additional domains excluded in the complete variant (heavier filter)
+# These pass the light filter but are still borderline risky
+pb_complete_extra_excluded_patterns:
+  - "eventim.com"
+  - "appconsent.io"
+  - "api."
+  - "accounts."
 
 outputs:
   adblock_dir:  "output/adblock"
   dns_dir:      "output/dns"
 
-# Filter list metadata written into file headers
 metadata:
   author:   "adfilters"
-  homepage: "https://github.com/cudios-dev/adfilters"  # update this
+  homepage: "https://github.com/cudios-dev/adfilters"
   license:  "MIT"
