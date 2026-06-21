@@ -233,13 +233,19 @@ def fetch_privacy_badger_rules(mode: str) -> set:
 # ── DDG Tracker Radar ─────────────────────────────────────────────────────────
 
 def _ensure_ddg_clone() -> Path:
-    """Sparse-clone or update DDG Tracker Radar, all configured regions."""
-    clone_dir = ROOT / ".cache" / "tracker-radar"
+    """
+    Sparse-clone or update DDG Tracker Radar, all configured regions.
 
-    if clone_dir.exists():
-        log("DDG cache found, pulling latest...")
-        subprocess.run(["git", "-C", str(clone_dir), "pull", "--depth=1"], check=True)
-    else:
+    sparse-checkout set runs unconditionally every time - not just on fresh clone.
+    This is required because GitHub Actions cache restores an existing directory,
+    causing the clone branch to be skipped and the old sparse-checkout config
+    (which may only have US) to persist. Running sparse-checkout set + pull
+    every time ensures all regions are present regardless of cache state.
+    """
+    clone_dir   = ROOT / ".cache" / "tracker-radar"
+    sparse_paths = [f"domains/{r}" for r in DDG_REGIONS]
+
+    if not clone_dir.exists():
         log(f"Sparse-cloning DDG Tracker Radar ({len(DDG_REGIONS)} regions)...")
         clone_dir.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run([
@@ -247,11 +253,18 @@ def _ensure_ddg_clone() -> Path:
             "--filter=blob:none", "--sparse",
             SOURCES["ddg_tracker_radar_repo"], str(clone_dir),
         ], check=True)
-        subprocess.run(
-            ["git", "-C", str(clone_dir), "sparse-checkout", "set"]
-            + [f"domains/{r}" for r in DDG_REGIONS],
-            check=True,
-        )
+
+    # Always update sparse-checkout config and pull.
+    # On a cache restore this fetches any regions not in the cached checkout.
+    log(f"Updating DDG sparse-checkout ({len(DDG_REGIONS)} regions)...")
+    subprocess.run(
+        ["git", "-C", str(clone_dir), "sparse-checkout", "set"] + sparse_paths,
+        check=True,
+    )
+    subprocess.run(
+        ["git", "-C", str(clone_dir), "pull", "--depth=1"],
+        check=True,
+    )
 
     return clone_dir
 
