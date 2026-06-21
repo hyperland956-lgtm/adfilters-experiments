@@ -12,18 +12,30 @@ sources:
 
   # EasyPrivacy (filter 118)
   easyprivacy:                "https://filters.adtidy.org/extension/ublock/filters/118.txt"
-  # Note: 118_optimized is identical to 118 (AdGuard does not optimize it), so we skip it
+  easyprivacy_optimized:      "https://filters.adtidy.org/extension/ublock/filters/118_optmized.txt"
 
   # AdGuard Mail Tracking Protection (filter 25)
   adg_mail:                   "https://filters.adtidy.org/extension/ublock/filters/25.txt"
   adg_mail_optimized:         "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt"
 
-  # DDG Tracker Radar - fetched fresh from the official repo
+  # DDG Tracker Radar
   ddg_tracker_radar_repo:     "https://github.com/duckduckgo/tracker-radar.git"
-  ddg_tracker_radar_region:   "US"
 
-# What categories in DDG Tracker Radar count as tracking
-ddg_tracking_categories:
+  # All available regions - union gives maximum coverage
+  ddg_tracker_radar_regions:
+    - "US"
+    - "AU"
+    - "CA"
+    - "CH"
+    - "DE"
+    - "FR"
+    - "GB"
+    - "NL"
+    - "NO"
+
+# Full list: all tracking categories + unknown (no category) domains
+# Used by advanced_tracking_protection.txt
+ddg_all_tracking_categories:
   - "Ad Motivated Tracking"
   - "Advertising"
   - "Analytics"
@@ -36,6 +48,29 @@ ddg_tracking_categories:
   - "Tracking"
   - "Ad Fraud"
   - "Email Tracking"
+  # Note: domains with NO category are also included in the full list (unknown = assume tracking)
+
+# Safe-only categories for the optimized list
+# Excludes: Embedded Content, Social, CDN, Badge, Online Payment, Tag Manager, Utility
+# These are known to break sites when blocked - DDG itself does not block them by default
+# Used by advanced_tracking_protection_optimized.txt
+ddg_safe_categories:
+  - "Advertising"
+  - "Ad Motivated Tracking"
+  - "Analytics"
+  - "Audience Measurement"
+  - "Action Pixels"
+  - "Fingerprinting"
+  - "Session Replay"
+  - "Malware"
+  - "Cryptomining"
+  - "Ad Fraud"
+  - "Email Tracking"
+
+# Minimum prevalence (0.0 to 1.0) for the optimized DDG list
+# 0.01 = tracker must appear on at least 1% of crawled sites
+# Full list uses 0.0 (no threshold)
+ddg_optimized_prevalence_threshold: 0.01
 
 outputs:
   adblock_dir:  "output/adblock"
@@ -43,6 +78,6 @@ outputs:
 
 # Filter list metadata written into file headers
 metadata:
-  author: "adfilters"
-  homepage: "https://github.com/shubham/adfilters"  # update this
-  license: "MIT"
+  author:   "adfilters"
+  homepage: "https://github.com/cudios-dev/adfilters"  # update this
+  license:  "MIT"
