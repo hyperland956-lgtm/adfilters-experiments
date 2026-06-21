@@ -1,0 +1,48 @@
+# adfilters configuration
+# Edit sources or output paths here without touching scripts
+
+sources:
+  # AdGuard Base Filter
+  adg_base_optimized:         "https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt"
+  adg_base_without_easylist:  "https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt"
+
+  # AdGuard Tracking Protection (filter 3)
+  adg_tracking:               "https://filters.adtidy.org/extension/ublock/filters/3.txt"
+  adg_tracking_optimized:     "https://filters.adtidy.org/extension/ublock/filters/3_optimized.txt"
+
+  # EasyPrivacy (filter 118)
+  easyprivacy:                "https://filters.adtidy.org/extension/ublock/filters/118.txt"
+  # Note: 118_optimized is identical to 118 (AdGuard does not optimize it), so we skip it
+
+  # AdGuard Mail Tracking Protection (filter 25)
+  adg_mail:                   "https://filters.adtidy.org/extension/ublock/filters/25.txt"
+  adg_mail_optimized:         "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt"
+
+  # DDG Tracker Radar - fetched fresh from the official repo
+  ddg_tracker_radar_repo:     "https://github.com/duckduckgo/tracker-radar.git"
+  ddg_tracker_radar_region:   "US"
+
+# What categories in DDG Tracker Radar count as tracking
+ddg_tracking_categories:
+  - "Ad Motivated Tracking"
+  - "Advertising"
+  - "Analytics"
+  - "Audience Measurement"
+  - "Action Pixels"
+  - "Fingerprinting"
+  - "Session Replay"
+  - "Malware"
+  - "Cryptomining"
+  - "Tracking"
+  - "Ad Fraud"
+  - "Email Tracking"
+
+outputs:
+  adblock_dir:  "output/adblock"
+  dns_dir:      "output/dns"
+
+# Filter list metadata written into file headers
+metadata:
+  author: "adfilters"
+  homepage: "https://github.com/shubham/adfilters"  # update this
+  license: "MIT"
