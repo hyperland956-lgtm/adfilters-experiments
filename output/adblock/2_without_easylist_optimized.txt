@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: AdGuard Base Filter - Without EasyList (Optimized)
-! Description: Intersection of AdGuard Base (optimized) and AdGuard Base (without EasyList). Use alongside EasyList/uBlock Origin defaults. Do not use with AdGuard Base filter.
-! Version: 2026-06-21T13:19:33Z
+! Description: Intersection of AdGuard Base (optimized) and AdGuard Base (without EasyList). Use alongside EasyList. Do not combine with the default AdGuard Base filter.
+! Version: 2026-06-21T13:48:51Z
 ! Expires: 1 day (update frequency)
-! Homepage: https://github.com/shubham/adfilters
+! Homepage: https://github.com/cudios-dev/adfilters
 ! License: MIT
 ! Rules: 16,382
 !
