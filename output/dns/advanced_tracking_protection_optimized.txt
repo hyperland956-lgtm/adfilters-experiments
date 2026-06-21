@@ -1,7 +1,7 @@
 # Title: Advanced Tracking Protection (Optimized) (DNS/hosts format)
-# Version: 2026-06-21T18:16:44Z
+# Version: 2026-06-21T18:23:31Z
 # Homepage: https://github.com/cudios-dev/adfilters
-# Domains: 98,975
+# Domains: 98,999
 #
 0.0.0.0 -084-gls-223-www-9-k-0brasil.net.daraz.com
 0.0.0.0 -access-logs-1.net.daraz.com
@@ -4813,6 +4813,7 @@
 0.0.0.0 abt.nike.com
 0.0.0.0 abt.nl.bauhaus
 0.0.0.0 abt.s3.yandex.net
+0.0.0.0 abtasty.com
 0.0.0.0 abtest.mistat.xiaomi.com
 0.0.0.0 abuaac.suzette-shop.jp
 0.0.0.0 abuajs.e-monsite.com
@@ -5055,6 +5056,7 @@
 0.0.0.0 actosclassaction.e.epiqnotification.com
 0.0.0.0 actuallysheep.com
 0.0.0.0 actuallysnake.com
+0.0.0.0 acuityplatform.com
 0.0.0.0 acv.au-hikari-kddi.com
 0.0.0.0 acv.auhikari-norikae.com
 0.0.0.0 acv.aun-air-wifi.com
@@ -5095,6 +5097,7 @@
 0.0.0.0 ad-log-upload-os.hoyoverse.com
 0.0.0.0 ad-log.dable.io
 0.0.0.0 ad-log.wemakeprice.com
+0.0.0.0 ad-m.asia
 0.0.0.0 ad-platform.jmty.jp
 0.0.0.0 ad-spire.net
 0.0.0.0 ad-tracker-api.luizalabs.com
@@ -5431,6 +5434,7 @@
 0.0.0.0 adlerauge.hurom-fachhandel.de
 0.0.0.0 adless.io
 0.0.0.0 adlgo.nzepouches.com
+0.0.0.0 adlightning.com
 0.0.0.0 adlink.wurl.com
 0.0.0.0 adlog.com.com
 0.0.0.0 adluak.madeleine.fr
@@ -6824,6 +6828,7 @@
 0.0.0.0 amplitude-experiment.bandlab.com
 0.0.0.0 amplitude.bandlab.com
 0.0.0.0 amplitude.chess.com
+0.0.0.0 amplitude.com
 0.0.0.0 amplitude.life360.com
 0.0.0.0 amplitude.thepure.app
 0.0.0.0 ampltd.medal.tv
@@ -10225,6 +10230,7 @@
 0.0.0.0 appfloor.appcpi.net.iberostar.com
 0.0.0.0 appgax.optica-optima.com
 0.0.0.0 appia.com
+0.0.0.0 appier.net
 0.0.0.0 appinfosoryz.carte-gr.total.fr
 0.0.0.0 applaus.buehnen-graz.com
 0.0.0.0 apple.www.letv.com
@@ -14228,6 +14234,7 @@
 0.0.0.0 childrensclub.ubmfashion.com
 0.0.0.0 chillingtofu.com
 0.0.0.0 chimpanzee.designerdailyreport.com
+0.0.0.0 chimpstatic.com
 0.0.0.0 chinchilla.68keys.io
 0.0.0.0 chingovernment.com
 0.0.0.0 chip.met.vgwort.de
@@ -15318,6 +15325,7 @@
 0.0.0.0 community.chpw.org
 0.0.0.0 community.fusesource.com
 0.0.0.0 community.keeperz.app
+0.0.0.0 company-target.com
 0.0.0.0 compare.easyviaggio.com
 0.0.0.0 compare.easyviajar.com
 0.0.0.0 comparereaction.com
@@ -15720,6 +15728,7 @@
 0.0.0.0 content22.online.citi.com
 0.0.0.0 contentmarketing.scheierassociates.com
 0.0.0.0 contents.pwc.com
+0.0.0.0 contentsquare.net
 0.0.0.0 contextweb.com
 0.0.0.0 continuenow.miami.edu
 0.0.0.0 contoso-my.sharepoint.com
@@ -16364,6 +16373,7 @@
 0.0.0.0 ctlpyp.lactoclear.co.kr
 0.0.0.0 ctlxht.akeso.co.kr
 0.0.0.0 ctm.turnbull-scott.co.uk
+0.0.0.0 ctnsnet.com
 0.0.0.0 ctp1.bforbank.com
 0.0.0.0 ctpnf.thequickflick.com.au
 0.0.0.0 ctr-iwb.nmg.de
@@ -50321,6 +50331,7 @@
 0.0.0.0 mggakg.littleblack.co.kr
 0.0.0.0 mghjqe.gloomyeyes.com
 0.0.0.0 mghlbo.alliance-elevage.com
+0.0.0.0 mgid.com
 0.0.0.0 mgixgn.wittchen.com
 0.0.0.0 mgmee.cestlavie-dublin.com
 0.0.0.0 mgmt.bybente.com
@@ -53542,6 +53553,7 @@
 0.0.0.0 optimisation.data.lloydsbankinggroup.com
 0.0.0.0 optimize.heroic.us
 0.0.0.0 optimize.mcafee.com
+0.0.0.0 optimizely.com
 0.0.0.0 optimizely.techtarget.com
 0.0.0.0 optionen.hager.de
 0.0.0.0 optionsnomad.com
@@ -54809,6 +54821,7 @@
 0.0.0.0 payments.americanexpress.co.uk
 0.0.0.0 paymentslink.dropp.cc
 0.0.0.0 paynewest.actonservice.com
+0.0.0.0 paypal.com
 0.0.0.0 payqjd.subito.it
 0.0.0.0 payroll.smartsalary.com.au
 0.0.0.0 pb.adriver.ru
@@ -54978,6 +54991,7 @@
 0.0.0.0 periodico.tesoros-de-carmen.com
 0.0.0.0 permission.au.actonservice.com
 0.0.0.0 permutive.app
+0.0.0.0 permutive.com
 0.0.0.0 perpetualtracking.lytess.com
 0.0.0.0 perr.h-cdn.com
 0.0.0.0 perr.hola.org
@@ -57066,6 +57080,7 @@
 0.0.0.0 qualaroo.com
 0.0.0.0 qualitas-app.hotdoc.com.au
 0.0.0.0 quality.rearon.se
+0.0.0.0 qualtrics.com
 0.0.0.0 quantcount.com
 0.0.0.0 quantserve.com
 0.0.0.0 quantumlagoon.com
@@ -61132,6 +61147,7 @@
 0.0.0.0 selphiu.com
 0.0.0.0 selvi.viessmann.com.tr
 0.0.0.0 sem.tkc-biyou.jp
+0.0.0.0 semasio.net
 0.0.0.0 semcusto.solucaogratuita.site
 0.0.0.0 semlimites.a2baceleradora.com
 0.0.0.0 send.merit.me
@@ -72015,6 +72031,7 @@
 0.0.0.0 springboard.aon.com
 0.0.0.0 springer.met.vgwort.de
 0.0.0.0 springolive.com
+0.0.0.0 springserve.com
 0.0.0.0 springsister.com
 0.0.0.0 springsnails.com
 0.0.0.0 sprint-47cdn.stape.dev
@@ -87392,6 +87409,7 @@
 0.0.0.0 tiq.monash.edu
 0.0.0.0 tiq.monash.edu.au
 0.0.0.0 tiq.sunlife.com
+0.0.0.0 tiqcdn.com
 0.0.0.0 tirandoalmedio.net.anwalt.de
 0.0.0.0 tireinside.com
 0.0.0.0 tiresomethunder.com
@@ -92905,6 +92923,7 @@
 0.0.0.0 tsu.tryhard-gear.com
 0.0.0.0 tsuubf.waysidegardens.com
 0.0.0.0 tswafl.lascana.nl
+0.0.0.0 tsyndicate.com
 0.0.0.0 tszisd.beliani.pt
 0.0.0.0 tt.andbam.care
 0.0.0.0 tt.basicabaya.com
@@ -93626,6 +93645,7 @@
 0.0.0.0 uncanny.marvelkids.com
 0.0.0.0 uncchl.mylene.eu
 0.0.0.0 uncmbg.timberland.de
+0.0.0.0 uncn.jp
 0.0.0.0 uncoveredexpert.com
 0.0.0.0 uncrj.organicbasics.com
 0.0.0.0 understanding.mojohomes.com.au
@@ -93662,6 +93682,7 @@
 0.0.0.0 unloadyourself.com
 0.0.0.0 unlock.eleganceclothing.co
 0.0.0.0 unm.emol.com
+0.0.0.0 unrulymedia.com
 0.0.0.0 uns.stageegift.giftcards.com
 0.0.0.0 unsubscirbe-email.stagemarketing.giftcards.com
 0.0.0.0 unsubscribe.cp.pt
@@ -97676,6 +97697,7 @@
 0.0.0.0 xiqvza.dickblick.com
 0.0.0.0 xirses.wargo.jp
 0.0.0.0 xithgs.suitsoutlets.com
+0.0.0.0 xiti.com
 0.0.0.0 xitvce.webtretho.com
 0.0.0.0 xiuksf.worten.es
 0.0.0.0 xiwhhx.wolfandshepherd.com
@@ -98103,6 +98125,7 @@
 0.0.0.0 yiiwaq.mms.com
 0.0.0.0 yijrqx.rybalka4you.ru
 0.0.0.0 yikrmn.ciceksepeti.com
+0.0.0.0 yimg.com
 0.0.0.0 yio.tremblant.ca
 0.0.0.0 yiohzu.tsigs.com
 0.0.0.0 yiookflg.3rdplanetguide.com
@@ -98560,6 +98583,7 @@
 0.0.0.0 zelten.fritz-berger.de
 0.0.0.0 zemanta.com
 0.0.0.0 zenaps.com
+0.0.0.0 zendesk.com
 0.0.0.0 zenedge.actonservice.com
 0.0.0.0 zenkq.happyhairbrush.co.uk
 0.0.0.0 zeocr.realbotanicals.com
