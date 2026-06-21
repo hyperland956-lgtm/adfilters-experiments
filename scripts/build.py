@@ -29,6 +29,7 @@ except ImportError:
             "adg_tracking":              "https://filters.adtidy.org/extension/ublock/filters/3.txt",
             "adg_tracking_optimized":    "https://filters.adtidy.org/extension/ublock/filters/3_optimized.txt",
             "easyprivacy":               "https://filters.adtidy.org/extension/ublock/filters/118.txt",
+            "easyprivacy_optimized":     "https://filters.adtidy.org/extension/ublock/filters/118_optmized.txt",
             "adg_mail":                  "https://filters.adtidy.org/extension/ublock/filters/25.txt",
             "adg_mail_optimized":        "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt",
             "ddg_tracker_radar_repo":    "https://github.com/duckduckgo/tracker-radar.git",
