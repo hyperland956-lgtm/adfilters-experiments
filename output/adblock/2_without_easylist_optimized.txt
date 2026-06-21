@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: AdGuard Base Filter - Without EasyList (Optimized)
 ! Description: Intersection of AdGuard Base (optimized) and AdGuard Base (without EasyList). Use alongside EasyList. Do not combine with the default AdGuard Base filter.
-! Version: 2026-06-21T14:28:46Z
+! Version: 2026-06-21T18:14:04Z
 ! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/cudios-dev/adfilters
 ! License: MIT
-! Rules: 16,382
+! Rules: 16,384
 !
 $3p,xhr,domain=faselhd.cafe|faselhd-watch.shop,badfilter
 $csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: www.googletagmanager.com *.google.com *.gstatic.com www.google-analytics.com *.googleapis.com *.disqus.com *.disquscdn.com code.jquery.com *.cloudflare.com cdn.streamroot.io cdn.jsdelivr.net vjs.zencdn.net cache.hollywood.to static.hollywood.to,domain=stream1.me|streamz.cc,badfilter
@@ -3992,6 +3992,7 @@ cloudfam.io##+js(abort-current-script, EventTarget.prototype.addEventListener, /
 cloudfam.io##+js(abort-on-stack-trace, document.createElement, openAdWithFallback)
 cloudfam.io##+js(no-window-open-if)
 cloudfam.io##+js(prevent-fetch, /pagead|adserve|adsbygoogle/)
+cloudfam.io##+js(prevent-fetch, method:HEAD)
 cloudfam.io##.cf-body > .cf-ad-box
 cloudgallery.net,imgair.net##+js(abort-current-script, document.getElementById, shouldFire)
 cloudgallery.net,imgair.net##+js(no-window-open-if, /tripedrated\.xyz|salaure\.pro|imgair\.net\/vip\//)
@@ -12625,6 +12626,7 @@ uploadmall.com#@#.Adsense
 uploadmall.com#@#.adSense
 uploadmall.com#@#iframe[width="728"][height="90"]
 uploadrar.com##.card.border-warning
+uploadrar.com##center > a[href][target="_blank"]
 uploady.io###iframe_id:style(position: absolute !important; left: -9999px !important;)
 uploady.io##+js(no-window-open-if)
 uploady.io##.download-page > a[target="_blank"] > img
