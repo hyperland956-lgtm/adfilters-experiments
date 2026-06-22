@@ -1,6 +1,6 @@
 # adfilters
 
-Custom filter lists built automatically from upstream sources. Updated weekly via GitHub Actions.
+Custom filter lists built automatically from upstream sources. Mainly focused on Adblock/Tracking.
 
 ---
 
