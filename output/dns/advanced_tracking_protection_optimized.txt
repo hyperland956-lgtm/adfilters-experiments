@@ -1,5 +1,5 @@
 # Title: Advanced Tracking Protection (Optimized) (DNS/hosts format)
-# Version: 2026-06-22T03:51:07Z
+# Version: 2026-06-22T07:22:42Z
 # Homepage: https://github.com/cudios-dev/adfilters
 # Domains: 98,999
 #

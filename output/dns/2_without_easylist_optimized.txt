@@ -1,7 +1,7 @@
 # Title: AdGuard Base Filter - Without EasyList (Optimized) (DNS/hosts format)
-# Version: 2026-06-22T03:51:07Z
+# Version: 2026-06-22T07:22:42Z
 # Homepage: https://github.com/cudios-dev/adfilters
-# Domains: 1,588
+# Domains: 1,589
 #
 0.0.0.0 01d449a2ad.26e8841da4.com
 0.0.0.0 03h6fpes.xyz
@@ -262,6 +262,7 @@
 0.0.0.0 bidmyadz.com
 0.0.0.0 bidmyqps.xyz
 0.0.0.0 biggestplayer.cachefly.net
+0.0.0.0 bio.booseed.com
 0.0.0.0 bj2rrrjb.xyz
 0.0.0.0 bktpcross.com
 0.0.0.0 bmwebm.org
@@ -414,6 +415,7 @@
 0.0.0.0 connected.ashrae.org
 0.0.0.0 connected.county10.com
 0.0.0.0 consent.cookiefirst.com
+0.0.0.0 console.livingmagonline.com
 0.0.0.0 console.mannixmarketing.com
 0.0.0.0 constellation.networknmedia.com
 0.0.0.0 content.impression-sync.xyz
@@ -787,7 +789,6 @@
 0.0.0.0 kivr8.wd6vy.com
 0.0.0.0 klik-slider.morgancode.com
 0.0.0.0 kneeljav09212026.shop
-0.0.0.0 ku7v49qghpkytrk537er.rest
 0.0.0.0 l4s.love4porn.com
 0.0.0.0 lalala.geenstijl.nl
 0.0.0.0 layout08062025.shop
@@ -890,7 +891,6 @@
 0.0.0.0 p.aprilads.online
 0.0.0.0 p.russ-porno.net
 0.0.0.0 p.tanx.com
-0.0.0.0 p7tycr5jcw42r2pflvo7.cfd
 0.0.0.0 paa-reporting-advertising.amazon
 0.0.0.0 pacaka.conxxx.pro
 0.0.0.0 pahtbt.tech
@@ -911,6 +911,7 @@
 0.0.0.0 pho.heo69.name
 0.0.0.0 pipa.topvacuumrobot.com
 0.0.0.0 pixelpluses.com
+0.0.0.0 pkoapbafhgaf.in
 0.0.0.0 planner.tiscali.it
 0.0.0.0 plarimoplus.com
 0.0.0.0 player.urdupoint.com
@@ -972,6 +973,7 @@
 0.0.0.0 redakcija.alo.rs
 0.0.0.0 redir.bluespringcoast.com
 0.0.0.0 redir.hightid.xyz
+0.0.0.0 redir.summerwaveadventures.com
 0.0.0.0 redir.tropicalsands.club
 0.0.0.0 redshieldcar.com
 0.0.0.0 rek.www.wp.pl
@@ -1078,7 +1080,6 @@
 0.0.0.0 rtbbtr.com
 0.0.0.0 rtbdemand.com
 0.0.0.0 rtbfactory.com
-0.0.0.0 rtbplatform.net
 0.0.0.0 rtbserve.io
 0.0.0.0 rtouchingthewaterw.com
 0.0.0.0 s.18ramp.com
@@ -1193,6 +1194,7 @@
 0.0.0.0 servedby.insideradverts.com
 0.0.0.0 servedby.mannixmarketing.com
 0.0.0.0 servedby.miningweekly.com
+0.0.0.0 servedby.mondiale.co.uk
 0.0.0.0 servedby.myadsmyanmar.com
 0.0.0.0 servedby.pinktriangle.ca
 0.0.0.0 servedby.polity.org.za
@@ -1434,7 +1436,6 @@
 0.0.0.0 xml-eu-v4.nexrtb.com
 0.0.0.0 xml-eu-v4.oceanfall.xyz
 0.0.0.0 xml-eu-v4.optumads.com
-0.0.0.0 xml-eu-v4.pubsfusion.com
 0.0.0.0 xml-eu-v4.qovolta.com
 0.0.0.0 xml-eu-v4.re-media.info
 0.0.0.0 xml-eu-v4.revantagex.com
