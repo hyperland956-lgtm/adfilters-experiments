@@ -338,11 +338,21 @@ def build_ddg_rules(mode: str) -> set:
                 continue
 
             if mode == "optimized":
-                # Strict: must have a safe category, no unknowns
+                # Must have at least one safe category. No unknowns.
                 if not (cats & categories):
                     continue
-            else:
-                # extended / complete: any matching category OR unknown
+
+            elif mode == "complete":
+                # Exclude if domain carries ANY risky category, even alongside tracking ones.
+                # e.g. a domain tagged [Embedded Content, Analytics] is excluded.
+                if cats & DDG_EXCL_COMPLETE:
+                    continue
+                # Still require at least one tracking category OR unknown
+                if cats and not (cats & categories):
+                    continue
+
+            else:  # extended
+                # Include if any tracking category matches, OR unknown (no categories)
                 if cats and not (cats & categories):
                     continue
 
