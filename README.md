@@ -1,6 +1,6 @@
 # adfilters
 
-Aggregated and deduplicated filter lists, rebuilt weekly from upstream sources.
+Extra filter lists: optimized AdGuard variants and comprehensive tracking protection from combined upstream sources.
 
 ---
 
