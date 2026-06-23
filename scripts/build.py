@@ -8,6 +8,7 @@ Run locally: python3 scripts/build.py
 import re
 import json
 import urllib.request
+import functools
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -47,7 +48,7 @@ except ImportError:
         ],
         "ddg_optimized_prevalence_threshold": 0.01,
         "ghostery_complete_categories": ["advertising","site_analytics","pornvertising"],
-        "ghostery_extended_extra_categories": ["customer_interaction","social_media","misc"],
+        "ghostery_extended_extra_categories": ["customer_interaction","social_media"],
         "pb_risky_domain_patterns": [
             ".azurefd.net",".cloudfront.net",".akamaized.net",".fastly.net",
             ".fastlylb.net",".edgekey.net",".edgesuite.net",
@@ -182,18 +183,25 @@ def write_both(stem: str, title: str, description: str, rules: set) -> None:
     write_dns(    f"{stem}.txt", title, rules)
 
 
-# ── Privacy Badger ────────────────────────────────────────────────────────────
+# ── Helpers ───────────────────────────────────────────────────────────────────
 
-def _is_risky_pb_domain(domain: str, extra_patterns: list = None) -> bool:
+@functools.lru_cache(maxsize=1)
+def get_ddg_safe_domains() -> set:
     """
-    Returns True if a domain matches any known risky pattern.
-    Used to filter PB block entries that could break site functionality.
+    Fetch the DuckDuckGo extension-tds.json and return a set of domains
+    that are flagged as `default: ignore`. These are structurally critical
+    domains that should never be root-blocked (e.g. google.com, facebook.com).
     """
-    patterns = PB_RISKY + (extra_patterns or [])
-    for pat in patterns:
-        if domain == pat or domain.endswith(pat):
-            return True
-    return False
+    log("Fetching DDG Safe List (default: ignore)...")
+    req = urllib.request.Request(SOURCES["ddg_tds_url"], headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        tds = json.loads(resp.read().decode("utf-8"))
+    safe = {d for d, c in tds.get("trackers", {}).items() if c.get("default") == "ignore"}
+    log(f"  Loaded {len(safe)} safe domains from DDG")
+    return safe
+
+
+# ── Privacy Badger ────────────────────────────────────────────────────────────
 
 
 def fetch_privacy_badger_rules(mode: str) -> set:
@@ -230,16 +238,16 @@ def fetch_privacy_badger_rules(mode: str) -> set:
         yellowlist.update(domains)
 
     rules = set()
-    extra = PB_COMPLETE_EXTRA if mode == "complete" else []
-    n_added = n_skip_risky = n_skip_yellow = 0
+    n_added = n_skip_safe = n_skip_yellow = 0
+    safe_domains = get_ddg_safe_domains()
 
     for domain in sorted(blocked):
         domain = domain.lstrip(".").lower()
         if not domain or "." not in domain:
             continue
 
-        if _is_risky_pb_domain(domain, extra):
-            n_skip_risky += 1
+        if domain in safe_domains:
+            n_skip_safe += 1
             continue
 
         if domain in yellowlist:
@@ -260,7 +268,7 @@ def fetch_privacy_badger_rules(mode: str) -> set:
         rules.update(safe_rules)
         n_added += len(safe_rules)
 
-    log(f"  PB {mode}: {n_added:,} rules ({n_skip_risky:,} SSO/risky skipped, {n_skip_yellow:,} yellowlist skipped)")
+    log(f"  PB {mode}: {n_added:,} rules ({n_skip_safe:,} safe domains skipped, {n_skip_yellow:,} yellowlist skipped)")
     return rules
 
 
@@ -384,6 +392,7 @@ def fetch_ddg_rules(mode: str) -> set:
 
 # ── Ghostery Tracker DB ───────────────────────────────────────────────────────
 
+
 def fetch_ghostery_rules(mode: str) -> set:
     """
     Fetch the Ghostery Tracker DB pre-built adblock filter list from latest release.
@@ -394,7 +403,7 @@ def fetch_ghostery_rules(mode: str) -> set:
                          subdomains (e.g. ||track.funnelytics.io^) so both types
                          are included - Ghostery's categorization is trusted.
 
-    mode=extended : all categories including customer_interaction, social_media, misc
+    mode=extended : all categories including customer_interaction, social_media
     mode=complete : safe categories only (advertising, site_analytics, pornvertising)
     """
     allowed_cats = GHOSTERY_COMPLETE_CATS | (GHOSTERY_EXTENDED_EXTRA if mode == "extended" else set())
@@ -404,9 +413,11 @@ def fetch_ghostery_rules(mode: str) -> set:
     with urllib.request.urlopen(req, timeout=60) as resp:
         raw = resp.read().decode("utf-8", errors="ignore")
 
-    rules       = set()
-    current_cat = None
-    skipped     = 0
+    rules        = set()
+    current_cat  = None
+    skipped      = 0
+    n_skip_safe  = 0
+    safe_domains = get_ddg_safe_domains()
 
     for line in raw.splitlines():
         line = line.strip()
@@ -419,9 +430,17 @@ def fetch_ghostery_rules(mode: str) -> set:
         if current_cat not in allowed_cats:
             skipped += 1
             continue
+
+        domain_match = re.search(r"^\|\|([^\^/]+)", line)
+        if domain_match:
+            domain = domain_match.group(1).lstrip(".").lower()
+            if domain in safe_domains:
+                n_skip_safe += 1
+                continue
+
         rules.add(line)
 
-    log(f"  Ghostery [{mode}]: {len(rules):,} rules kept, {skipped} lines skipped (category)")
+    log(f"  Ghostery [{mode}]: {len(rules):,} rules kept, {skipped} lines skipped (category/risky)")
     return rules
 
 
