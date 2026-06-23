@@ -40,14 +40,6 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Cache DDG Tracker Radar
-        uses: actions/cache@v4
-        with:
-          path: .cache/tracker-radar
-          key: ddg-tracker-radar-${{ github.run_id }}
-          restore-keys: |
-            ddg-tracker-radar-
-
       - name: Run build
         run: python3 scripts/build.py
 
