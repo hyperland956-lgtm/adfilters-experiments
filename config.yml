@@ -25,6 +25,9 @@ sources:
   # Privacy Badger seed.json - curated, shipped with the extension
   privacy_badger_seed: "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json"
 
+  # Ghostery Tracker DB
+  ghostery_trackerdb_url: "https://github.com/ghostery/trackerdb/releases/latest/download/trackerdb.txt"
+
 # ── DDG category configs per variant ──────────────────────────────────────────
 
 # Extended + Complete share these base tracking categories
