@@ -20,7 +20,7 @@ sources:
 
   # DDG Tracker Data Set - official compiled TDS used by DDG browsers and extensions
   # Single HTTP fetch replaces the old sparse git clone of tracker-radar
-  ddg_tds_url: "https://staticcdn.duckduckgo.com/trackerblocking/v6/tds.json"
+  ddg_tds_url: "https://staticcdn.duckduckgo.com/trackerblocking/v2.1/tds.json"
 
   # Privacy Badger seed.json - curated, shipped with the extension
   privacy_badger_seed: "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json"
