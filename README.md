@@ -59,7 +59,7 @@ All filter lists are derived from the following upstream sources:
 - [DDG Tracker Data Set](https://staticcdn.duckduckgo.com/trackerblocking/v6/tds.json)
 - [Privacy Badger](https://github.com/EFForg/privacybadger)
 - [Ghostery Tracker DB](https://github.com/ghostery/trackerdb)
-
+- Disconnect.me
 ---
 
 ## License
