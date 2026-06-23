@@ -29,7 +29,7 @@ except ImportError:
             "easyprivacy_optimized":     "https://filters.adtidy.org/extension/ublock/filters/118_optimized.txt",
             "adg_mail":                  "https://filters.adtidy.org/extension/ublock/filters/25.txt",
             "adg_mail_optimized":        "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt",
-            "ddg_tds_url":               "https://staticcdn.duckduckgo.com/trackerblocking/v6/tds.json",
+            "ddg_tds_url":               "https://staticcdn.duckduckgo.com/trackerblocking/v2.1/tds.json",
             "privacy_badger_seed":       "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json",
             "ghostery_trackerdb_url":    "https://github.com/ghostery/trackerdb/releases/latest/download/trackerdb.txt",
         },
