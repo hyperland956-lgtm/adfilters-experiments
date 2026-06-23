@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: AdGuard Base Filter - Without EasyList (Optimized)
 ! Description: Intersection of AdGuard Base (optimized) and AdGuard Base (without EasyList). Use alongside EasyList. Do not combine with the default AdGuard Base filter.
-! Version: 2026-06-23T13:23:10Z
+! Version: 2026-06-23T14:58:55Z
 ! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/cudios-dev/adfilters
 ! License: MIT
@@ -9439,7 +9439,6 @@ pcgamer.com##div[class^="van_vid_carousel"]
 pcgamer.com,tomshardware.com#@#.sponsored-article
 pcgamesn.com###nn_astro_wrapper:style(height: 50px !important;)
 pcgamesn.com##+js(remove-attr, href, .article-featured-image > a[href^="https://pubads.g.doubleclick.net/"])
-pcgamesn.com,ign.com,theatlantic.com##.ad-wrapper
 pcgamestorrents.*,igg-games.*###tm-sidebar div > a[href] > img
 pcgamestorrents.*,igg-games.*##.uk-grid-margin:has([id^="advads_ad_widget"])
 pcgamestorrents.*,igg-games.*##article * > a[href]:has(img[src][height="85"])
@@ -10560,6 +10559,7 @@ rpmlive.online,bigbuttshubvideos.com,upns.live,sport.seekplays.com,streamporn.nl
 rpmplay.online##+js(google-ima)
 rpmstream.live,rpmvip.com,playeranimewatch.pl,pixeldrain.sriflix.my,videosh.upns.live,ultrastream.online,sf.upns.xyz,showflix.upns.one,upns.online##+js(addEventListener-defuser, click, /_blank|adId:|window\.open/)
 rscripts.net##+js(prevent-fetch, doubleclick)
+rscripts.net,pcgamesn.com,ign.com,theatlantic.com##.ad-wrapper
 rt.com###today-media-article
 rtl.hr###adblock:remove()
 rtvonline.com##.adfinix-ad
