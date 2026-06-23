@@ -29,8 +29,9 @@ except ImportError:
             "easyprivacy_optimized":     "https://filters.adtidy.org/extension/ublock/filters/118_optimized.txt",
             "adg_mail":                  "https://filters.adtidy.org/extension/ublock/filters/25.txt",
             "adg_mail_optimized":        "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt",
-            "ddg_tds_url":               "https://staticcdn.duckduckgo.com/trackerblocking/v2.1/tds.json",
+            "ddg_tds_url":               "https://staticcdn.duckduckgo.com/trackerblocking/v6/current/extension-tds.json",
             "privacy_badger_seed":       "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json",
+            "privacy_badger_config":     "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/pbconfig.json",
             "ghostery_trackerdb_url":    "https://github.com/ghostery/trackerdb/releases/latest/download/trackerdb.txt",
         },
         "ddg_all_tracking_categories": [
@@ -197,43 +198,70 @@ def _is_risky_pb_domain(domain: str, extra_patterns: list = None) -> bool:
 
 def fetch_privacy_badger_rules(mode: str) -> set:
     """
-    Fetch Privacy Badger seed.json and return safe ||domain^ block rules.
+    Build adblock rules from EFF's Privacy Badger seed.json and pbconfig.json.
 
-    mode='extended' : block-only, light filter (exclude CDN/platform patterns)
-    mode='complete' : block-only, heavy filter (light filter + extra risky patterns)
-
-    cookieblock entries are never included - those are borderline functional domains
-    (Spotify API, Dropbox, Twitch) that PB only strips cookies from, not fully blocks.
-    We cannot replicate cookie-stripping in a filter list, so including them as full
-    blocks would break those services.
+    We use pbconfig.json to gracefully handle the "yellowlist" (cookieblocking)
+    and sitefixes since static adblock lists cannot support PB's click-to-play
+    widgets or dynamic domain tracking overrides.
     """
-    log(f"Fetching Privacy Badger seed.json (mode={mode})...")
-    req = urllib.request.Request(
-        SOURCES["privacy_badger_seed"],
-        headers=HEADERS
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    log("Fetching Privacy Badger seed...")
+    req = urllib.request.Request(SOURCES["privacy_badger_seed"], headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=120) as resp:
         seed = json.loads(resp.read().decode("utf-8"))
+
+    log("Fetching Privacy Badger config (pbconfig.json)...")
+    req_cfg = urllib.request.Request(SOURCES.get("privacy_badger_config", "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/pbconfig.json"), headers=HEADERS)
+    with urllib.request.urlopen(req_cfg, timeout=120) as resp_cfg:
+        pbconfig = json.loads(resp_cfg.read().decode("utf-8"))
 
     action_map = seed.get("action_map", {})
     blocked    = {d for d, v in action_map.items() if v.get("heuristicAction") == "block"}
-    log(f"  PB raw block entries: {len(blocked):,}")
 
+    # Dynamically extract yellowlist (cookieblock) domains
+    yellowlist = set(pbconfig.get("yellowlist", []))
+
+    # Extract sitefixes exclusions
+    sitefixes_ignore = pbconfig.get("sitefixes", {}).get("ignore", {})
+    sitefixes_yellowlist = pbconfig.get("sitefixes", {}).get("yellowlist", {})
+
+    for domains in sitefixes_ignore.values():
+        yellowlist.update(domains)
+    for domains in sitefixes_yellowlist.values():
+        yellowlist.update(domains)
+
+    rules = set()
     extra = PB_COMPLETE_EXTRA if mode == "complete" else []
+    n_added = n_skip_risky = n_skip_yellow = 0
 
-    safe_rules = set()
-    skipped    = 0
-    for domain in blocked:
+    for domain in sorted(blocked):
         domain = domain.lstrip(".").lower()
         if not domain or "." not in domain:
             continue
-        if _is_risky_pb_domain(domain, extra):
-            skipped += 1
-            continue
-        safe_rules.add(f"||{domain}^")
 
-    log(f"  PB [{mode}]: {len(safe_rules):,} rules kept, {skipped} skipped as risky")
-    return safe_rules
+        if _is_risky_pb_domain(domain, extra):
+            n_skip_risky += 1
+            continue
+
+        if domain in yellowlist:
+            n_skip_yellow += 1
+            continue
+
+        # Use $third-party to mimic PB's cross-site-only blocking behavior
+        safe_rules = {f"||{domain}^$third-party"}
+
+        if mode == "optimized":
+            pass
+        elif mode == "complete":
+            # Add known subdomains manually just in case
+            if "google-analytics.com" in domain:
+                safe_rules.add(f"||www.{domain}^$third-party")
+                safe_rules.add(f"||ssl.{domain}^$third-party")
+
+        rules.update(safe_rules)
+        n_added += len(safe_rules)
+
+    log(f"  PB {mode}: {n_added:,} rules ({n_skip_risky:,} SSO/risky skipped, {n_skip_yellow:,} yellowlist skipped)")
+    return rules
 
 
 # ── DDG Tracker Data Set ─────────────────────────────────────────────────────
