@@ -185,19 +185,27 @@ def write_both(stem: str, title: str, description: str, rules: set) -> None:
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+def get_base_domain(domain: str) -> str:
+    """Extracts the base word from a domain to handle regional TLDs (e.g. google.co.uk -> google)."""
+    parts = domain.split('.')
+    if len(parts) >= 3 and parts[-2] in ['co', 'com', 'org', 'net']:
+        return parts[-3]
+    return parts[-2] if len(parts) >= 2 else parts[0]
+
+
 @functools.lru_cache(maxsize=1)
-def get_ddg_safe_domains() -> set:
+def get_ddg_safe_bases() -> set:
     """
-    Fetch the DuckDuckGo extension-tds.json and return a set of domains
+    Fetch the DuckDuckGo extension-tds.json and return a set of base domains
     that are flagged as `default: ignore`. These are structurally critical
-    domains that should never be root-blocked (e.g. google.com, facebook.com).
+    domains that should never be root-blocked (e.g. google, facebook).
     """
     log("Fetching DDG Safe List (default: ignore)...")
     req = urllib.request.Request(SOURCES["ddg_tds_url"], headers=HEADERS)
     with urllib.request.urlopen(req, timeout=120) as resp:
         tds = json.loads(resp.read().decode("utf-8"))
-    safe = {d for d, c in tds.get("trackers", {}).items() if c.get("default") == "ignore"}
-    log(f"  Loaded {len(safe)} safe domains from DDG")
+    safe = {get_base_domain(d) for d, c in tds.get("trackers", {}).items() if c.get("default") == "ignore"}
+    log(f"  Loaded {len(safe)} safe base domains from DDG")
     return safe
 
 
@@ -239,14 +247,14 @@ def fetch_privacy_badger_rules(mode: str) -> set:
 
     rules = set()
     n_added = n_skip_safe = n_skip_yellow = 0
-    safe_domains = get_ddg_safe_domains()
+    safe_bases = get_ddg_safe_bases()
 
     for domain in sorted(blocked):
         domain = domain.lstrip(".").lower()
         if not domain or "." not in domain:
             continue
 
-        if domain in safe_domains:
+        if get_base_domain(domain) in safe_bases:
             n_skip_safe += 1
             continue
 
@@ -417,7 +425,7 @@ def fetch_ghostery_rules(mode: str) -> set:
     current_cat  = None
     skipped      = 0
     n_skip_safe  = 0
-    safe_domains = get_ddg_safe_domains()
+    safe_bases   = get_ddg_safe_bases()
 
     for line in raw.splitlines():
         line = line.strip()
@@ -434,13 +442,64 @@ def fetch_ghostery_rules(mode: str) -> set:
         domain_match = re.search(r"^\|\|([^\^/]+)", line)
         if domain_match:
             domain = domain_match.group(1).lstrip(".").lower()
-            if domain in safe_domains:
+            if get_base_domain(domain) in safe_bases:
                 n_skip_safe += 1
                 continue
 
         rules.add(line)
 
-    log(f"  Ghostery [{mode}]: {len(rules):,} rules kept, {skipped} lines skipped (category/risky)")
+    log(f"  Ghostery [{mode}]: {len(rules):,} rules kept, {skipped} lines skipped (category), {n_skip_safe} rules skipped (DDG safe list)")
+    return rules
+
+
+# ── Disconnect Tracker List ───────────────────────────────────────────────────
+
+DISCONNECT_COMPLETE_CATS = {
+    "Advertising",
+    "Analytics",
+    "FingerprintingInvasive",
+    "Cryptomining"
+}
+
+DISCONNECT_EXTENDED_CATS = {
+    "FingerprintingGeneral",
+    "Social"
+}
+
+def fetch_disconnect_rules(mode: str) -> set:
+    allowed_cats = DISCONNECT_COMPLETE_CATS | (DISCONNECT_EXTENDED_CATS if mode == "extended" else set())
+
+    log(f"Fetching Disconnect List (mode={mode})...")
+    req = urllib.request.Request(SOURCES["disconnect_plaintext_url"], headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+
+    rules = set()
+    n_added = n_skip_safe = 0
+    safe_bases = get_ddg_safe_bases()
+
+    for category, entities in data.get('categories', {}).items():
+        if category not in allowed_cats:
+            continue
+            
+        if isinstance(entities, list):
+            for entity in entities:
+                for name, content in entity.items():
+                    for url, domains in content.items():
+                        if isinstance(domains, list):
+                            for domain in domains:
+                                domain = domain.lstrip(".").lower()
+                                if not domain or "." not in domain:
+                                    continue
+                                
+                                if get_base_domain(domain) in safe_bases:
+                                    n_skip_safe += 1
+                                    continue
+                                
+                                rules.add(f"||{domain}^$third-party")
+                                n_added += 1
+
+    log(f"  Disconnect [{mode}]: {n_added:,} rules kept, {n_skip_safe:,} safe domains skipped")
     return rules
 
 
@@ -483,6 +542,7 @@ def build_advanced_tracking_protection_extended() -> None:
         | fetch_ddg_rules(mode="extended")
         | fetch_privacy_badger_rules(mode="extended")
         | fetch_ghostery_rules(mode="extended")
+        | fetch_disconnect_rules(mode="extended")
     )
     write_both(
         "advanced_tracking_protection_extended",
@@ -503,7 +563,7 @@ def build_advanced_tracking_protection_complete() -> None:
       - AdGuard Tracking Protection (full)
       - EasyPrivacy (full)
       - AdGuard Mail Tracking Protection (full)
-      - DDG Tracker Radar: excludes Embedded Content + Social categories, all regions, with subdomains
+      - DDG Tracker Radar: excludes Embedded Content and Social categories, all regions, with subdomains
       - Privacy Badger: hard-blocked domains only, heavy filter applied
     """
     log("=== Building: Advanced Tracking Protection (Complete) ===")
@@ -514,6 +574,7 @@ def build_advanced_tracking_protection_complete() -> None:
         | fetch_ddg_rules(mode="complete")
         | fetch_privacy_badger_rules(mode="complete")
         | fetch_ghostery_rules(mode="complete")
+        | fetch_disconnect_rules(mode="complete")
     )
     write_both(
         "advanced_tracking_protection",

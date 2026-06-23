@@ -29,6 +29,9 @@ sources:
   # Ghostery Tracker DB
   ghostery_trackerdb_url: "https://github.com/ghostery/trackerdb/releases/latest/download/trackerdb.txt"
 
+  # Disconnect Tracker List
+  disconnect_plaintext_url: "https://services.disconnect.me/disconnect-plaintext.json"
+
 # ── DDG category configs per variant ──────────────────────────────────────────
 
 # Extended + Complete share these base tracking categories
