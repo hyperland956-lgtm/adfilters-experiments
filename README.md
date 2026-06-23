@@ -56,8 +56,9 @@ All filter lists are derived from the following upstream sources:
 
 - [AdGuard Filters](https://github.com/AdguardTeam/AdguardFilters)
 - [EasyPrivacy](https://easylist.to)
-- [DDG Tracker Radar](https://github.com/duckduckgo/tracker-radar)
+- [DDG Tracker Data Set](https://staticcdn.duckduckgo.com/trackerblocking/v6/tds.json)
 - [Privacy Badger](https://github.com/EFForg/privacybadger)
+- [Ghostery Tracker DB](https://github.com/ghostery/trackerdb)
 
 ---
 
