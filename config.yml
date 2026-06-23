@@ -18,20 +18,9 @@ sources:
   adg_mail:                   "https://filters.adtidy.org/extension/ublock/filters/25.txt"
   adg_mail_optimized:         "https://filters.adtidy.org/extension/ublock/filters/25_optimized.txt"
 
-  # DDG Tracker Radar - sparse-cloned fresh on each build
-  ddg_tracker_radar_repo:     "https://github.com/duckduckgo/tracker-radar.git"
-
-  # All available regions - union gives maximum global coverage
-  ddg_tracker_radar_regions:
-    - "US"
-    - "AU"
-    - "CA"
-    - "CH"
-    - "DE"
-    - "FR"
-    - "GB"
-    - "NL"
-    - "NO"
+  # DDG Tracker Data Set - official compiled TDS used by DDG browsers and extensions
+  # Single HTTP fetch replaces the old sparse git clone of tracker-radar
+  ddg_tds_url: "https://staticcdn.duckduckgo.com/trackerblocking/v6/tds.json"
 
   # Privacy Badger seed.json - curated, shipped with the extension
   privacy_badger_seed: "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json"
@@ -123,3 +112,19 @@ metadata:
   author:   "adfilters"
   homepage: "https://github.com/cudios-dev/adfilters"
   license:  "MIT"
+
+# ── Ghostery Tracker DB ───────────────────────────────────────────────────────
+
+# Ghostery categories safe to block in the complete variant
+# Excludes: social_media, customer_interaction, audio_video_player, consent,
+#           hosting, utilities, extensions, misc (all can break functionality)
+ghostery_complete_categories:
+  - "advertising"
+  - "site_analytics"
+  - "pornvertising"
+
+# Ghostery categories added in the extended variant on top of complete
+ghostery_extended_extra_categories:
+  - "customer_interaction"
+  - "social_media"
+  - "misc"
