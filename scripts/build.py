@@ -87,13 +87,22 @@ TIMESTAMP = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+HEADERS = {
+    "User-Agent": USER_AGENT,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+}
+
 def log(msg: str) -> None:
     print(f"[build] {msg}", flush=True)
 
 
 def fetch(url: str) -> set:
     log(f"Fetching {url}")
-    req = urllib.request.Request(url, headers={"User-Agent": "adfilters/1.0"})
+    req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=60) as resp:
         raw = resp.read().decode("utf-8", errors="ignore")
     rules = set()
@@ -201,7 +210,7 @@ def fetch_privacy_badger_rules(mode: str) -> set:
     log(f"Fetching Privacy Badger seed.json (mode={mode})...")
     req = urllib.request.Request(
         SOURCES["privacy_badger_seed"],
-        headers={"User-Agent": "adfilters/1.0"}
+        headers=HEADERS
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
         seed = json.loads(resp.read().decode("utf-8"))
@@ -285,7 +294,7 @@ def fetch_ddg_rules(mode: str) -> set:
     mode=optimized : safe categories only; default=block domains only; no path rules
     """
     log("Fetching DDG TDS...")
-    req = urllib.request.Request(SOURCES["ddg_tds_url"], headers={"User-Agent": "adfilters/1.0"})
+    req = urllib.request.Request(SOURCES["ddg_tds_url"], headers=HEADERS)
     with urllib.request.urlopen(req, timeout=120) as resp:
         tds = json.loads(resp.read().decode("utf-8"))
 
@@ -363,7 +372,7 @@ def fetch_ghostery_rules(mode: str) -> set:
     allowed_cats = GHOSTERY_COMPLETE_CATS | (GHOSTERY_EXTENDED_EXTRA if mode == "extended" else set())
 
     log(f"Fetching Ghostery Tracker DB (mode={mode})...")
-    req = urllib.request.Request(SOURCES["ghostery_trackerdb_url"], headers={"User-Agent": "adfilters/1.0"})
+    req = urllib.request.Request(SOURCES["ghostery_trackerdb_url"], headers=HEADERS)
     with urllib.request.urlopen(req, timeout=60) as resp:
         raw = resp.read().decode("utf-8", errors="ignore")
 
