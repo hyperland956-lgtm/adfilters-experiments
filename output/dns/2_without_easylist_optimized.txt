@@ -1,5 +1,5 @@
 # Title: AdGuard Base Filter - Without EasyList (Optimized) (DNS/hosts format)
-# Version: 2026-06-23T15:24:30Z
+# Version: 2026-06-23T16:15:48Z
 # Homepage: https://github.com/cudios-dev/adfilters
 # Domains: 1,707
 #

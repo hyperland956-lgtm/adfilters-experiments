@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: AdGuard Base Filter - Without EasyList (Optimized)
 ! Description: Intersection of AdGuard Base (optimized) and AdGuard Base (without EasyList). Use alongside EasyList. Do not combine with the default AdGuard Base filter.
-! Version: 2026-06-23T15:24:30Z
+! Version: 2026-06-23T16:15:48Z
 ! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/cudios-dev/adfilters
 ! License: MIT
-! Rules: 16,489
+! Rules: 16,491
 !
 $3p,xhr,domain=faselhd.cafe|faselhd-watch.shop,badfilter
 $csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: www.googletagmanager.com *.google.com *.gstatic.com www.google-analytics.com *.googleapis.com *.disqus.com *.disquscdn.com code.jquery.com *.cloudflare.com cdn.streamroot.io cdn.jsdelivr.net vjs.zencdn.net cache.hollywood.to static.hollywood.to,domain=stream1.me|streamz.cc,badfilter
@@ -784,6 +784,7 @@ $xhr,redirect-rule=noop.txt,domain=oko.sh|tii.la
 @@||ahcdn.com^$media
 @@||aigenda.ru^$generichide
 @@||aimfar.solution.weborama.fr/fcgi-bin/oba.fcgi?action=opt$domain=youronlinechoices.com
+@@||airfind.com^$image,domain=headlinelogic.com
 @@||ajax.cloudflare.com/cdn-cgi/scripts/*/cloudflare-static/mirage*.js$domain=rule34.xxx
 @@||ajax.googleapis.com/ajax/libs/jquery/
 @@||akamaihd.net/i^$3p
@@ -12088,6 +12089,7 @@ thestreamable.com###promo-signup-bottom-sheet
 thestreet.com#@#.pbs__player
 thestudentroom.co.uk##header.MuiAppBar-positionFixed:style(position: static !important;)
 thestudentroom.co.uk##img[src*="logo-colour.svg"]:style(margin-top: 14px !important;)
+thesun.co.uk##.article-boxout
 thesun.co.uk##.article__content > .has-text-align-center:has(> strong > a[href])
 thesun.co.uk##.article__footer
 thesun.co.uk##.customiser-v2-layout-1-billboard-container
