@@ -209,6 +209,38 @@ def get_ddg_safe_bases() -> set:
     return safe
 
 
+@functools.lru_cache(maxsize=1)
+def get_ddg_entity_map() -> dict:
+    """
+    Fetch the DuckDuckGo extension-tds.json and return a dictionary mapping
+    domains to a list of their sister domains (domains owned by the same entity).
+    """
+    req = urllib.request.Request(SOURCES["ddg_tds_url"], headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        tds = json.loads(resp.read().decode("utf-8"))
+    
+    entity_map = {}
+    for name, entity in tds.get("entities", {}).items():
+        domains = entity.get("domains", [])
+        if len(domains) > 1:
+            for d in domains:
+                entity_map[d] = [s for s in domains if s != d]
+    return entity_map
+
+
+def format_rule(domain: str, entity_map: dict) -> str:
+    """
+    Formats a root domain block rule. If the domain is part of an entity with
+    multiple sister domains, we append a domain=~ exclusion modifier.
+    """
+    sisters = entity_map.get(domain)
+    if sisters:
+        exclusions = "|".join([f"~{s}" for s in sorted(sisters)])
+        return f"||{domain}^$third-party,domain={exclusions}"
+    else:
+        return f"||{domain}^$third-party"
+
+
 # ── Privacy Badger ────────────────────────────────────────────────────────────
 
 
@@ -248,6 +280,7 @@ def fetch_privacy_badger_rules(mode: str) -> set:
     rules = set()
     n_added = n_skip_safe = n_skip_yellow = 0
     safe_bases = get_ddg_safe_bases()
+    entity_map = get_ddg_entity_map()
 
     for domain in sorted(blocked):
         domain = domain.lstrip(".").lower()
@@ -263,7 +296,7 @@ def fetch_privacy_badger_rules(mode: str) -> set:
             continue
 
         # Use $third-party to mimic PB's cross-site-only blocking behavior
-        safe_rules = {f"||{domain}^$third-party"}
+        safe_rules = {format_rule(domain, entity_map)}
 
         if mode == "optimized":
             pass
@@ -347,6 +380,7 @@ def fetch_ddg_rules(mode: str) -> set:
 
     rules = set()
     n_block = n_paths = n_exc = n_skip_cat = n_skip_complex = 0
+    entity_map = get_ddg_entity_map()
 
     for domain, tracker in trackers.items():
         default   = tracker.get("default")
@@ -370,7 +404,7 @@ def fetch_ddg_rules(mode: str) -> set:
                 continue
 
         if default == "block":
-            rules.add(f"||{domain}^$third-party")
+            rules.add(format_rule(domain, entity_map))
             n_block += 1
             for r in tds_rules:
                 if r.get("action") != "ignore":
@@ -426,6 +460,7 @@ def fetch_ghostery_rules(mode: str) -> set:
     skipped      = 0
     n_skip_safe  = 0
     safe_bases   = get_ddg_safe_bases()
+    entity_map   = get_ddg_entity_map()
 
     for line in raw.splitlines():
         line = line.strip()
@@ -444,6 +479,16 @@ def fetch_ghostery_rules(mode: str) -> set:
             domain = domain_match.group(1).lstrip(".").lower()
             if get_base_domain(domain) in safe_bases:
                 n_skip_safe += 1
+                continue
+
+            sisters = entity_map.get(domain)
+            if sisters and line.endswith("^"):
+                exclusions = "|".join([f"~{s}" for s in sorted(sisters)])
+                rules.add(f"{line}$third-party,domain={exclusions}")
+                continue
+            elif sisters and line.endswith("$third-party"):
+                exclusions = "|".join([f"~{s}" for s in sorted(sisters)])
+                rules.add(f"{line},domain={exclusions}")
                 continue
 
         rules.add(line)
@@ -477,6 +522,7 @@ def fetch_disconnect_rules(mode: str) -> set:
     rules = set()
     n_added = n_skip_safe = 0
     safe_bases = get_ddg_safe_bases()
+    entity_map = get_ddg_entity_map()
 
     for category, entities in data.get('categories', {}).items():
         if category not in allowed_cats:
@@ -496,7 +542,7 @@ def fetch_disconnect_rules(mode: str) -> set:
                                     n_skip_safe += 1
                                     continue
                                 
-                                rules.add(f"||{domain}^$third-party")
+                                rules.add(format_rule(domain, entity_map))
                                 n_added += 1
 
     log(f"  Disconnect [{mode}]: {n_added:,} rules kept, {n_skip_safe:,} safe domains skipped")
