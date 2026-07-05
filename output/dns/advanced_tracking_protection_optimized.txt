@@ -1,7 +1,7 @@
 # Title: Advanced Tracking Protection (Optimized) (DNS/hosts format)
-# Version: 2026-06-28T07:05:03Z
+# Version: 2026-07-05T06:43:35Z
 # Homepage: https://github.com/shubham/adfilters
-# Domains: 174,584
+# Domains: 174,601
 #
 0.0.0.0 -084-gls-223-www-9-k-0brasil.net.daraz.com
 0.0.0.0 -access-logs-1.net.daraz.com
@@ -23808,6 +23808,7 @@
 0.0.0.0 analyticcdn.globalmailer.com
 0.0.0.0 analyticcdn.wlmediahub.com
 0.0.0.0 analytics-1.cavai.com
+0.0.0.0 analytics-api-s.cloudinary.com
 0.0.0.0 analytics-api.a-f.io
 0.0.0.0 analytics-api.byub.org
 0.0.0.0 analytics-api.gemcommerce.com
@@ -23849,6 +23850,7 @@
 0.0.0.0 analytics-fe.digital-cloud-eu-main.medallia.eu
 0.0.0.0 analytics-fe.digital-cloud-gov.medallia.com
 0.0.0.0 analytics-fe.digital-cloud-prem.medallia.com
+0.0.0.0 analytics-fe.digital-cloud-prem.medallia.eu
 0.0.0.0 analytics-fe.digital-cloud-smf1.medallia.com
 0.0.0.0 analytics-fe.digital-cloud-syd1.medallia.com.au
 0.0.0.0 analytics-fe.digital-cloud-us-main.medallia.com
@@ -24010,6 +24012,7 @@
 0.0.0.0 analytics.ateeq-sa.com
 0.0.0.0 analytics.athome.com
 0.0.0.0 analytics.athoscommerce.net
+0.0.0.0 analytics.atlas5.co
 0.0.0.0 analytics.atlassian.com
 0.0.0.0 analytics.atom.com
 0.0.0.0 analytics.audioeye-services.com
@@ -33055,6 +33058,7 @@
 0.0.0.0 bal.balciselahattin.com
 0.0.0.0 balance.omnipeers.com
 0.0.0.0 balancedbodypilates.myshopify.com
+0.0.0.0 balancenotes.com
 0.0.0.0 balancer-cro.netdania.com
 0.0.0.0 balancer.datafeeds.io
 0.0.0.0 balboai.eomail6.com
@@ -44516,6 +44520,7 @@
 0.0.0.0 coffee.brandzaak.nl
 0.0.0.0 coffee.garageroasted.co.uk
 0.0.0.0 coffee.seducaoinvisivel.store
+0.0.0.0 coffeefire.net
 0.0.0.0 coffeesidehustle.com
 0.0.0.0 coffeycomm.actonservice.com
 0.0.0.0 cofra.me
@@ -54474,6 +54479,7 @@
 0.0.0.0 dclibrary.libanswers.com
 0.0.0.0 dclk-match.dotomi.com
 0.0.0.0 dclnxirp001cou.net.jumia.co.tz
+0.0.0.0 dclsrv.com
 0.0.0.0 dcluc.boxousa.com
 0.0.0.0 dcm9zy.net
 0.0.0.0 dcmfe.datacamp.com.cdn.cloudflare.net
@@ -57052,6 +57058,7 @@
 0.0.0.0 dsp-service.adtarget.biz
 0.0.0.0 dsp-service.monetixads.com
 0.0.0.0 dsp-service.pixad.com.tr
+0.0.0.0 dsp-track-global.zmaticoo.com
 0.0.0.0 dsp-track-usg.zmaticoo.com
 0.0.0.0 dsp-trk.eskimi.com
 0.0.0.0 dsp.360yield.com
@@ -64814,6 +64821,7 @@
 0.0.0.0 fire-gcp-lb-81.payoneerx.prod2.reblaze.com
 0.0.0.0 fire-us.attn.tv
 0.0.0.0 fire.solutions.jci.com
+0.0.0.0 fireanalytics.firestream.to
 0.0.0.0 firebase.com
 0.0.0.0 firebasedatabase.app
 0.0.0.0 firebaseio.com
@@ -66471,6 +66479,7 @@
 0.0.0.0 fuelcdn.com
 0.0.0.0 fueled.io
 0.0.0.0 fueledseaktvje.dataplane.rudderstack.com
+0.0.0.0 fuelfever.net
 0.0.0.0 fuelinspector.com
 0.0.0.0 fuelmedia.io
 0.0.0.0 fuelx.com
@@ -87087,6 +87096,7 @@
 0.0.0.0 lkoutz.winparts.be
 0.0.0.0 lkqce.dermaflash.com
 0.0.0.0 lkqd.net
+0.0.0.0 lkqivtsnfvriw.website
 0.0.0.0 lkr.reply.eu
 0.0.0.0 lksiz.mydancerbox.com
 0.0.0.0 lksrhj.green-acres.pt
@@ -109116,6 +109126,7 @@
 0.0.0.0 pculb.upheal.io
 0.0.0.0 pcusa.freshchat.com
 0.0.0.0 pcuud.replacements.com
+0.0.0.0 pcx-events.revbox.co
 0.0.0.0 pcxqfjx.pa-cd.com
 0.0.0.0 pcykgc.onetravel.com
 0.0.0.0 pczmj.eat.attntags.com
@@ -110311,6 +110322,7 @@
 0.0.0.0 pl.noartmusic.com
 0.0.0.0 pl.paradiesgartenfestival.at
 0.0.0.0 pl.paradisecity.be
+0.0.0.0 pl.primis.tech
 0.0.0.0 pl.ruid.gemius.pl
 0.0.0.0 pl.scandal.events
 0.0.0.0 pl.schaatsbaanmuseumplein.nl
@@ -111251,6 +111263,7 @@
 0.0.0.0 postgraduate2.smu.edu.sg
 0.0.0.0 posthog.client10.me
 0.0.0.0 posthog.com
+0.0.0.0 posthog.football24.ua
 0.0.0.0 posthog.infra.sohohousedigital.com
 0.0.0.0 posthog.lingvanex.com
 0.0.0.0 posthog.tarnkappe.info
@@ -111322,6 +111335,7 @@
 0.0.0.0 powerstarsbuilding.com
 0.0.0.0 powerstep.postaffiliatepro.com
 0.0.0.0 powertips.idera.com
+0.0.0.0 powertoolwiki.com
 0.0.0.0 powerup.rsaworks.com
 0.0.0.0 poweruptools.com
 0.0.0.0 powerview17.talentegy.com
@@ -115972,6 +115986,7 @@
 0.0.0.0 rest-api.wm.com
 0.0.0.0 rest.bandsintown.com
 0.0.0.0 rest.chatrandom.com
+0.0.0.0 rest.comfy.ua
 0.0.0.0 rest.contextly.com
 0.0.0.0 rest.flingster.com
 0.0.0.0 rest.fra-02.braze.eu
@@ -148523,6 +148538,7 @@
 0.0.0.0 streamrail.net
 0.0.0.0 streams-eu2-cdn.k5a.io
 0.0.0.0 streams-eu4-cdn.k5a.io
+0.0.0.0 streams-scores.rbl.ms
 0.0.0.0 streams.cablecar.sph.com.sg
 0.0.0.0 streams.yext.com
 0.0.0.0 streamstats.prd.dlive.tv
@@ -150414,6 +150430,7 @@
 0.0.0.0 t.evocsports.ch
 0.0.0.0 t.evoriel.fr
 0.0.0.0 t.experienceandamans.com
+0.0.0.0 t.experte.de
 0.0.0.0 t.fabulousfox.com
 0.0.0.0 t.factorform.com
 0.0.0.0 t.fairparkdallas.com
