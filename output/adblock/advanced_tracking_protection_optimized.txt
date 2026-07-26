@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: Advanced Tracking Protection (Optimized)
 ! Description: Union of AdGuard Tracking Protection, EasyPrivacy, AdGuard Mail Tracking Protection, and DDG Tracker Radar (US). Deduplicated. Covers trackers, fingerprinting, email pixels, and analytics.
-! Version: 2026-07-05T06:43:35Z
+! Version: 2026-07-26T06:08:28Z
 ! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/shubham/adfilters
 ! License: MIT
-! Rules: 295,748
+! Rules: 295,955
 !
 $3p,xhr,domain=opensubtitles.org
 $csp=child-src 'none'; frame-src 'self' *; worker-src 'none',domain=fileone.tv|theappguruz.com
@@ -394,12 +394,12 @@ $ping,3p
 /AppMeasurement.js
 /AppMeasurement.js$domain=channel4.com
 /AppMeasurement.min.js
-/AppMeasurement.min.js$domain=petco.com|tractorsupply.com
+/AppMeasurement.min.js$domain=petco.com|tractorsupply.com|eonline.com
 /AppMeasurement2.js
 /AppMeasurementCustom.min.js
 /AppMeasurement_Module_ActivityMap.js$domain=channel4.com
 /AppMeasurement_Module_ActivityMap.min.js
-/AppMeasurement_Module_ActivityMap.min.js$domain=petco.com
+/AppMeasurement_Module_ActivityMap.min.js$domain=petco.com|eonline.com
 /Article/ViewCount/*
 /AutoTracker.js
 /Avada-Child-Theme/js/GA.*js$domain=allurekorea.com|vogue.co.kr
@@ -554,6 +554,7 @@ $ping,3p
 /^https:\/\/www\.purevpn\.[a-z]+\/[a-z0-9]{7}\/$/$script
 /^https:\/\/www\.totaljobs\.com\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+/$script,xhr,domain=totaljobs.com
 /^https?:\/\/(?!assets|script|static)(?:[0-9a-z]{10,13}|[0-9a-z]{6})\.[0-9A-Za-z.\-_]+\/(?=[0-9a-z+\/\-]*[A-Z])[0-9A-Za-z+\/\-]{80,106}$/$match-case,script,~3p
+/^https?:\/\/(android\.com\.pl|biznesenter\.pl)\/[a-z0-9]{1,4}\/$/$script,~3p,domain=android.com.pl|biznesenter.pl
 /^https?:\/\/fdts\.ebay-kleinanzeigen\.de\/[a-z0-9]{13,18}\.js\?/$script,domain=kleinanzeigen.de
 /^https?:\/\/pov\.spectrum\.net\/[a-zA-Z0-9]{14,}\.js/$script,domain=spectrum.net
 /^https?:\/\/tjmaxx\.tjx\.com\/libraries\/[a-z0-9]{20,}/$script,xhr,domain=tjx.com
@@ -583,6 +584,7 @@ $ping,3p
 /_assets/oply/public/*
 /_blazor/*$ping
 /_events/api/setEvent$xhr
+/_events|$domain=uber.com|ubereats.com|uberhealth.com
 /_ga?send&
 /_ga?sponsor_pixel=
 /_gz/counter.php?
@@ -601,6 +603,7 @@ $ping,3p
 /_static/deliver.js?nonce=$script,~3p
 /_t/open/*$image
 /_tracking/*
+/_track|$domain=uber.com|ubereats.com|uberhealth.com
 /_vercel/insights/script.js
 /_vercel/speed-insights/script.js
 /_visitcount?
@@ -880,6 +883,7 @@ $ping,3p
 /api/site/tracking-config/*
 /api/stat?
 /api/statsd|$~3p,xhr
+/api/stn/audience|$xhr
 /api/track?guid
 /api/track|$3p,xhr
 /api/trk?
@@ -891,6 +895,7 @@ $ping,3p
 /api/v1/impressions|
 /api/v1/metrics
 /api/v1/reportData/*
+/api/v1/reporting/flows
 /api/v1/stat?
 /api/v1/streamtelemetry
 /api/v2/collector
@@ -1249,6 +1254,7 @@ $ping,3p
 /cnvtr.js
 /cocoon-master/lib/analytics/access.
 /cocoon-master/lib/analytics/access.php?
+/code/e.js|$~3p
 /codesters-analytics.
 /cogi-etracker.js
 /coherentpath.link/o/*$image
@@ -1528,7 +1534,6 @@ $ping,3p
 /eventStream|$domain=autoguide.com|motorcycle.com|upgradedhome.com
 /event_log/*
 /event_logger
-/event_logging/*
 /eventing.coursera.org/img/*
 /eventproxy/track
 /events-collector.
@@ -1973,6 +1978,8 @@ $ping,3p
 /intake/v2/rum.js
 /interaction/beacon
 /intercept/intercept.js
+/internal-stats-lite/p.php?
+/internal-stats/pixel/*
 /ipdvdc.min.js
 /ips-invite.iperceptions.com/*
 /iris-t.js
@@ -2091,6 +2098,7 @@ $ping,3p
 /library/svy/broker.js
 /libs/sentry/*/sentry.js
 /libs/tracker.js
+/libtrc/tr5?type=*pixel*
 /liferay-analytics-api.js
 /liferay-analytics-processor.js
 /lightspeed_tracker.js
@@ -2237,6 +2245,7 @@ $ping,3p
 /lzdmailer.letter.open?
 /m-email/t.png?
 /m.gif?
+/m/opening/*$image
 /madAnalytics.js
 /magento-storefront-event-collector@
 /magento/page-visit?
@@ -2316,6 +2325,7 @@ $ping,3p
 /mistats/*
 /mixpanel-init.js
 /mixpanel.$domain=~mixpanel.com
+/ml.bitcash.co.jp/c/*$image
 /mlb-ml-analytics.min.js
 /mlopen_track.html
 /mmclient.js
@@ -2475,7 +2485,7 @@ $ping,3p
 /ouibounce.min.js
 /outLoging.js
 /outLoging2.js
-/outbrain.js
+/outbrain.js$~xhr
 /outbrainAd.
 /oval_web_analytics_latest.js
 /owa.Analytics.m.js
@@ -3275,12 +3285,12 @@ $ping,3p
 /t.notificationmail.microsoft.com/r/?id=$image
 /t.paypal.com/*$image
 /t.yesware.com/t/*$image
-/t/*/a^$image,domain=~permies.com
+/t/*/a^$image
 /t/event.js?
 /t/event?
 /t?referer=
 /t?tcid=
-/taboola.js
+/taboola.js$~xhr
 /taboola/loader.js
 /taboolaHead.js
 /taevents-c.js
@@ -3342,6 +3352,7 @@ $ping,3p
 /tp.mkt.vorwerk.com/r/*$image
 /tr.gif?
 /tr/lp/intg.js
+/tr/op/*-$image
 /tr/pageview/*
 /trace-Update.php?
 /trace/link/*$image
@@ -5367,9 +5378,8 @@ $ping,3p
 ://elqtrk.
 ://email.*/o/$image
 ://emailtracking.$image
-://estats.*/code/e.js
 ://fallback.*/collector
-://fathom.$domain=~fathom.care|~fathom.co.za|~fathom.fm|~fathom.info|~fathom.io|~fathom.lib.uchicago.edu|~fathom.org|~fathom.video|~fathom.world|~fathomdelivers.com|~fathomseo.com|~usesfathom.com
+://fathom.$domain=~fathom.care|~fathom.co.za|~fathom.fm|~fathom.info|~fathom.io|~fathom.lib.uchicago.edu|~fathom.news|~fathom.org|~fathom.video|~fathom.world|~fathomdelivers.com|~fathomseo.com|~usesfathom.com
 ://gtm.*.js?id=GTM-
 ://gtm.*.js?st=
 ://gtrack.*.com/dye?
@@ -5411,7 +5421,6 @@ $ping,3p
 ://ssgtm.
 ://sst.*.js?id=GTM-
 ://stat.*/pageview/$xhr
-://stats.*/code/e.js
 ://t.*/open^$image
 ://t.order.*/r/?id=$image
 ://t.paypal.com/ts?v=$image
@@ -5473,6 +5482,7 @@ $ping,3p
 ?wmcAction=wmcTrack&
 @@.2o7.net/$domain=today.com
 @@.googleadservices.*.js$domain=ponominalu.ru
+@@.my.salesforce-setup.com/_ui/common/config/field/*/d?id=*&type=
 @@/adrum.js$domain=usbank.com
 @@/cdn-cgi/pe/bag2?*googleadservices.com$domain=droid-life.com
 @@/cdn-cgi/pe/bag2?*histats.com$domain=nmac.to|xrussianteens.com
@@ -5558,7 +5568,7 @@ $ping,3p
 @@||adobedtm.com/extensions/$domain=antena3.com|apple.com|atresmedia.com|atresplayer.com|automobiles.honda.com|bravotv.com|cadenaser.com|crave.ca|foodnetwork.com|lasexta.com|telus.com|verizon.com|xfinity.com
 @@||adobedtm.com/launch-$script,xhr
 @@||adobedtm.com^*-libraryCode_source.min.js$domain=doda.jp
-@@||adobedtm.com^*-source.min.js$script,domain=53.com|aarp.org|aircanada.com|ally.com|americanexpress.com|as.com|atresplayer.com|automobiles.honda.com|backcountry.com|bbva.com.ar|bbvacib.com|bbvauk.com|bestbuy.ca|bose.ae|bose.at|bose.ca|bose.ch|bose.cl|bose.co|bose.co.jp|bose.co.nz|bose.co.uk|bose.com|bose.com.au|bose.de|bose.dk|bose.es|bose.fi|bose.fr|bose.hk|bose.hu|bose.ie|bose.it|bose.lu|bose.mx|bose.nl|bose.no|bose.pe|bose.pl|bose.se|boseapac.com|bosebelgium.be|boselatam.com|bt.com|cadenaser.com|churchofjesuschrist.org|cibc.com|crave.ca|currys.co.uk|deutsche-bank.de|dollargeneral.com|etihad.com|eurosport.de|fedex.com|guitarcenter.com|healthsafe-id.com|healthy.kaiserpermanente.org|helvetia.com|hgtv.com|hilton.com|homedepot.ca|ihg.com|imsa.com|ing.com.au|ingrammicro.com|kroger.com|lenovo.com|lifetime.life|lowes.com|manager-magazin.de|marriott.com|medscape.com|mtvuutiset.fi|mybell.bell.ca|natwest.com|nbarizona.com|news.sky.com|philips.com|plasticsnews.com|pnc.com|poweredbycovermore.com|ralphlauren.com|samsung.com|sephora.com|snsbank.nl|ssrn.com|starwarscelebration.com|subway.com|tatacliq.com|telegraph.co.uk|telus.com|verizon.com|virginplus.ca|walgreens.com|xfinity.com
+@@||adobedtm.com^*-source.min.js$script,domain=53.com|aarp.org|aircanada.com|ally.com|americanexpress.com|as.com|atresplayer.com|automobiles.honda.com|backcountry.com|bbva.com.ar|bbvacib.com|bbvauk.com|bestbuy.ca|bose.ae|bose.at|bose.ca|bose.ch|bose.cl|bose.co|bose.co.jp|bose.co.nz|bose.co.uk|bose.com|bose.com.au|bose.de|bose.dk|bose.es|bose.fi|bose.fr|bose.hk|bose.hu|bose.ie|bose.it|bose.lu|bose.mx|bose.nl|bose.no|bose.pe|bose.pl|bose.se|boseapac.com|bosebelgium.be|boselatam.com|bt.com|cadenaser.com|churchofjesuschrist.org|cibc.com|crave.ca|currys.co.uk|deutsche-bank.de|dollargeneral.com|eonline.com|etihad.com|eurosport.de|fedex.com|guitarcenter.com|healthsafe-id.com|healthy.kaiserpermanente.org|helvetia.com|hgtv.com|hilton.com|homedepot.ca|ihg.com|imsa.com|ing.com.au|ingrammicro.com|kroger.com|lenovo.com|lifetime.life|lowes.com|manager-magazin.de|marriott.com|medscape.com|mtvuutiset.fi|mybell.bell.ca|natwest.com|nbarizona.com|news.sky.com|osprey.com|philips.com|plasticsnews.com|pnc.com|poweredbycovermore.com|ralphlauren.com|samsung.com|sephora.com|snsbank.nl|ssrn.com|starwarscelebration.com|subway.com|tatacliq.com|telegraph.co.uk|telus.com|verizon.com|virginplus.ca|walgreens.com|xfinity.com
 @@||adobedtm.com^*/AppMeasurement.min.js$script,domain=sky.it
 @@||adobedtm.com^*/launch-$script,xhr
 @@||adobedtm.com^*/mbox-contents-$script,domain=absa.co.za|ally.com|americanexpress.com|as.com|backcountry.com|ceair.com|conad.it|costco.com|dhl.de|fcbarcelona.cat|fcbarcelona.cn|fcbarcelona.com|fcbarcelona.es|fcbarcelona.fr|fcbarcelona.jp|firststatesuper.com.au|hgtv.com|lenovo.com|lowes.com|nfl.com|oprah.com|pnc.com|shoppersdrugmart.ca|sony.jp|tatacliq.com|usanetwork.com|vanityfair.com|wired.com
@@ -5601,6 +5611,7 @@ $ping,3p
 @@||amc-widgets.crowdtwist.com/widgets/t/account-
 @@||amplitude.com/libs/$script,domain=b2c.voegol.com.br|elconfidencial.com|kink.com|pdfexpert.com|xe.com
 @@||an-sm.naughtycdn.com/js/lti-analytics-*.min.js$domain=members.naughtyamerica.com
+@@||an.gr-wcon.com/script/$domain=chipstore.de
 @@||analysys.cn^$domain=analysys.cn
 @@||analytics-*.clickdimensions.com/*/pages/*.html$subdocument,domain=nhs.uk
 @@||analytics-*.clickdimensions.com/*/pages/*.html$subdocument,domain=techuk.org
@@ -5646,6 +5657,7 @@ $ping,3p
 @@||api.app.mobilelocker.eu/api/latest/application-environment/ahoy/events$~3p
 @@||api.babbel.io/gamma/v1/$ping,domain=babbel.com
 @@||api.chartbeat.com^$script,domain=financialpost.com|wcpo.com|couriermail.com.au|betabeat.com
+@@||api.clerk.io/v*/log/$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk
 @@||api.clerk.io/v*/log/click?$domain=fjellandhandel.no
 @@||api.clerk.io/v*/log/click?payload=$domain=ringo.no
 @@||api.cxense.com/document/search?
@@ -5798,7 +5810,6 @@ $ping,3p
 @@||blackbaud.net/proxy/api/track/
 @@||blackcircles.ca^$script,~3p
 @@||blob.core.windows.net/bge/src/js/google-analytics.js$domain=secure2.bge.com
-@@||blob.core.windows.net/comed/src/js/google-analytics.js$domain=comed.com
 @@||blocket.se^*/xtcore.js
 @@||bloctel.gouv.fr/assets/scripts/smarttag.js
 @@||blueconic.net/bostonglobemedia.js$domain=bostonglobe.com
@@ -5888,11 +5899,11 @@ $ping,3p
 @@||cdn.boomtrain.com/analyticstrain/snopes^$domain=snopes.com
 @@||cdn.cervell.io^$domain=cildimveben.com
 @@||cdn.clerk.io/clerk.js$domain=apotera.no
+@@||cdn.clerk.io/clerk.js$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk
 @@||cdn.clerk.io/clerk.js$domain=batteribyen.dk|batterionline.no|batterionline.se
 @@||cdn.clerk.io/clerk.js$domain=dehardloopwinkel.nl
 @@||cdn.clerk.io/clerk.js$domain=fjellandhandel.no
 @@||cdn.clerk.io/clerk.js$domain=garmont.com
-@@||cdn.clerk.io/clerk.js$domain=globaltools.dk|globaltools.no|globaltools.se
 @@||cdn.clerk.io/clerk.js$domain=industrivarer.no
 @@||cdn.clerk.io/clerk.js$domain=jaktdepotet.no
 @@||cdn.clerk.io/clerk.js$domain=panzerglass.com
@@ -6430,6 +6441,7 @@ $ping,3p
 @@||fandango.com/b/ss/$image
 @@||faq-widget.nakanohito.jp/faqwidget.js$domain=keio-passport.co.jp
 @@||fast.fonts.net/jsapi/core/mt.js$script,domain=abeautifuldominion.com|bkmedical.com|eclecticbars.co.uk|gables.com|itsolutions-inc.com|kinsfarmmarket.com|senate.gov|toyotagazooracing.com
+@@||fastly-analytics.com/debug_resolver$xhr,domain=fastly-debug.com
 @@||fathom.video/embed/$subdocument
 @@||fccbrea.org^*/swfaddress.js
 @@||fdi.fiduciarydecisions.com/a/lib/gtag/gtag.js$script,~3p
@@ -6440,11 +6452,13 @@ $ping,3p
 @@||feliz-web.data.tm-awx.com/smile-web.min.js$domain=liverpoolecho.co.uk|mirror.co.uk|birminghammail.co.uk|dailystar.co.uk|manchestereveningnews.co.uk
 @@||feliz-web.data.tm-awx.com/smile-web.min.js$domain=ok.co.uk
 @@||feliz-web.data.tm-awx.com/smile-web.min.js$domain=themirror.com
+@@||feliz-web.data.tm-awx.com^$domain=football.london
 @@||feliz.data.tm-awx.com/smile-web-v*/$domain=ok.co.uk
 @@||feliz.data.tm-awx.com/smile-web-v2/rootEvent$domain=examinerlive.co.uk
 @@||feliz.data.tm-awx.com/smile-web-v2/rootEvent$domain=liverpoolecho.co.uk|mirror.co.uk|birminghammail.co.uk|dailystar.co.uk|manchestereveningnews.co.uk
 @@||feliz.data.tm-awx.com/smile-web-v2/rootEvent$domain=mirror.co.uk
 @@||feliz.data.tm-awx.com/smile-web-v2/rootEvent$domain=themirror.com
+@@||feliz.data.tm-awx.com^$domain=football.london
 @@||fichub.com/plugins/adobe/lib/AppMeasurement.js$domain=natgeotv.com
 @@||fichub.com/plugins/adobe/lib/VisitorAPI.js$domain=natgeotv.com
 @@||fifa.com^*/webanalytics.js?
@@ -6801,7 +6815,7 @@ $ping,3p
 @@||googletagmanager.com/gtag/js^$domain=stardock.com
 @@||googletagmanager.com/gtag/js^$domain=teb.com.tr
 @@||googletagmanager.com/gtm.js$domain=20min.ch
-@@||googletagmanager.com/gtm.js$domain=3djuegosguias.com|3djuegospc.com|9to5mac.com|acehardware.com|acornonline.com|adorama.com|ads.spotify.com|aena.es|aeromexico.com|afisha.timepad.ru|airhaifa.com|aliexpress.com|almamedia.fi|ampparit.com|anacondastores.com|animeanime.jp|anond.hatelabo.jp|app.joinhandshake.com|applesfera.com|aruba.it|arvopaperi.fi|atgtickets.com|atptour.com|aussiebum.com|auth.max.com|autobild.de|autoplus.fr|autorevue.cz|avis.com|axeptio.eu|b2c.voegol.com.br|backcountry.com|baywa-re.com|bbcgoodfood.com|benesse-style-care.co.jp|besplatka.ua|beterbed.nl|betten.de|biletix.com|binglee.com.au|bombas.com|book.impress.co.jp|bsa-whitelabel.com|bunte.de|businessinsider.jp|butcherblockco.com|bybit.com|bybitglobal.com|caminteresse.fr|campograndenews.com.br|canadiantire.ca|capital.it|carcareplus.jp|carhartt-wip.com|casa.it|cashier.dmm.co.jp|cashier.dmm.com|ccleaner.com|cdek.ru|cdon.fi|checkout.ao.com|chipotle.com|chronopost.fr|cinemacafe.net|cityheaven.net|ckdtrialfinder.natera.com|clickup.com|cmoa.jp|como.fi|complex.com|compradiccion.com|computerbild.de|coolermaster.com|cora.fr|cosmo-hairshop.de|costco.co.jp|costco.co.uk|courses.monoprix.fr|cram.com|crello.com|currys.co.uk|cyclestyle.net|cyclingnews.com|cypress.io|dazeddigital.com|de.hgtv.com|deejay.it|dengekionline.com|dholic.co.jp|digitalocean.com|directoalpaladar.com|directv.com|dlsite.com|dmax.de|dmv.ca.gov|doodle.com|dropps.com|e15.cz|easternbank.com|eat.co.nz|ecmweb.com|ecovacs.com|edwardjones.com|eki-net.com|elcorteingles.es|elnuevodia.com|enmotive.com|episodi.fi|eprice.it|ergotron.com|espinof.com|euronics.ee|euronics.it|expressvpn.com|famesupport.com|fandom.com|farmaciabolli1833.it|feex.co.il|festoolusa.com|finanzen.at|finanzen.ch|finanzen.net|findernet.com|flets.com|flytap.com|focus.de|formula1.com|fortress.com.hk|fortune.com|freenet-funk.de|froxy.com|fum.fi|gamebusiness.jp|gamespark.jp|genbeta.com|glamusha.ru|globo.com|gorillamind.com|grandhood.dk|gravitydefyer.com|gumtree.com|harveynorman.co.nz|harveynorman.com.au|hatenacorp.jp|headlightrevolution.com|hepsiburada.com|herculesstands.com|hobbyhall.fi|hobbystock.jp|homeinspector.org|hostingvergelijker.nl|hotelfountaingate.com.au|idealo.at|idealo.co.uk|idealo.de|idealo.es|idealo.fr|idealo.it|iexprofs.nl|iltalehti.fi|independent.co.uk|inferno.fi|inside-games.jp|insiderstore.com.br|insightsoftware.com|investor.natera.com|iodonna.it|iphoneitalia.com|j-wave.co.jp|jalan.net|jbhifi.co.nz|jbhifi.com.au|jn.pt|join.kazm.com|journaldunet.com|jreastmall.com|junonline.jp|kakuyomu.jp|karriere.at|karriere.heldele.de|kauppalehti.fi|kedronparkhotel.com.au|kfc.co.jp|kilian-metall.de|kinepolis.be|kinepolis.ch|kinepolis.es|kinepolis.fr|kinepolis.lu|kinepolis.nl|kitamura.jp|komputronik.pl|konami.com|kontan.co.id|la7.it|ladepeche.fr|larousse.fr|lastampa.it|lasvegasentuidioma.com|lbc.co.uk|lecker.de|lequipeur.com|level.travel|life.fi|lift.co.za|linternaute.com|lippu.fi|loopearplugs.com|luko.eu|m1.com|m2o.it|magazineluiza.com.br|mainichi.jp|makitani.net|mall.heiwa.jp|mangaseek.net|marks.com|mcgeeandco.com|mecindo.no|mediamarkt.nl|mediuutiset.fi|mercell.com|meritonsuites.com.au|midilibre.fr|mikrobitti.fi|mirapodo.de|mobilmania.cz|montcopa.org|morimotohid.com|mustar.meitetsu.co.jp|mycar-life.com|mysmartprice.com|nanikanokami.github.io|nap-camp.com|net-chuko.com|netcombo.com.br|newscafe.ne.jp|nexon.com|nflgamepass.com|ngv.vic.gov.au|nielsendodgechryslerjeepram.com|nihontsushin.com|noelleeming.co.nz|nordvpn.com|nourison.com|nove.tv|nowtv.com.tr|o2.co.uk|oakandfort.com|odia.ig.com.br|oetker-shop.de|okwave.jp|olx.ro|onepodcast.it|online-shop.mb.softbank.jp|online.ysroad.co.jp|onlineshop.ocn.ne.jp|order.fiveguys.com|orpi.com|oxylabs.io|papajohns.com|pccomponentes.com|petsathome.com|pgatoursuperstore.com|philips.com|pioneer.eu|plaion.com|plantsome.ca|plex.tv|pohjanmaanhyvinvointi.fi|poprosa.com|porsche.com|portofoonwinkel.nl|post.ch|posti.fi|pptvhd36.com|primeoak.co.uk|prisjakt.nu|prisonfellowship.org|prizehometickets.com.au|proxyscrape.com|qrcode-monkey.com|radiko.jp|radiobob.de|radiorur.de|rbbtoday.com|reanimal.jp|remax.com.ar|resemom.jp|response.jp|rhbgroup.com|rocketnews24.com|rtl.de|rumba.fi|rustih.ru|rydercup.com|sanwacompany.co.jp|saraiva.com.br|saturn.at|savethechildren.it|scan.netsecurity.ne.jp|sciencesetavenir.fr|scotsman.com|service.smt.docomo.ne.jp|servicing.loandepot.com|shop.clifbar.com|shop.moen.com|shoprite.com|sloways.eu|smartbox.com|soranews24.com|soundguys.com|soundi.fi|spektrum.de|sport1.de|sportingnews.com|sportiva.shueisha.co.jp|sportmaster.ru|spyder7.com|stage.parco.jp|store-jp.nintendo.com|str.toyokeizai.net|stressless.com|stuttgarter-nachrichten.de|subscribe.greenbuildingadvisor.com|sunnybankhotel.com.au|superesportes.com.br|support.bose.com|support.brother.com|support.creative.com|support.knivesandtools.com|swarajyamag.com|swb.de|talent.lowes.com|talouselama.fi|tbsradio.jp|teddyfood.com|tekniikkatalous.fi|telia.no|thecw.com|theretrofitsource.com|thesandshotel.com.au|tickethour.com|ticketmaster.ae|ticketmaster.at|ticketmaster.be|ticketmaster.ca|ticketmaster.ch|ticketmaster.cl|ticketmaster.co.il|ticketmaster.co.nz|ticketmaster.co.uk|ticketmaster.co.za|ticketmaster.com|ticketmaster.com.au|ticketmaster.com.br|ticketmaster.com.mx|ticketmaster.cz|ticketmaster.de|ticketmaster.dk|ticketmaster.es|ticketmaster.fi|ticketmaster.fr|ticketmaster.gr|ticketmaster.ie|ticketmaster.it|ticketmaster.nl|ticketmaster.no|ticketmaster.pe|ticketmaster.pl|ticketmaster.se|ticketmaster.sg|tickets.georgiaaquarium.org|tide.com|tilt.fi|time.com|tivi.fi|tixcraft.com|tn.com.ar|tomshw.it|topper.com.br|toyota-forklifts.se|trademe.co.nz|tradera.com|transa.ch|tredz.co.uk|trendencias.com|trendenciashombre.com|trendyol-milla.com|trendyol.com|trespa.info|tribuna.com|truckspring.com|tugatech.com.pt|tumi.com|tv-asahi.co.jp|type.jp|uclabruins.com|unieuro.it|uniqlo.com|upc.pl|upwork.com|uqr.to|uusisuomi.fi|veho.fi|vidaextra.com|video.lacnews24.it|video.repubblica.it|vip.de|virginmedia.com|vitonica.com|viviennewestwood-tokyo.com|vox.de|vtvgo.vn|wamiz.com|watson.ch|watsons.com.tr|willyweather.com.au|workingclassheroes.co.uk|wowma.jp|wpb.shueisha.co.jp|www.gov.pl|xatakamovil.com|xxl.se|ybt.sapporobeer.jp|ymobile.jp|yotsuba-shop.com|youpouch.com|zakzak.co.jp|zazzle.com|zennioptical.com|zf1.tohoku-epco.co.jp|zinio.com|zipair.net|zive.cz|zozo.jp
+@@||googletagmanager.com/gtm.js$domain=3djuegosguias.com|3djuegospc.com|9to5mac.com|acehardware.com|acornonline.com|adorama.com|ads.spotify.com|aena.es|aeromexico.com|afisha.timepad.ru|airhaifa.com|aliexpress.com|almamedia.fi|ampparit.com|anacondastores.com|animeanime.jp|anond.hatelabo.jp|app.joinhandshake.com|applesfera.com|aruba.it|arvopaperi.fi|atgtickets.com|atptour.com|aussiebum.com|auth.max.com|autobild.de|autoplus.fr|autorevue.cz|avis.com|axeptio.eu|b2c.voegol.com.br|backcountry.com|baywa-re.com|bbcgoodfood.com|benesse-style-care.co.jp|besplatka.ua|beterbed.nl|betten.de|biletix.com|binglee.com.au|bombas.com|book.impress.co.jp|bsa-whitelabel.com|bunte.de|businessinsider.jp|butcherblockco.com|bybit.com|bybitglobal.com|caminteresse.fr|campograndenews.com.br|canadiantire.ca|capital.it|carcareplus.jp|carhartt-wip.com|casa.it|cashier.dmm.co.jp|cashier.dmm.com|ccleaner.com|cdek.ru|cdon.fi|checkout.ao.com|chipotle.com|chronopost.fr|cinemacafe.net|cityheaven.net|ckdtrialfinder.natera.com|clickup.com|cmoa.jp|como.fi|complex.com|compradiccion.com|computerbild.de|coolermaster.com|cora.fr|cosmo-hairshop.de|costco.co.jp|costco.co.uk|courses.monoprix.fr|cram.com|crello.com|currys.co.uk|cyclestyle.net|cyclingnews.com|cypress.io|dazeddigital.com|de.hgtv.com|deejay.it|dengekionline.com|dholic.co.jp|digitalocean.com|directoalpaladar.com|directv.com|dlsite.com|dmax.de|dmv.ca.gov|doodle.com|dropps.com|e15.cz|easternbank.com|eat.co.nz|ecmweb.com|ecovacs.com|edwardjones.com|eki-net.com|elcorteingles.es|elnuevodia.com|enmotive.com|episodi.fi|eprice.it|ergotron.com|espinof.com|euronics.ee|euronics.it|expressvpn.com|famesupport.com|fandom.com|farmaciabolli1833.it|feex.co.il|festoolusa.com|finanzen.at|finanzen.ch|finanzen.net|findernet.com|flets.com|flytap.com|focus.de|formula1.com|fortress.com.hk|fortune.com|freenet-funk.de|froxy.com|fum.fi|gamebusiness.jp|gamespark.jp|genbeta.com|glamusha.ru|globalblue.com|globo.com|gorillamind.com|grandhood.dk|gravitydefyer.com|gumtree.com|harveynorman.co.nz|harveynorman.com.au|hatenacorp.jp|headlightrevolution.com|hepsiburada.com|herculesstands.com|hobbyhall.fi|hobbystock.jp|hokkaido-np.co.jp|homeinspector.org|hostingvergelijker.nl|hotelfountaingate.com.au|idealo.at|idealo.co.uk|idealo.de|idealo.es|idealo.fr|idealo.it|iexprofs.nl|iltalehti.fi|independent.co.uk|inferno.fi|inside-games.jp|insiderstore.com.br|insightsoftware.com|investor.natera.com|iodonna.it|iphoneitalia.com|ireland.ie|j-wave.co.jp|jalan.net|jbhifi.co.nz|jbhifi.com.au|jn.pt|join.kazm.com|journaldunet.com|jreastmall.com|junonline.jp|kakuyomu.jp|karriere.at|karriere.heldele.de|kauppalehti.fi|kedronparkhotel.com.au|kfc.co.jp|kilian-metall.de|kinepolis.be|kinepolis.ch|kinepolis.es|kinepolis.fr|kinepolis.lu|kinepolis.nl|kitamura.jp|komputronik.pl|konami.com|kontan.co.id|la7.it|ladepeche.fr|larousse.fr|lastampa.it|lasvegasentuidioma.com|lbc.co.uk|lecker.de|lequipeur.com|level.travel|life.fi|lift.co.za|linternaute.com|lippu.fi|loopearplugs.com|luko.eu|m1.com|m2o.it|magazineluiza.com.br|mainichi.jp|makitani.net|mall.heiwa.jp|mangaseek.net|marks.com|mcgeeandco.com|mecindo.no|mediamarkt.nl|medibank.com.au|mediuutiset.fi|mercell.com|meritonsuites.com.au|midilibre.fr|mikrobitti.fi|mirapodo.de|mobilmania.cz|montcopa.org|morimotohid.com|mustar.meitetsu.co.jp|mycar-life.com|mysmartprice.com|nanikanokami.github.io|nap-camp.com|net-chuko.com|netcombo.com.br|newscafe.ne.jp|nexon.com|nflgamepass.com|ngv.vic.gov.au|nielsendodgechryslerjeepram.com|nihontsushin.com|noelleeming.co.nz|nordvpn.com|nourison.com|nove.tv|nowtv.com.tr|o2.co.uk|oakandfort.com|odia.ig.com.br|oetker-shop.de|okwave.jp|olx.ro|onepodcast.it|online-shop.mb.softbank.jp|online.ysroad.co.jp|onlineshop.ocn.ne.jp|order.fiveguys.com|orpi.com|oxylabs.io|papajohns.com|pccomponentes.com|petsathome.com|pgatoursuperstore.com|philips.com|pioneer.eu|plaion.com|plantsome.ca|plex.tv|pohjanmaanhyvinvointi.fi|poprosa.com|porsche.com|portofoonwinkel.nl|post.ch|posti.fi|pptvhd36.com|primeoak.co.uk|prisjakt.nu|prisonfellowship.org|prizehometickets.com.au|proxyscrape.com|qrcode-monkey.com|radiko.jp|radiobob.de|radiorur.de|rbbtoday.com|reanimal.jp|remax.com.ar|resemom.jp|response.jp|rhbgroup.com|rocketnews24.com|rtl.de|rumba.fi|rustih.ru|rydercup.com|sanwacompany.co.jp|saraiva.com.br|saturn.at|savethechildren.it|scan.netsecurity.ne.jp|sciencesetavenir.fr|scotsman.com|service.smt.docomo.ne.jp|servicing.loandepot.com|shop.clifbar.com|shop.moen.com|shoprite.com|sloways.eu|smartbox.com|soranews24.com|soundguys.com|soundi.fi|spektrum.de|sport1.de|sportingnews.com|sportiva.shueisha.co.jp|sportmaster.ru|spyder7.com|stage.parco.jp|store-jp.nintendo.com|str.toyokeizai.net|stressless.com|stuttgarter-nachrichten.de|subscribe.greenbuildingadvisor.com|sunnybankhotel.com.au|superesportes.com.br|support.bose.com|support.brother.com|support.creative.com|support.knivesandtools.com|swarajyamag.com|swb.de|talent.lowes.com|talouselama.fi|tbsradio.jp|teddyfood.com|tekniikkatalous.fi|telia.no|thecw.com|theretrofitsource.com|thesandshotel.com.au|tickethour.com|ticketmaster.ae|ticketmaster.at|ticketmaster.be|ticketmaster.ca|ticketmaster.ch|ticketmaster.cl|ticketmaster.co.il|ticketmaster.co.nz|ticketmaster.co.uk|ticketmaster.co.za|ticketmaster.com|ticketmaster.com.au|ticketmaster.com.br|ticketmaster.com.mx|ticketmaster.cz|ticketmaster.de|ticketmaster.dk|ticketmaster.es|ticketmaster.fi|ticketmaster.fr|ticketmaster.gr|ticketmaster.ie|ticketmaster.it|ticketmaster.nl|ticketmaster.no|ticketmaster.pe|ticketmaster.pl|ticketmaster.se|ticketmaster.sg|tickets.georgiaaquarium.org|tide.com|tilt.fi|time.com|tivi.fi|tixcraft.com|tn.com.ar|tomshw.it|topper.com.br|toyota-forklifts.se|trademe.co.nz|tradera.com|transa.ch|tredz.co.uk|trendencias.com|trendenciashombre.com|trendyol-milla.com|trendyol.com|trespa.info|tribuna.com|truckspring.com|tugatech.com.pt|tumi.com|tv-asahi.co.jp|type.jp|uclabruins.com|unieuro.it|uniqlo.com|upc.pl|upwork.com|uqr.to|uusisuomi.fi|veho.fi|vidaextra.com|video.lacnews24.it|video.repubblica.it|vip.de|virginmedia.com|vitonica.com|viviennewestwood-tokyo.com|vox.de|vtvgo.vn|wamiz.com|watson.ch|watsons.com.tr|willyweather.com.au|workingclassheroes.co.uk|wowma.jp|wpb.shueisha.co.jp|www.gov.pl|xatakamovil.com|xxl.se|ybt.sapporobeer.jp|ymobile.jp|yotsuba-shop.com|youpouch.com|zakzak.co.jp|zazzle.com|zennioptical.com|zf1.tohoku-epco.co.jp|zinio.com|zipair.net|zive.cz|zozo.jp
 @@||googletagmanager.com/gtm.js$domain=accupass.com
 @@||googletagmanager.com/gtm.js$domain=adlibris.com
 @@||googletagmanager.com/gtm.js$domain=ads.allegro.pl
@@ -6888,6 +6902,7 @@ $ping,3p
 @@||googletagmanager.com/gtm.js$domain=gillette.de
 @@||googletagmanager.com/gtm.js$domain=givingfuel.com|regfox.com|ticketspice.com|redpodium.com
 @@||googletagmanager.com/gtm.js$domain=glamusha.ru
+@@||googletagmanager.com/gtm.js$domain=globaltools.dk|globaltools.no|globaltools.se
 @@||googletagmanager.com/gtm.js$domain=globo.com
 @@||googletagmanager.com/gtm.js$domain=gocomics.com
 @@||googletagmanager.com/gtm.js$domain=gratis.com
@@ -6898,6 +6913,7 @@ $ping,3p
 @@||googletagmanager.com/gtm.js$domain=highsnobiety.com
 @@||googletagmanager.com/gtm.js$domain=hipolink.net
 @@||googletagmanager.com/gtm.js$domain=hobbystock.jp
+@@||googletagmanager.com/gtm.js$domain=hokkaido-np.co.jp
 @@||googletagmanager.com/gtm.js$domain=hp.com
 @@||googletagmanager.com/gtm.js$domain=hub.docker.com
 @@||googletagmanager.com/gtm.js$domain=hyponamiru.cz
@@ -7430,7 +7446,7 @@ $ping,3p
 @@||marketo.com/index.php/form/
 @@||marketo.com/js/forms$script,stylesheet
 @@||martech.condenastdigital.com/lib/martech.js$domain=wired.com
-@@||martech.condenastdigital.com/lib/martech.js$script,domain=wired.com
+@@||martech.condenastdigital.com/lib/martech.js$script,domain=cntraveler.com|wired.com
 @@||matomo.miraheze.org/matomo.js$script,~3p
 @@||matsukiyococokara-online.com/store/*/rtoaster.js
 @@||maxmind.com/app/country.js$domain=lenovo.com|nationalgeographic.com
@@ -7680,6 +7696,7 @@ $ping,3p
 @@||pcworldcommunication.d2.sc.omtrdc.net/b/ss/$domain=techhive.com
 @@||pdrnetwork.112.2o7.net/b/ss/pdrnetworkpdrnetprod/
 @@||per*.segmentify.com^$domain=mediamarkt.com.tr
+@@||permies.com/t/*/a/$image
 @@||petdrugsonline.co.uk/scripts/gtm.js$~3p
 @@||pi.ai/ingest/$domain=pi.ai
 @@||picsearch.com/js/comscore.js$domain=dn.se
@@ -7967,6 +7984,7 @@ $ping,3p
 @@||shenlongruanjian.com/website/js/fingerprint2.min.js
 @@||shoonya.finvasia.com/fingerprint2.min.js$script,~3p
 @@||shop.bmw.com.au/assets/analytics-setup.js$~3p
+@@||shopify.com/authentication/$permissions=private-state-token-redemption=()
 @@||shopify.com/shopifycloud/boomerang/shopify-boomerang-$domain=rydewear.com
 @@||showheroes.com/publishertag.js$domain=rollingstone.de
 @@||showheroes.com/pubtag.js$domain=rollingstone.de
@@ -8083,6 +8101,7 @@ $ping,3p
 @@||static.chartbeat.com/js/chartbeat_mab.js$domain=usatoday.com
 @@||static.chartbeat.com/js/chartbeat_video.js$domain=gamespot.com
 @@||static.cloud.coveo.com/coveo.analytics.js/$domain=cabelas.com
+@@||static.cloudflareinsights.com^$domain=quasarzone.com,script
 @@||static.criteo.net/js/ld/publishertag.js$domain=novayagazeta.ru
 @@||static.foxnews.com^*/VisitorAPI.js$domain=foxbusiness.com|foxnews.com
 @@||static.hotjar.com/c/hotjar-$script,domain=mercadopublico.cl
@@ -8189,6 +8208,7 @@ $ping,3p
 @@||tchibo.de^*/webtrekk_$xhr
 @@||team-rec.jp^$domain=search-voi.0101.co.jp|voi.0101.co.jp
 @@||teams.microsoft.com/dialin-cdn-root/*/aria-web-telemetry-$~3p
+@@||techlab-cdn.com/e/$domain=sephora.com
 @@||technical-service.net/api?$domain=n-tv.de|vip.de|rtl.de
 @@||technical-service.net^$xhr,domain=n-tv.de|rtl.de|vip.de
 @@||teenage.engineering/store/assets/tracking-pixel.*.js$domain=teenage.engineering
@@ -8298,6 +8318,7 @@ $ping,3p
 @@||umeng.com/college/$domain=developer.umeng.com
 @@||unpkg.com/@adobe/magento-storefront-event-collector@$domain=osprey.com
 @@||ups.com/*/WebTracking/track&dcs
+@@||ups.com/*/fragments/tracking-widget.plain.html$~3p
 @@||ups.com/*/tracking.cgi
 @@||ups.com/WebTracking/
 @@||ups.xplosion.de/ctx$domain=ingame.de
@@ -8529,8 +8550,8 @@ accept.alalikexpress.com$image
 access.moseasia.com$image
 account-email.bellmedia.ca$image
 accounting.avadacom.com$image
-accuweather.com,acmemarkets.com,aiskillsnavigator.microsoft.com,boston.com,capezio.com,chime.com,costco.com,crunchyroll.com,deezer.com,delta.com,dnb.co.uk,dnb.com,dollargeneral.com,engadget.com,espn.com,eventbrite.com,filson.com,flyfrontier.com,formula1.com,geizhals.de,gladiatorgarageworks.com,harborfreight.com,hopwtr.com,jdsports.com,kkrt.com,lenscrafters.com,livewithkellyandmark.com,madewell.com,mail.yahoo.com,mazdausa.com,milesplit.live,monsterenergy.com,newyorker.com,norton.com,pandora.com,payment.nba.com,porsche.com,qobuz.com,rivals.com,soundcloud.com,spotify.com,subway.com,techcrunch.com,ticketmaster.*,tidal.com,tirerack.com,twitter.com,uber.com,ubereats.com,usaa.com,vimeo.com,visible.com,weather.com,wunderground.com,www.yahoo.com,x.com##+js(set, Navigator.prototype.globalPrivacyControl, false)
-accuweather.com,acmemarkets.com,aiskillsnavigator.microsoft.com,boston.com,capezio.com,chime.com,costco.com,crunchyroll.com,deezer.com,delta.com,dnb.co.uk,dnb.com,dollargeneral.com,engadget.com,espn.com,eventbrite.com,filson.com,flyfrontier.com,formula1.com,geizhals.de,gladiatorgarageworks.com,harborfreight.com,hopwtr.com,jdsports.com,kkrt.com,lenscrafters.com,livewithkellyandmark.com,madewell.com,mail.yahoo.com,mazdausa.com,milesplit.live,monsterenergy.com,newyorker.com,norton.com,pandora.com,payment.nba.com,porsche.com,qobuz.com,rivals.com,soundcloud.com,spotify.com,subway.com,techcrunch.com,ticketmaster.*,tidal.com,tirerack.com,twitter.com,uber.com,ubereats.com,usaa.com,vimeo.com,visible.com,weather.com,wunderground.com,www.yahoo.com,x.com##+js(set, navigator.globalPrivacyControl, false)
+accuweather.com,acmemarkets.com,aiskillsnavigator.microsoft.com,boston.com,capezio.com,chime.com,costco.com,crunchyroll.com,deezer.com,delta.com,dnb.co.uk,dnb.com,dollargeneral.com,engadget.com,espn.com,eventbrite.com,filson.com,flyfrontier.com,formula1.com,geizhals.de,gladiatorgarageworks.com,harborfreight.com,hopwtr.com,jdsports.com,kkrt.com,lenscrafters.com,livewithkellyandmark.com,madewell.com,mail.yahoo.com,mazdausa.com,michaels.com,milesplit.live,monsterenergy.com,newyorker.com,norton.com,pandora.com,payment.nba.com,porsche.com,qobuz.com,rivals.com,soundcloud.com,spotify.com,subway.com,techcrunch.com,ticketmaster.*,tidal.com,tirerack.com,twitter.com,uber.com,ubereats.com,usaa.com,vimeo.com,visible.com,weather.com,wunderground.com,www.yahoo.com,x.com##+js(set, Navigator.prototype.globalPrivacyControl, false)
+accuweather.com,acmemarkets.com,aiskillsnavigator.microsoft.com,boston.com,capezio.com,chime.com,costco.com,crunchyroll.com,deezer.com,delta.com,dnb.co.uk,dnb.com,dollargeneral.com,engadget.com,espn.com,eventbrite.com,filson.com,flyfrontier.com,formula1.com,geizhals.de,gladiatorgarageworks.com,harborfreight.com,hopwtr.com,jdsports.com,kkrt.com,lenscrafters.com,livewithkellyandmark.com,madewell.com,mail.yahoo.com,mazdausa.com,michaels.com,milesplit.live,monsterenergy.com,newyorker.com,norton.com,pandora.com,payment.nba.com,porsche.com,qobuz.com,rivals.com,soundcloud.com,spotify.com,subway.com,techcrunch.com,ticketmaster.*,tidal.com,tirerack.com,twitter.com,uber.com,ubereats.com,usaa.com,vimeo.com,visible.com,weather.com,wunderground.com,www.yahoo.com,x.com##+js(set, navigator.globalPrivacyControl, false)
 aceee.org##+js(prevent-canvas, 2d)
 action.mail.ys983.com$image
 activate.avadacom.com$image
@@ -8767,7 +8788,7 @@ airlift.net##+js(abort-on-property-read, posthog)
 akali.webspecmail.com$image
 akamai.webspecmail.com$image
 akshare.moseasia.com$image
-al.com,attackofthefanboy.com,destructoid.com,edmontonsun.com,gamepur.com,gamerjournalist.com,gameskinny.com,lehighvalleylivecom,lgbtqnation.com,macwelt.de,mlive.com,news8000.com,nj.com,pcwelt.de,primagames.com,siliconera.com,syracuse.com,themarysue.com,touchtapplay.com,wegotthiscovered.com##+js(aost, decodeURI, /(?=^(?!.*\.js))/)
+al.com,attackofthefanboy.com,destructoid.com,edmontonsun.com,gamepur.com,gamerjournalist.com,gameskinny.com,lehighvalleylivecom,lgbtqnation.com,macwelt.de,mlive.com,news8000.com,nj.com,pcwelt.de,pennlive.com,primagames.com,progameguides.com,siliconera.com,syracuse.com,themarysue.com,touchtapplay.com,wegotthiscovered.com##+js(aost, decodeURI, /(?=^(?!.*\.js))/)
 alba.alalikexpress.com$image
 album.moseasia.com$image
 alert.avadacom.com$image
@@ -8825,7 +8846,7 @@ apkpure.*##+js(set-constant, $$.analytics, {})
 apkpure.*##+js(set-constant, $$.analytics.send, noopFunc)
 apkpure.com##+js(remove-node-text, script, /deviceId|__apkpureFirstInteractionType|fingerprintjs|pvid/i)
 apkpure.com##+js(set-local-storage-item, __BEACON_deviceId, $remove$)
-apnews.com,artforum.com,artnews.com,billboard.com,calgaryherald.com,calgarysun.com,crooksandliars.com,deadline.com,dpreview.com,driving.ca,financialpost.com,goldderby.com,golfdigest.com,hollywoodreporter.com,indiewire.com,lfpress.com,nationalpost.com,nbcsports.com,oregonlive.com,ottawasun.com,robbreport.com,rollingstone.com,sherdog.com,sidereel.com,superherohype.com,techcrunch.com,torontosun.com,vancouversun.com,variety.com,vibe.com,windsorstar.com,wwd.com##+js(acs, document.getElementsByTagName, .pubads)
+apnews.com,artforum.com,artnews.com,billboard.com,calgaryherald.com,calgarysun.com,crooksandliars.com,deadline.com,dpreview.com,driving.ca,financialpost.com,goldderby.com,golfdigest.com,hollywoodreporter.com,indiewire.com,lfpress.com,nationalpost.com,nbcsports.com,oregonlive.com,ottawasun.com,robbreport.com,rollingstone.com,sherdog.com,sidereel.com,superherohype.com,techcrunch.com,torontosun.com,vancouversun.com,variety.com,vibe.com,wfaa.com,windsorstar.com,wqad.com,wtol.com,wtsp.com,wwd.com##+js(acs, document.getElementsByTagName, .pubads)
 apo-prod.adobe.io/po-server/link/open$image
 app.businessmaking.progress.net/e/*?elq=$image
 app.c.bloomberg.com$image
@@ -9002,6 +9023,7 @@ bilibili.com##+js(set-constant, __MIRROR_REPORT__.customReportPb, noopFunc)
 bilibili.com##+js(set-constant, __MIRROR_REPORT__.pbReportPv, noopFunc)
 bilibili.com##+js(set-constant, __MIRROR_REPORT__.techReportPb, noopFunc)
 billing.lattice.com$image
+binance.com/bapi/*/message/webhook/open/$image
 bingo.webspecmail.com$image
 biologianet.com##+js(set-constant, UOLPD, {})
 biologianet.com##+js(set-constant, UOLPD.dataLayer, {})
@@ -9010,6 +9032,7 @@ bismarck.townsquaremedia.info$image
 bitdefender.com##body[style="opacity: 0;"]:style(opacity: 1 !important;)
 biteki.com##.slick-slide > div[id] + script:upward(1):remove()
 bizjournals.com##.c1-ad-sticky
+biznesenter.pl##+js(abort-current-script, document.createElement, gtm.start)
 bl-1.com$image
 blog.fc2.com##.side-menu > div.sidebar-style > script[src^="//counter1.fc2.com/"]:upward(2)
 blog.fc2.com##div[class$="_outline"] > div > div.plugin-counter:upward(2)
@@ -9075,6 +9098,7 @@ cccp.es.relay.walmart.com$image
 cccp.relay.walmart.ca$image
 cccp.relay.walmart.com.mx$image
 cd.quickpage.email$image
+cdn.mcauto-images-production.sendgrid.net/*/1x1.gif$image
 cdn.shopify.com/shopifycloud/shopify/assets/themes_support/notifications/spacer-$image
 cemail.thnks.com$image
 cend.baygardensresorts.com$image
@@ -12233,6 +12257,8 @@ colliers.com##+js(set-local-storage-item, visitorId, $remove$)
 coloradoan.com##+js(set-local-storage-item, user_insights, $remove$)
 com-com-i-sub-demo-p-pro-bhyktzus.email.rycofilters.com$image
 comichara.com,movient.net###text-6
+complex.com##+js(set-local-storage-item, poll_anonymous_id, $remove$)
+compo.de##+js(set-local-storage-item, rid, $remove$)
 compute.click.s11.sfmc-osl.com$image
 computerbild.de##.articleAdditional > .mehrthema
 computerweekly.com##+js(set-local-storage-item, anonUserTrackingID, $remove$)
@@ -14645,6 +14671,7 @@ email.aph.atproperties.com$image
 email.aph.compass.com$image
 email.api.cloud.metodostandup.it$image
 email.api.glovoapp.com$image
+email.api.nhncloudservice.com/email/*/collectors/readCheck/$image
 email.api.stocksharksacademy.hu$image
 email.api.zillinks.com$image
 email.apicepsico.com.br$image
@@ -96499,6 +96526,7 @@ gala.com##+js(set-local-storage-item, _gal1, $remove$)
 gamespot.com##+js(set-local-storage-item, ppid, $remove$)
 gamma1-0.cloud.s11.sfmc-osl.com$image
 gate.happycustomer.io$image
+gazetadopovo.com.br##section[class^="pianoRecommender"]
 gbatemp.net,usatoday.com##+js(set, admiral, noopFunc)
 gcdsdk.appsflyersdk.com^
 geinoukame.com##.ninja-recommend-block + br
@@ -97267,6 +97295,7 @@ intercom-mail.com/via/o?$image
 interfootball.heraldcorp.com##+js(abort-on-stack-trace, console, _0x)
 intranet2.click.s11.sfmc-osl.com$image
 investor-web.hdfcfund.com##+js(set-constant, smartech, noopFunc)
+ipay.ztgame.com##+js(prevent-fetch, beacon.ztgame.com)
 iplobalid3.click.s11.sfmc-osl.com$image
 ipr.edison.com$image
 iprmail.ipressroom.com$image
@@ -99464,6 +99493,7 @@ mail.mployeradvisor.com$image
 mail.mtrl.me$image
 mail.muddest.com$image
 mail.nationalgeographic.com$image
+mail.naver.com/readReceipt/notify/$image
 mail.newenglandland.com$image
 mail.novut.com$image
 mail.odfw.com$image
@@ -99784,6 +99814,7 @@ mca469a0.view-qa1.sfmc-marketingqa.com$image
 mca46a12.view-qa1.sfmc-marketingqa.com$image
 mca46a2d.view-qa1.sfmc-marketingqa.com$image
 mca46a31.view-qa1.sfmc-marketingqa.com$image
+mcp.directory##+js(remove-cookie, dotcom_user)
 mdpr.jp##.p-articleList__heading:has(+ div#taboola-below-article-thumbnails-desktop)
 medallia.*/?*&invite-opened=yes$image
 mediamarkt.de##+js(abort-on-property-write, ftr__startScriptLoad)
@@ -100191,6 +100222,7 @@ mkt-email.servbay.com$image
 mkt.gitlab.cn$image
 mkt.mw.cnrgp.com$image
 mktcloud.imagin.com$image
+ml.bitcash.co.jp/c/$image
 mlinks.truckingoffice.com$image
 mltrk.io/pixel$image
 mobile-rest.click.s11.sfmc-osl.com$image
@@ -102217,6 +102249,7 @@ pcgameshardware.de##img[src^="//vg01.met.vgwort.de/"]
 pcid3.click.s11.sfmc-osl.com$image
 pcmag.com##img[src^="https://t.myvisualiq.net/"]
 pcworld.com##+js(href-sanitizer, a[href*="skimresources.com"], ?url)
+peacocktv.com##+js(set-local-storage-item, impressionTrackingSessionId, $remove$)
 pedalparts.co.kr##+js(set-constant, aCounterPageScriptGoodsView, noopFunc)
 pelikan.*##+js(set-local-storage-item, PAPVisitorId, $remove$)
 pellejss.info$image
@@ -102233,6 +102266,7 @@ ping.mg.apexpay.org$image
 pinterest.com/email/open/$image
 pinterest.com/email/tracking.gif$image
 pioneer.eu##+js(remove-attr, onclick, a[href][onclick^="trackOutboundLink"])
+pixel.app.returnpath.net
 pixel.monitor*.returnpath.net$image
 platform.autods.com##+js(set-constant, _conv_q, {})
 platform.autods.com##+js(set-constant, _conv_q.push, noopFunc)
@@ -102497,6 +102531,7 @@ qiita.com##+js(addEventListener-defuser, load, navigator)
 qiita.com##div[class^="css"] > div > div[id^="logly-"]:upward(2)
 qledvideosupport.com$image
 quizlet.com##+js(abort-current-script, document.createElement, Snowplow)
+qwant.com##+js(prevent-fetch, apm.qwant.com/intake/v2/rum/events)
 r.gleam.io$image
 r.ml.reverso.net/tr/op$image
 r.rakuten.co.jp/*.gif?mpe=
@@ -102709,6 +102744,7 @@ scottlobalid3.click.s11.sfmc-osl.com$image
 screenov.eu##.container > div.box:has(> a[href^="https://www.liveinternet.ru/click"])
 sealfit.ontraport.net/o?$image
 search.brave.com##+js(set-local-storage-item, app.usageMetricsOptOut, true)
+search.naver.com##+js(set-cookie-reload, NNB, 1, /, .naver.com)
 seclub.org##a[href^="http://waplog.net/"]
 secure.axocom.happycustomer.io$image
 secure.bman.happycustomer.io$image
@@ -102736,6 +102772,7 @@ sender.email.superpopi.com$image
 sendfox.com/trk/open/$image
 sendpul.se*8080$image
 sendpul.se*image$image
+sendy.*/t/$image
 seorinexpress.com##+js(set-constant, AM_PRODUCT, noopFunc)
 server.avalst.com$image
 server.buyersparadise.happycustomer.io$image
@@ -106601,6 +106638,8 @@ www2.mtrl.me$image
 www22.click.s11.sfmc-osl.com$image
 www3.assetmanagement.pictet$image
 wwwstg.click.s11.sfmc-osl.com$image
+x.com##+js(no-xhr-if, /i/api/1.1/flow/viewer.json)
+x.com##+js(prevent-fetch, /i/api/1.1/flow/viewer.json)
 xealth.froedtert.com$image
 xingyue.geely.com,tineco.com,galaxy.geely.com,guancha.cn##+js(set-constant, sensors, {})
 xingyue.geely.com,tineco.com,galaxy.geely.com,guancha.cn##+js(set-constant, sensors.init, noopFunc)
@@ -109097,6 +109136,7 @@ zonedirector.avadacom.com$image
 ||1412554.fls.doubleclick.net^
 ||14126952.fls.doubleclick.net^
 ||1413725622.rsc.cdn77.org^
+||1414.hexa.su^
 ||14144353.fls.doubleclick.net^
 ||14146474.fls.doubleclick.net^
 ||1414820.collect.igodigital.com^
@@ -120923,6 +120963,7 @@ zonedirector.avadacom.com$image
 ||a.impactradius-tag.com^
 ||a.imput.net^
 ||a.intensse.ro^
+||a.ipinfo.io^
 ||a.ipoque.com^
 ||a.ironpla.net^
 ||a.itim.es^
@@ -126492,6 +126533,7 @@ zonedirector.avadacom.com$image
 ||abrye.com^
 ||abs.cookieless-proxistore.com^
 ||abs.proxistore.com^
+||abs.twimg.com/responsive-web/client-web/loader.HomeTimelineAdblockNotice
 ||abs.yandex.ru^
 ||absentairport.com^
 ||absinfo.eagle.org^
@@ -128439,6 +128481,7 @@ zonedirector.avadacom.com$image
 ||ads.travelaudience.com^
 ||ads.trustx.org^
 ||ads.tver.jp^
+||ads.tvp.pl^
 ||ads.ulti300capi.com^
 ||ads.undertone.com^
 ||ads.us.criteo.com^
@@ -130196,6 +130239,7 @@ zonedirector.avadacom.com$image
 ||aktkb.eshopygo.pl^
 ||aktrack.pubmatic.com^
 ||akutagawa.consumer.gopuff.com.cdn.cloudflare.net^
+||akutagawa.consumer.gopuff.com^
 ||akv2-br-cdn.kwai.net.iberostar.com^
 ||akviv.snagtights.eu^
 ||akwiqx.jdsports.be^
@@ -131132,6 +131176,7 @@ zonedirector.avadacom.com$image
 ||amplifypixel.outbrain.com^
 ||amplilab.thepure.app^
 ||amplitude-experiment.bandlab.com^
+||amplitude.anytype.io^
 ||amplitude.bandlab.com^
 ||amplitude.chess.com^
 ||amplitude.com^
@@ -131833,6 +131878,7 @@ zonedirector.avadacom.com$image
 ||analytics.eventbrite.com^
 ||analytics.everythingstream.com^
 ||analytics.evo.co.uk^
+||analytics.evolushost.com^
 ||analytics.ewz.ch^
 ||analytics.example.com^
 ||analytics.expertstores.co.za^
@@ -132013,6 +132059,7 @@ zonedirector.avadacom.com$image
 ||analytics.infosysequinox.com^
 ||analytics.infosysprize.org^
 ||analytics.infosyspublicservices.com^
+||analytics.infraloods.nl^
 ||analytics.innologica.com^
 ||analytics.inquirernetwork.net^
 ||analytics.inquisitr.com^
@@ -132348,6 +132395,7 @@ zonedirector.avadacom.com$image
 ||analytics.perfumestime.sa^
 ||analytics.pesktop.com^
 ||analytics.petracarestore.com^
+||analytics.pextra.cloud^
 ||analytics.pgatour.com^
 ||analytics.pgncs.notion.so^
 ||analytics.phn.com^
@@ -132771,6 +132819,7 @@ zonedirector.avadacom.com$image
 ||analytics.vivantskincare.com^
 ||analytics.vivint.com^
 ||analytics.vixcloud.co^
+||analytics.vk.asahi.co.jp^
 ||analytics.vodgc.net^$3p
 ||analytics.vortexscans.com^
 ||analytics.voxbusinesscard.com^
@@ -133101,6 +133150,7 @@ zonedirector.avadacom.com$image
 ||anonym.data.funkedigital.de^
 ||anonymised.io^
 ||anonymised.io^$3p
+||anonymized-metrics.rmbl.ws^
 ||anonymous.qub.ca^
 ||anormal-tracker.de^$3p
 ||anpoimages.com^
@@ -133618,6 +133668,7 @@ zonedirector.avadacom.com$image
 ||api-receiver.detailroi.com^
 ||api-register.ujoygames.com/logs/
 ||api-regulations-gov.domains.api.data.gov^
+||api-rengine-stg.viva.id/hit
 ||api-router.kaspersky-labs.com/logger2/metrics/
 ||api-router.kaspersky-labs.com/logger2^
 ||api-rudderstack.fullscript.com^
@@ -134316,6 +134367,7 @@ zonedirector.avadacom.com$image
 ||api.famisafe.com^
 ||api.fanmatics.com/event
 ||api.fantasticfurniture.com.au.cdn.cloudflare.net^
+||api.faphouse.com^$ping
 ||api.farfetch.net^
 ||api.farmaciaartesanal.com^
 ||api.farmaciasanpablo.com.mx.edgekey.net^
@@ -134507,6 +134559,7 @@ zonedirector.avadacom.com$image
 ||api.healthlife.magazine4you.site^
 ||api.hearclearco.store^
 ||api.helefitness.com.br^
+||api.helloextend.com/mintsight
 ||api.helloextend.com^
 ||api.helpshift.com^
 ||api.herbalista.net^
@@ -134673,7 +134726,6 @@ zonedirector.avadacom.com$image
 ||api.lab8oficial.com.br^
 ||api.lablpx.com^
 ||api.lafiorestore.com.br^
-||api.laftel.net/api/*/status/$xhr,redirect=noop.js,script
 ||api.laganeb.com^
 ||api.lamhah.com^
 ||api.land.com^
@@ -135021,6 +135073,7 @@ zonedirector.avadacom.com$image
 ||api.photon.aremedia.net.au^
 ||api.piano.io^
 ||api.picaapi.com^
+||api.pico.bendingspoonsapps.com/v*/web-events
 ||api.pico.tools/metrics/
 ||api.picox.bendingspoons.com/v1/events
 ||api.picox.bendingspoons.com^
@@ -135349,6 +135402,7 @@ zonedirector.avadacom.com$image
 ||api.storyly.io^
 ||api.strats.gg/internal/api/*/visits
 ||api.streamelements.com/science/
+||api.strem.io/api/events
 ||api.strike.fox^
 ||api.studioimmagine.com.br^
 ||api.stytch.com^
@@ -135387,6 +135441,7 @@ zonedirector.avadacom.com$image
 ||api.tatadigital.com/analytics-engine/
 ||api.tatadigital.com^
 ||api.tblcontent.com*/log/
+||api.tblcontent.com^
 ||api.tecbov.com.br^
 ||api.techtouch.jp^
 ||api.teester.com/data/collect
@@ -135511,6 +135566,7 @@ zonedirector.avadacom.com$image
 ||api.userlike.com^
 ||api.userstyles.org/tic/stats
 ||api.userway.org^
+||api.usestoryteller.com/api/app/activity/recordActivity?
 ||api.usestoryteller.com^
 ||api.usw2.pure.cloud^
 ||api.uxsniff.com^
@@ -137884,6 +137940,7 @@ zonedirector.avadacom.com$image
 ||archive-digger.com^
 ||archive.double-kick.co^
 ||archive.org/includes/analytics.js
+||archive.org/includes/athena.js
 ||archive.promatis.com^
 ||archived.first.eloqua.extrahop.com^
 ||archived.learn.eloqua.extrahop.com^
@@ -138760,6 +138817,7 @@ zonedirector.avadacom.com$image
 ||assets.mayoclinic.org.edgekey.net^
 ||assets.mcnichols.com.cdn.cloudflare.net^
 ||assets.media-platform.com^
+||assets.mediadelivery.net/rum.js
 ||assets.mediadelivery.net^
 ||assets.mediahostingcdn.com^
 ||assets.mediaspace.kaltura.com^
@@ -139356,6 +139414,7 @@ zonedirector.avadacom.com$image
 ||athena-event-provider.n11.com^
 ||athena-tech.eu^
 ||athena.accsc.com.au^
+||athena.archive.org^
 ||athena.collegeboard.org.edgekey.net^
 ||athena.io^
 ||athena.nederlandseloterij.nl^
@@ -140774,6 +140833,7 @@ zonedirector.avadacom.com$image
 ||b1sync.outbrain.com^
 ||b1sync.zemanta.com^
 ||b1tow9h4erpw.anur.polymerdev.com^
+||b2.mail.ru/count/$image
 ||b2.shared.global.fastly.net^
 ||b2.trafficdeposit.com^
 ||b202882dccbd789376a81ac881abab4a.safeframe.googlesyndication.com^
@@ -141621,6 +141681,7 @@ zonedirector.avadacom.com$image
 ||barclaycardus.com.ssl.sc.omtrdc.net^
 ||barclaycardus.com^
 ||barclaycardus.tt.omtrdc.net^
+||barcodetool.com^
 ||barddfvgkhctch11.ru^$3p
 ||barefootdreams-us.attn.tv^
 ||baremetrics.com^$3p
@@ -141631,6 +141692,7 @@ zonedirector.avadacom.com$image
 ||barilliance.net^$3p
 ||barion.com^
 ||barium.cheezdev.com^
+||barkfactor.com^
 ||barkfazb.dataplane.rudderstack.com^
 ||barkin.jubileescents.co.uk^
 ||barks.jp/v1/stats
@@ -142341,6 +142403,7 @@ zonedirector.avadacom.com$image
 ||beatselectronicsllc.tt.omtrdc.net^
 ||beaumont.actonservice.com^
 ||beaumontenterprise.com/413gkwMT/init.js
+||beautifulrope.com^
 ||beauty.hotpepper.jp.ssl.sc.omtrdc.net^
 ||beautycircle.com^
 ||beautylish.attn.tv^
@@ -142395,6 +142458,7 @@ zonedirector.avadacom.com$image
 ||beeline.api.flocktory.com^
 ||beeline.beeline-tire.co.jp^
 ||beeline.ru^
+||beelinecolor.com^
 ||beelineconnect.com^
 ||beemray.com^$3p
 ||beemrdwn.com^$3p
@@ -142490,6 +142554,7 @@ zonedirector.avadacom.com$image
 ||beneficios.davivienda.sv^
 ||benefisgpf.live.geonetric.com^
 ||benefits.aon.com^
+||benefitssense.com^
 ||benelph.de^
 ||benelux2.secureforms.mcafee.com^
 ||benent.net/nf/analysis/
@@ -143130,6 +143195,7 @@ zonedirector.avadacom.com$image
 ||bidgx.com^
 ||bidlift.152media.info^
 ||bidline-us-east.bidswitch.net^
+||bidmachine.io^
 ||bidmatic.io^
 ||bidpapers.com^
 ||bidphysics.com^$3p
@@ -143153,6 +143219,7 @@ zonedirector.avadacom.com$image
 ||bienvenido.americanindustriesgroup.com^
 ||bienvivre.chartwell.com^
 ||biesn.crossrope.com^
+||bifrost-api.hotstar.com/v*/events
 ||bifur-eu-west-1.searchly.com^
 ||big-country-blocker.zend-apps.com^
 ||big-skins.com^
@@ -143392,6 +143459,7 @@ zonedirector.avadacom.com$image
 ||bisonline.com^
 ||bisrtb.vidazoo.com^
 ||bisse11111.pcapredict.com^
+||bissell.pl/datalayer/index/events
 ||bisto.customers.edgetag.io^
 ||bisto.shinesty.com^
 ||bit.beformance.com^
@@ -144467,6 +144535,7 @@ zonedirector.avadacom.com$image
 ||box.hirstart.hu^
 ||box.kryptotrejder.sk^
 ||box.zendesk.com^
+||boxandcover.com^
 ||boxcast.com^
 ||boxcloud.com^
 ||boxever.com^
@@ -145825,6 +145894,7 @@ zonedirector.avadacom.com$image
 ||c.bookwalker.jp/v/louis/*/tracks.js
 ||c.bouncepingpong.com^
 ||c.brid.tv^
+||c.bubutv.top^
 ||c.cdn.autotraderspecialty.com^
 ||c.cdn.group^
 ||c.cfjump.com^
@@ -145968,6 +146038,7 @@ zonedirector.avadacom.com$image
 ||c.tt-srv.com^
 ||c.tupsrv.com^
 ||c.tvpixel.com^
+||c.uniten.io^
 ||c.us.heap-api.com^
 ||c.vanityfair.com^
 ||c.vcty.co^
@@ -147718,8 +147789,10 @@ zonedirector.avadacom.com$image
 ||capitaloneservices.demdex.net^
 ||capitaloneservices.tt.omtrdc.net^
 ||capitaloneshopping.com^
+||capitalopera.com^
 ||capitfes.andrefilipe.com.br^
 ||capitp.teacherpimenta.com^
+||caplights.com^
 ||capndr.com^
 ||cappasity.com^
 ||capping.sirius.press^
@@ -148390,7 +148463,7 @@ zonedirector.avadacom.com$image
 ||ccgnuq.bbqgalore.com^
 ||cchlhb.budgetsport.fi^
 ||cchome-stage.adobe.io^
-||cchome.adobe.io^
+||cchome.adobe.io/app/v*/logs^
 ||cci-us.attn.tv^
 ||cciqma.cosabella.com^
 ||ccjep.onehopewine.com^
@@ -149244,6 +149317,7 @@ zonedirector.avadacom.com$image
 ||cdn.caprofitx.com^
 ||cdn.captchafox.com^
 ||cdn.carbonads.com^
+||cdn.cardcluster.com/ma/j.js
 ||cdn.carrotquest.app^
 ||cdn.cartcoders.com^
 ||cdn.cartgenie.com^
@@ -149454,6 +149528,7 @@ zonedirector.avadacom.com$image
 ||cdn.dsmcdn.com/frontend/web/production/dom-event-tracker-
 ||cdn.dsmcdn.com/sfint/production/demeter-prod-*.umd.js
 ||cdn.dsmcdn.com/sfx/mergen/
+||cdn.dsmcdn.com/web/prod/ring-manager.js
 ||cdn.dsspn.com^
 ||cdn.dtblt.com^
 ||cdn.dulceauroraa.com^
@@ -149502,6 +149577,7 @@ zonedirector.avadacom.com$image
 ||cdn.espn.com^
 ||cdn.etc.nu^
 ||cdn.etsy.reputon.com^
+||cdn.eu.amplitude.com/libs/analytics-browser-
 ||cdn.eu.amplitude.com^
 ||cdn.eu.getblueshift.com^
 ||cdn.eu.heap-api.com^
@@ -149573,6 +149649,7 @@ zonedirector.avadacom.com$image
 ||cdn.flowplayer.com^
 ||cdn.fluidplayer.com^
 ||cdn.fluidrausa.com^
+||cdn.fonts.net/t/1.css?
 ||cdn.fonts.net^
 ||cdn.fonts.wsasitecore.net^
 ||cdn.fontshare.com^
@@ -151541,6 +151618,7 @@ zonedirector.avadacom.com$image
 ||celebrus-prod2.nationwide.com^
 ||celebrus.com^$3p
 ||celebs.live^
+||celebtattler.com/world/cache/analytics.js
 ||celestialeuphony.com^
 ||celestialquasar.com^
 ||celestialspectra.com^
@@ -152279,6 +152357,7 @@ zonedirector.avadacom.com$image
 ||chelsea.clicks.hqo.co^
 ||chelseamagazines.com^
 ||chem-guys-staging.myshopify.com^
+||chemistrycore.com^
 ||chengqian-tech.com^
 ||cheqzone.com^
 ||cheqzone.com^$3p
@@ -152396,6 +152475,8 @@ zonedirector.avadacom.com$image
 ||choose.adelaide.edu.au^
 ||choose.nu.edu^
 ||chooseenergy-us.attn.tv^
+||choosefi.com/api/site/track
+||choosefi.com/block-event
 ||choosetexaspower-us.attn.tv^
 ||chord.co^
 ||chosen.css^
@@ -152861,7 +152942,6 @@ zonedirector.avadacom.com$image
 ||classy-online.jp/wp-content/plugins/wp-associate-post-r2/js/click-tracking.js
 ||classy.org^
 ||classyschema.org^
-||claude.ai/api/event_logging/
 ||claude.ai/sentry^
 ||claude.ai^
 ||claudio.treintastudios.com^
@@ -153392,6 +153472,7 @@ zonedirector.avadacom.com$image
 ||clknewz.com^
 ||clknrtrg.pro^
 ||clkstat.china.cn^
+||clktrkd.com^
 ||cllctr.any.run^
 ||cllctr.roistat.com^
 ||cllfa.iheartraves.com^
@@ -153449,6 +153530,7 @@ zonedirector.avadacom.com$image
 ||closte.com^
 ||clothing.blue-industry.com^
 ||clothing.pinglelifestyle.com^
+||clothsense.com^
 ||cloud-adp.fr^
 ||cloud-assets.alicdn.com.w.cdngslb.com^
 ||cloud-cdn.co^
@@ -157850,6 +157932,7 @@ zonedirector.avadacom.com$image
 ||credifence-ss.olladeals.com^
 ||credifenceshop-ss.checkoutera.com^
 ||credify.tnn.in^
+||credistory.ru/api/Metrics/
 ||credistory.ru/api/v1/LiveMetrics/
 ||credit.commercial.capitalontap.com^
 ||credithumanfederalcreditunio.chat.digital.ringcentral.com^
@@ -159036,6 +159119,8 @@ zonedirector.avadacom.com$image
 ||czcqb.skinvirtue.com.au^
 ||czdxto.radiopopular.pt^
 ||czechvrnetwork.com^
+||czesciauto24.pl/p/g^
+||czesciauto24.pl/securegtm/
 ||czgroep.containers.piwik.pro^
 ||czgroep.piwik.pro^
 ||czguii.com^
@@ -159550,6 +159635,7 @@ zonedirector.avadacom.com$image
 ||d1miwkthq39xj8.cloudfront.net^
 ||d1n00d49gkbray.cloudfront.net^
 ||d1q7pknmpq2wkm.cloudfront.net/js/my.fanplayr.com/
+||d1qmrxg9gbf226.cloudfront.net^
 ||d1qnmu4nrib73p.cloudfront.net^
 ||d1qpxk1wfeh8v1.cloudfront.net^
 ||d1r27qvpjiaqj3.cloudfront.net^
@@ -159619,6 +159705,7 @@ zonedirector.avadacom.com$image
 ||d26df8daf8db179201be7548fe1289f2.safeframe.googlesyndication.com^
 ||d273d454df1c257cecf7538a5b3122b3.safeframe.googlesyndication.com^
 ||d276.ourmidland.com^
+||d27623md02evp.cloudfront.net^
 ||d27s92d8z1yatv.cloudfront.net/js/jquery.jw.analitycs.js
 ||d28082025.entrelogik.com.br^
 ||d28903942df3e033271c78c1a92eec05.safeframe.googlesyndication.com^
@@ -159664,6 +159751,7 @@ zonedirector.avadacom.com$image
 ||d2fj3s7h83rb61.cloudfront.net
 ||d2fuc4clr7gvcn.cloudfront.net/track.js
 ||d2fuc4clr7gvcn.cloudfront.net^
+||d2fw3s7rfepszt.cloudfront.net^
 ||d2g2u2795e3fzw.cloudfront.net^
 ||d2gbtcuv3w9qyv.cloudfront.net^
 ||d2gt2ux04o03l1.cloudfront.net^
@@ -159733,6 +159821,7 @@ zonedirector.avadacom.com$image
 ||d3773e7ddad51240e96a9ad304c11f13.safeframe.googlesyndication.com^
 ||d3797b8dd5de64b52401eba3f04ea921.safeframe.googlesyndication.com^
 ||d37f166870e35374acd6d67c3c8c1b63.safeframe.googlesyndication.com^
+||d37l98t2r94go6.cloudfront.net^
 ||d38318ed6b37.50cf26e3.us-east-1.token.awswaf.com^
 ||d38tudgzjt8cbb.cloudfront.net/log.gif?
 ||d395ev7kdef0wl.cloudfront.net/a.gif?
@@ -164986,7 +165075,6 @@ zonedirector.avadacom.com$image
 ||dd.insiad.com^
 ||dd.leboncoin.fr^
 ||dd.nytimes.com^
-||dd.qwant.com^
 ||dd.reuters.com^
 ||dd.seloger-bureaux-commerces.com^
 ||dd.seloger.com^
@@ -165230,6 +165318,7 @@ zonedirector.avadacom.com$image
 ||deciem.my.salesforce-scrt.com^
 ||decify.co^
 ||decision.flagship.io^
+||decisionhut.com^
 ||decisivebase.com^
 ||decisivedrawer.com^
 ||deck-expressions.reamaze.io^
@@ -165528,6 +165617,7 @@ zonedirector.avadacom.com$image
 ||denakop.com^$3p
 ||dengage.com^
 ||dengage.com^$3p
+||dengarden.com/.api/admiral
 ||denison.blueconic.net^
 ||dennis.blueconic.net^
 ||dennis.slgnt.eu^
@@ -165603,6 +165693,7 @@ zonedirector.avadacom.com$image
 ||design.informabi.com^
 ||design.nanawall.com^
 ||design.tourispo.com^
+||designdew.com^
 ||designedtorun.com^
 ||designer-api.hu-manity.co^
 ||designer.artifi.net^
@@ -167596,6 +167687,7 @@ zonedirector.avadacom.com$image
 ||dragonforms.com^
 ||dragonfru.it^
 ||dragonquest.square-enix-games.com^
+||dragontamer.net^
 ||drainpaste.com^
 ||drake.blueconic.net^
 ||drake.enterprise.localist.com^
@@ -168024,6 +168116,7 @@ zonedirector.avadacom.com$image
 ||dtx.delcasas.com.br^
 ||dtxngr.com^$3p
 ||dtxtngytz5im1.cloudfront.net^
+||dty0ycn35t4d2.cloudfront.net^
 ||dtym7iokkjlif.cloudfront.net/dough/
 ||dtzrrz.green-japan.com^
 ||dtzru.colorescience.com^
@@ -168470,6 +168563,7 @@ zonedirector.avadacom.com$image
 ||e.apis.zonkafeedback.com/contacts/tracking|
 ||e.atrc.link^
 ||e.azran.id^
+||e.bad.news^
 ||e.beckmancoulter.com^
 ||e.calibermind.com^
 ||e.channelexco.com^
@@ -169376,6 +169470,7 @@ zonedirector.avadacom.com$image
 ||eat.newtrina.com^
 ||eat9.thebeat925.ca^
 ||eatablesquare.com^
+||eatinglate.com^
 ||eatjav.ekosport.fr^
 ||eatmycookies.mockingbirdcinema.com^
 ||eaton.com.edgekey.net^
@@ -169734,6 +169829,7 @@ zonedirector.avadacom.com$image
 ||echo24-relay.iocnt.net^
 ||echoacloud.com^
 ||echoinghaven.com^
+||echoturkey.com^
 ||ecjsot.aosom.es^
 ||eck.brettspieleck.de^
 ||eckbu.santascoffee.com^
@@ -169831,6 +169927,7 @@ zonedirector.avadacom.com$image
 ||ecr-microfrontend.production.ippen.space^
 ||ecranlarge.com/stat
 ||ecrzm.cusocuts.com^
+||ecs.*.on.aws/events?cee=
 ||ecs.demdex.net^
 ||ecs.office.com^
 ||ecs.tagtoo.co^
@@ -171482,6 +171579,7 @@ zonedirector.avadacom.com$image
 ||emblemhealth.demdex.net^
 ||emblemhealth.scene7.com^
 ||emblemhealthservices.tt.omtrdc.net^
+||embossedpaper.com^
 ||embut.hoki-11.com^
 ||emc.dr-stick.shop^
 ||emcalliance.vmware.com^
@@ -171601,6 +171699,7 @@ zonedirector.avadacom.com$image
 ||emu.motala.no^
 ||emu.pin13.net^
 ||emulatorjs.com^
+||emule-security.org/tracker.js
 ||emvwr2994ad.exactdn.com^
 ||emxdgt.com^
 ||emxdgt.com^$3p
@@ -172451,6 +172550,7 @@ zonedirector.avadacom.com$image
 ||esrtech.com/api/collect
 ||esrtech.com/web-pixels
 ||essaygiants.com^
+||essayplanet.com^
 ||essayspin.com^
 ||esse.ismcdn.jp^
 ||essen.essentia-bd.com^
@@ -173682,6 +173782,7 @@ zonedirector.avadacom.com$image
 ||evs.icy-lake.kickstarter.com^
 ||evs.relay.abbott.com^
 ||evs.segjs.roadpass.com^
+||evs.segment.complex.com^
 ||evs.segment.windstream.com^
 ||evs.sgmt.loom.com^
 ||evs.sgmt.loom.com^$script
@@ -174053,6 +174154,7 @@ zonedirector.avadacom.com$image
 ||external-fra3-2.xx.fbcdn.net^
 ||external-preview.redd.it^
 ||external-promo-metrics.yandex.net^
+||external-tag.mysquadbeyond.com^
 ||external.airport.ai^
 ||external.citynews.it^
 ||external.fpbc1-1.fna.fbcdn.net.iberostar.com^
@@ -176136,6 +176238,7 @@ zonedirector.avadacom.com$image
 ||files.upscore.com/iframe/iframe_conversion_tracking.js$script,redirect=noop.js,domain=schwarzwaelder-bote.de
 ||files.upscore.com^
 ||files.urlinsgroup.com^
+||files.userlink.ai/public/tracking.js
 ||files.userlink.ai^
 ||files.webyn.ai^
 ||files.wolframcdn.com.edgekey.net^
@@ -176198,6 +176301,7 @@ zonedirector.avadacom.com$image
 ||finalfantasyxiv.com^
 ||finalid.com^$3p
 ||finalizeforce.com^
+||finaloptics.com^
 ||finalsite.com^
 ||finalsite.net^
 ||finalyticsdata.com^
@@ -176479,6 +176583,7 @@ zonedirector.avadacom.com$image
 ||fittingbox.com/analytics/
 ||fittingbox.com^
 ||fitwear.szfitwear.com.br^
+||fitwithalpine.com^
 ||fitymi.app/js/script.js
 ||fiu.apparmor.com^
 ||fiuoo.molarclean.com^
@@ -176524,6 +176629,7 @@ zonedirector.avadacom.com$image
 ||fjjkh.thelostestate.com^
 ||fjkjaj.peterhahn.nl^
 ||fjnrh.period.co^
+||fjordsand.com^$redirect=noop.js,script
 ||fjortk.braun-hamburg.com^
 ||fjqtg.resthavenokc.com^
 ||fjqtyu.bethowen.ru^
@@ -176640,6 +176746,7 @@ zonedirector.avadacom.com$image
 ||fldoai.municipal.com^
 ||flea.elbertsnaturalfoods.com^
 ||flea.welikeoliver.com^
+||fleathecat.com^
 ||fleet-eml.postmates.com^
 ||fleetcdn.com^
 ||fleetfeet.myshopify.com^
@@ -176724,6 +176831,7 @@ zonedirector.avadacom.com$image
 ||flixgvid.flix360.io^
 ||flixster.com^*/analytics.
 ||flixsyndication.net^$3p
+||flixtrz.com/api/analytics/watch-event|
 ||flixyshop-ss.topashopo.com^
 ||fljaxb.chalktalksports.com^
 ||flmb.cheapcaribbean.com^
@@ -177350,6 +177458,7 @@ zonedirector.avadacom.com$image
 ||forscprts.com^
 ||forseasky.com^
 ||fortawesome.com^
+||fortbeach.com^
 ||fortecthelp.zendesk.com^
 ||forter.com^$3p
 ||fortinet.demdex.net^
@@ -177752,6 +177861,7 @@ zonedirector.avadacom.com$image
 ||franchising.pizzapizza.ca^
 ||franchising.toppers.ca^
 ||franeski.net/js/lib.js
+||franken-analytics.makeup.global^
 ||frankiesbikinis-us.attn.tv^
 ||frankiesbikinis.attn.tv^
 ||frankiesbikinishelp.zendesk.com^
@@ -178345,7 +178455,7 @@ zonedirector.avadacom.com$image
 ||funraise.io^
 ||funsdata.com^
 ||funstage.com^$3p
-||funtoyplanet.com^
+||funtoyplanet.com^$redirect=noop.js,script
 ||fuooms.aetrex.com^
 ||fuoqr.comfortorthowear.com^
 ||fupa.net/fupa/api.php?p=besucher_klick
@@ -180357,6 +180467,7 @@ zonedirector.avadacom.com$image
 ||gitbook.com/v1/integrations/googleanalytics/
 ||gitbook.com^
 ||gitcrumbs.com^
+||gitfut.com/*/view
 ||githack.com^
 ||github.blog^
 ||github.com/_private/browser/stats
@@ -182257,6 +182368,7 @@ zonedirector.avadacom.com$image
 ||graduate.quinnipiac.edu^
 ||grafana-agent.cuboxx.io^
 ||grafana-alloy.rum.gcp.pgcloud.com^
+||grafana-app-proxy.consumer.gopuff.com/collect
 ||grafana.net/collect/
 ||grafana.net^
 ||graffiti-tags.apple.com^
@@ -182559,6 +182671,7 @@ zonedirector.avadacom.com$image
 ||gripi.online^
 ||grit.software^
 ||griza.homebase.co.uk^
+||grizly.*/metrics/
 ||grizzlyapps.com^
 ||grjxzyrk.birchevents.com^
 ||grkesp3hf5.data.adobedc.net^
@@ -186805,6 +186918,7 @@ zonedirector.avadacom.com$image
 ||h2.upsellit.com^
 ||h20qtjygwppc.statuspage.io^
 ||h2porn.com/new-hit/?
+||h2tcbox.baidu.com^
 ||h2tcbox.n.shifen.com^
 ||h3.nfl.map.fastly.net^
 ||h30-deploy.obviyo.net^
@@ -187461,6 +187575,7 @@ zonedirector.avadacom.com$image
 ||heatmap.it^
 ||heatmap.it^$3p
 ||heatmap.kenga.tech^
+||heatmap.support-inc.co.jp^
 ||heatmapcore.com^
 ||heatmaps.lcisoft.it^
 ||heatmaps.monsido.com^
@@ -187510,6 +187625,7 @@ zonedirector.avadacom.com$image
 ||helens.actonservice.com^
 ||helfen.famev.de^
 ||heliguy.myshopify.com^
+||helios.g2a.com^
 ||helios.undergroundgameshow.com^
 ||helium-seo.com^
 ||heliumads.com^
@@ -187721,6 +187837,7 @@ zonedirector.avadacom.com$image
 ||hevir.ryanandrose.co^
 ||hevoziguty.edgarsuites.com^
 ||hevqaz.submarino.com.br^
+||hexa.su/script.js
 ||hexagon-analytics.com^$3p
 ||hexagon-cdn.com^
 ||hexgator.com^
@@ -188010,6 +188127,7 @@ zonedirector.avadacom.com$image
 ||hit360.tech^
 ||hitachi-hightech-as.actonservice.com^
 ||hitbox.com^$3p
+||hitboxdesigns.com^
 ||hitcount.dk^$3p
 ||hitcounter.ru$3p
 ||hitcountersonline.com^$3p
@@ -188291,6 +188409,7 @@ zonedirector.avadacom.com$image
 ||hochschwarzwald.user.com^
 ||hockerty.com^
 ||hockeycanada.vercel.app^
+||hockeyfool.com^
 ||hockeyscores.obox.media^
 ||hockeyshop-us.attn.tv^
 ||hockeystack.com^
@@ -188424,6 +188543,7 @@ zonedirector.avadacom.com$image
 ||homepage-tools.schnelle-online.info^
 ||homepage.webcommander.workers.dev^
 ||homepornking.com^
+||homerunfood.com^
 ||homes.com^
 ||homes.jp^
 ||homesciencetools.bigc-apps.com^
@@ -191543,7 +191663,6 @@ zonedirector.avadacom.com$image
 ||img.lb.wbmdstatic.com^
 ||img.learn.abreon.com^
 ||img.link.cabinetry.com^
-||img.litix.io/a.gif
 ||img.lmadps.jp^
 ||img.ltwebstatic.com.cdn.cloudflare.net^
 ||img.ltwebstatic.com^
@@ -193594,6 +193713,7 @@ zonedirector.avadacom.com$image
 ||insights.pembepanjur.com^
 ||insights.perfecttransport.nl^
 ||insights.pharma-news-insights.com^
+||insights.playpilot.net^
 ||insights.prophet.com^
 ||insights.reservesrliving.com^
 ||insights.scrumble.nl^
@@ -194312,6 +194432,7 @@ zonedirector.avadacom.com$image
 ||ipogh.magicmolecule.com^
 ||ipokabu.net/js/analytics.js
 ||iponweb.net^
+||iportal.ru/static/mediadash/tracker.iife.min.js
 ||iportal.ru^
 ||ipost.com^
 ||ippen.space/idat
@@ -195444,7 +195565,9 @@ zonedirector.avadacom.com$image
 ||jitn45twfd-dsn.algolia.net^
 ||jitsu.com^
 ||jitsu.ixbt.com^
+||jitsu.ixbt.games^
 ||jitsu.ixbt.site^
+||jitsu.www1.ru^
 ||jiujpc.asgoodasnew.fr^
 ||jive.com^
 ||jivosite.com^
@@ -197345,6 +197468,7 @@ zonedirector.avadacom.com$image
 ||kitabisa.tokyobola.click^
 ||kitbag.com/api/track|
 ||kitbit.net^$3p
+||kitces.com/wp-json/kwm/v1/track
 ||kitchen.juicer.cc^
 ||kitchenaid-h.assetsadobe.com^
 ||kitconet.com^
@@ -197465,9 +197589,7 @@ zonedirector.avadacom.com$image
 ||klarnaevt.com^
 ||klarnapayments.com^
 ||klarnaservices.com/?a=$image
-||klarnaservices.com/v1/osm-client-script/
 ||klarnaservices.com^
-||klarnaservices.com^$image,3p
 ||klaviyo.com/onsite/js/sentry.
 ||klaviyo.com/onsite/track-analytics?
 ||klaviyo.com^
@@ -197747,6 +197869,8 @@ zonedirector.avadacom.com$image
 ||kokos.click^$3p
 ||kolayik.com/gjyo/
 ||kolesa.kz/ms/rum/v1/send
+||kolivo.id/api/v1/track/event
+||kollabo.id/*/vitals
 ||kollus.com^
 ||komatsu.demdex.net^
 ||kombinat.digital^
@@ -198354,6 +198478,7 @@ zonedirector.avadacom.com$image
 ||l.osakazine.net^
 ||l.otemo-yan.net^
 ||l.ouest-france.fr^
+||l.ovhcloud.com^
 ||l.page.worldvision.ca^
 ||l.paroledemamans.com^
 ||l.player.ooyala.com^
@@ -198467,6 +198592,7 @@ zonedirector.avadacom.com$image
 ||labcorp.customdomains.okta.com^
 ||labcorp.demdex.net^
 ||label.samita.io^
+||labelsensor.com^
 ||lablanca-us.attn.tv^
 ||lablpx.com^
 ||laboredlocket.com^
@@ -198633,6 +198759,7 @@ zonedirector.avadacom.com$image
 ||landsnail.garasjeport1.no^
 ||landsnail.motin.eu^
 ||landstar.actonservice.com^
+||landsuites.com^
 ||landuscooperative.actonservice.com^
 ||landwestern.com^
 ||langdontacticaltechnology.zendesk.com^
@@ -198948,6 +199075,7 @@ zonedirector.avadacom.com$image
 ||leadboxer.com^$3p
 ||leadcertain.actonservice.com^
 ||leadchampion.com^$3p
+||leadconnectorhq.com/stats/event
 ||leadconnectorhq.com^
 ||leaddyno.com^
 ||leaddyno.com^$3p
@@ -199243,6 +199371,7 @@ zonedirector.avadacom.com$image
 ||lenovo.com.edgekey.net^
 ||lenovo.com.ssl.d1.sc.omtrdc.net^
 ||lenovo.com/_ui/desktop/common/js/common/youtubeVideoAnalytic.js
+||lenovo.com/gemets/
 ||lenovo.com/portalpacks/web/js/AnalyticsServiceFactory*.js
 ||lenovo.com^
 ||lenovo.demdex.net^
@@ -200811,6 +200940,7 @@ zonedirector.avadacom.com$image
 ||linternaute.com.edgekey.net^
 ||linux-community.de^
 ||linux-magazin.de^
+||linuxcommunity.io/assets/google-universal-analytics-*.js
 ||linximpulse.net/impulse/
 ||lio8.destinia.com.pa^
 ||liod1ours.com^$3p
@@ -201042,6 +201172,7 @@ zonedirector.avadacom.com$image
 ||liverail.com/track/?
 ||liverpool.groupbycloud.com^
 ||liverpoolfcshop.queue-it.net^
+||livescore.com/external/media/analytics_config/
 ||livescore.com^
 ||livescores-api.chalk247.com^
 ||livesearch-autocomplete.magento-ds.com^
@@ -206573,6 +206704,7 @@ zonedirector.avadacom.com$image
 ||logusage.stockinstore.net^
 ||logw310.ati-host.net^
 ||logwork.com^
+||logws*.ati-host.net^
 ||logws1309.ati-host.net^
 ||logws1330.ati-host.net^
 ||logws1335.ati-host.net^
@@ -206658,6 +206790,7 @@ zonedirector.avadacom.com$image
 ||loopme.com^
 ||loopme.me^
 ||loopmertb.com^
+||looprecycled.com^
 ||loopreturns.com^
 ||loopwidget.com^
 ||loopwork.co^
@@ -207643,6 +207776,7 @@ zonedirector.avadacom.com$image
 ||m.pcmobile.ca^
 ||m.petmire.com^
 ||m.premier.info.shutterstock.com^
+||m.privatesportshop.es^
 ||m.providers.alto.com^
 ||m.realself.com^
 ||m.rech.studio^
@@ -211333,6 +211467,7 @@ zonedirector.avadacom.com$image
 ||media-stat.mail.ru^
 ||media-static.lovehoneyassets.com^
 ||media-taftlaw-com.alias.onilive.com^
+||media-trend.mail.ru/pixel/
 ||media-video.chip.de.edgekey.net^
 ||media-wc.espssl.com^
 ||media-www.canadiantire.ca.edgekey.net^
@@ -211374,6 +211509,7 @@ zonedirector.avadacom.com$image
 ||media.ceros.com^
 ||media.claritylabsolutions.com^
 ||media.complex.com.cdn.cloudflare.net^
+||media.complex.com/common/catalyst.js
 ||media.contentassetscdn.com^
 ||media.cos.com.edgekey.net^
 ||media.crocs.com^
@@ -211917,6 +212053,7 @@ zonedirector.avadacom.com$image
 ||mensch.ekd.de^
 ||mensjournal.com/.api/admiral
 ||mensjournal.com/.bootscripts/analytics.min.js
+||menteechain.com^
 ||mentimeter.com/performance-metrics
 ||mention-me.com^
 ||mentionlink.com^
@@ -216030,6 +216167,7 @@ zonedirector.avadacom.com$image
 ||movetv.com^
 ||movibliss-ss.checkoutera.com^
 ||moviead55.ru^
+||moviebite.cc/api/trakt/
 ||moviefap.com^
 ||moviefone.com/click?
 ||moviefone.com/ping?
@@ -216457,6 +216595,8 @@ zonedirector.avadacom.com$image
 ||mt3.maisontheatre.com^
 ||mt48.net^
 ||mta.forddirectservices.com^
+||mtag-*.wedevs.com^
+||mtag.markopolo.ai^
 ||mtag.microsoft.com^
 ||mtag.mman.kr^
 ||mtags.arcgis.com.edgekey.net^
@@ -217495,6 +217635,8 @@ zonedirector.avadacom.com$image
 ||na.nawpush.com^
 ||na.shgcdn3.com^
 ||na.static.mega.co.nz^
+||na.web.skill.music.a2z.com/api/audioAdStarted
+||na.web.skill.music.a2z.com/api/elementClicked
 ||na.wpmprod.mgsreops.com^
 ||na0.icarol.com^
 ||na1.api.commerce.adobe.com^
@@ -218222,6 +218364,7 @@ zonedirector.avadacom.com$image
 ||netaffiliation.com^$script,3p
 ||netaffinity.io^
 ||netagent.cz^$3p
+||netandbytes.com^
 ||netapm.music.163.com^
 ||netapp.com.ssl.sc.omtrdc.net^
 ||netappinc.tt.omtrdc.net^
@@ -218311,6 +218454,7 @@ zonedirector.avadacom.com$image
 ||netstat.yunnan.cn^
 ||netstats.dk^$3p
 ||netsuite.com^
+||nettg.pl/store-view/api/track-page-view
 ||nettix.fi^
 ||nettokom-lp.information.nettokom.de^
 ||nettoolkit.com^
@@ -221588,6 +221732,7 @@ zonedirector.avadacom.com$image
 ||omnifpc.devry.edu^
 ||omnifpcs.devry.edu^
 ||omnilert.net^
+||omnimove.tourradar.com^
 ||omniomar.com^
 ||omnipeers.com^
 ||omnis.basspro.com^
@@ -221894,6 +222039,7 @@ zonedirector.avadacom.com$image
 ||oneid.live^
 ||oneid.mmstat.com^
 ||oneills.zendesk.com^
+||onekindmarket.com^
 ||onelink-edge.com^
 ||onelink.appsflyer.com^
 ||onelink.me^
@@ -221915,6 +222061,7 @@ zonedirector.avadacom.com$image
 ||onemg.dataplane.rudderstack.com^
 ||onemg.gumlet.io^
 ||onemob.mobi^
+||onemorebump.com^
 ||onenavigation.project1content.com^
 ||onenet.gakujutsu.com^
 ||onenevada.extole.io^
@@ -221978,6 +222125,7 @@ zonedirector.avadacom.com$image
 ||onigh.colorwowhair.com^
 ||onilive.com^
 ||oniom8we.micpn.com^
+||onioncomic.com^
 ||onjjbn.koffiemarkt.be^
 ||onjmsj.sumai-surfin.com^
 ||onkakao.net^
@@ -222014,6 +222162,7 @@ zonedirector.avadacom.com$image
 ||online.sharjahart.org^
 ||online.siteboosters.de^
 ||online.spsglobal.com^
+||online.spsglobal.com^$badfilter
 ||online.yodle.com^
 ||online4media.de^
 ||onlineaccess1.com^
@@ -222053,6 +222202,7 @@ zonedirector.avadacom.com$image
 ||onlyfree.de^*/counterservice/
 ||onlyinboards.zendesk.com^
 ||onlymyhealth.com.edgekey.net^
+||onlystreets.com^
 ||onlywoofs.com^
 ||onmaven.app^
 ||onmlkjiion.carte-gr.total.fr^
@@ -224573,6 +224723,7 @@ zonedirector.avadacom.com$image
 ||passportnews.co.il/system/js/analytics.js
 ||passportnews.co.il/tag_manager.js
 ||passt.cleens.co.uk^
+||passwordbyte.com^
 ||pasta.esfile.duapps.com^
 ||pastatic.picsart.com.cdn.cloudflare.net^
 ||pastemagazine.com^
@@ -224815,6 +224966,7 @@ zonedirector.avadacom.com$image
 ||pbs.fsrv.io^
 ||pbs.getpublica.com^
 ||pbs.hubvisor.io^
+||pbs.inmobi.com^
 ||pbs.intergient.com^
 ||pbs.nextmillmedia.com^
 ||pbs.nitropay.com^
@@ -225163,6 +225315,7 @@ zonedirector.avadacom.com$image
 ||people.moderncampground.com^
 ||people.spaciousskiescampgrounds.com^
 ||people.wdf.sap.corp^
+||peoplebrain.net^
 ||peoplehr.actonservice.com^
 ||peopleonehealth.com^
 ||peoriacommunityagainstviolence.org^
@@ -225297,6 +225450,7 @@ zonedirector.avadacom.com$image
 ||personalization-web.g.mindbox.ru^
 ||personalization.vidio.com^
 ||personalizationmall.com^
+||personalize-edge.contentstack.com/events
 ||personalize-edge.contentstack.com^
 ||personalize.isg-ecda-prod-vpn.us.e01.c01.johndeerecloud.com^
 ||personalizer.io^
@@ -225586,6 +225740,7 @@ zonedirector.avadacom.com$image
 ||pi.pardot.com/analytics
 ||pi.pardot.com/analytics?
 ||pi.pardot.com^
+||pi.pdfjs.express^
 ||pi.technik3d.com^
 ||pia.jp/akam/$script
 ||pia.jp/images/pt.gif$image
@@ -226771,10 +226926,12 @@ zonedirector.avadacom.com$image
 ||player2.h-cdn.com^
 ||playerad-cdn.timesa.pl^
 ||playergo.top^
+||playerhappy.com^
 ||players.brightcove.net^
 ||players.sardius.media^
 ||players.voltaxservices.io^
 ||players.yumpu.com^
+||playerscache.com^
 ||playerserver.walkme.com/Statistics/
 ||playerserver.walkme.com^
 ||playerservice.cdn.tv1.eu^
@@ -228857,6 +229014,7 @@ zonedirector.avadacom.com$image
 ||providesupport.com/cmd/$image
 ||providesupport.com^
 ||provify.io^$3p
+||provingmagic.com^
 ||provisioner.pub.ethos508-prod-va6.ethos.adobe.net^
 ||provize.3dfitness.cz^
 ||provize.brilas.cz^
@@ -230878,6 +231036,7 @@ zonedirector.avadacom.com$image
 ||r.ussp.io^
 ||r.utraff.com^
 ||r.uuidksinc.net^
+||r.vares.top^
 ||r.visitstats.com^
 ||r.wdfl.co/rw.js
 ||r.wdfl.co^
@@ -230928,6 +231087,7 @@ zonedirector.avadacom.com$image
 ||r2r.utas.edu.au^
 ||r3-t.trackedlink.net^
 ||r3.dotdigital-pages.com^
+||r3.mail.ru/k?fver=
 ||r3.mail.ru/k?sign=
 ||r3.trackedweb.net^
 ||r3.visualwebsiteoptimizer.com^
@@ -230977,6 +231137,7 @@ zonedirector.avadacom.com$image
 ||rabbit.meitustat.com^
 ||rabbit.radicalxchange.org^
 ||rabbit.upwardhomes.net^
+||rabbitboots.com^
 ||rabbitbreath.com^
 ||rabbitloader.xyz^
 ||rabbitrifle.com^
@@ -232218,6 +232379,7 @@ zonedirector.avadacom.com$image
 ||rekhtastaticcdn.pc.cdn.bitgravity.com^
 ||reklama.lv/services/collect.php
 ||reklama.lv/services/espy.php
+||reklama.mail.ru/*.gif
 ||reklon.net^
 ||rel-link.californiapsychics.com^
 ||rel.msn.com^
@@ -232233,6 +232395,8 @@ zonedirector.avadacom.com$image
 ||relatorios.prportais.com.br/storage/cdn-adi/news-tracker-min.js
 ||relay-event.talkie-ai.com^
 ||relay-lzglwr.fly.dev^
+||relay-prod.typeracer.com/e/
+||relay-prod.typeracer.com/flags/
 ||relay-t.io^
 ||relay.archlending.com^
 ||relay.brandinglab.com.br^
@@ -232610,6 +232774,7 @@ zonedirector.avadacom.com$image
 ||researchgate.net/beacon/
 ||researchgate.net/track/
 ||researchintel.com^$3p
+||researchlog.dbresearch.com^
 ||researchnow.co.uk^$3p
 ||researchnow.co.uk^$3p,domain=~dynata.com
 ||researchnow.com/t/beacon$3p
@@ -233308,6 +233473,7 @@ zonedirector.avadacom.com$image
 ||ripcurl.eu^
 ||ripleyprd.wpenginepowered.com^
 ||ripleys.directus.app^
+||ripples.sh^$3p
 ||ripzey.carrieres-publiques.com^
 ||ris.p1.awc.lotteryservices.net^
 ||riscitsolutions.actonservice.com^
@@ -233577,6 +233743,7 @@ zonedirector.avadacom.com$image
 ||robotflowermobile.com^
 ||robotgarages.com^
 ||robotics.informz.net^
+||robotrefinery.com^
 ||robotsrefinery.com^
 ||robust-themes.com^
 ||roccofortehotels.demdex.net^
@@ -233598,6 +233765,7 @@ zonedirector.avadacom.com$image
 ||rocketcdn.me/*/tracking.js
 ||rocketcdn.me^
 ||rocketmiles.com^
+||rocketmonitor.com^
 ||rocketmortgage.com.edgekey.net^
 ||rocketmortgage.com.ssl.sc.omtrdc.net^
 ||rocketmortgage.com^
@@ -233788,6 +233956,7 @@ zonedirector.avadacom.com$image
 ||route.kcvisibility.com^
 ||routeapp.io/route-analytics/
 ||routeapp.io^
+||routebug.com^
 ||routemaps.de^
 ||router.infolinks.com^
 ||router.parklogic.com^
@@ -234606,6 +234775,7 @@ zonedirector.avadacom.com$image
 ||run.app/event-tracking-trigger
 ||run.app/events$domain=imgur.com|worldstar.com|worldstarhiphop.com
 ||run.app/events-receiver/get-web-event
+||run.app/events?cee=
 ||run.app/metrics/
 ||run.app/track.js
 ||run.crtx.info/track.min.js
@@ -235545,6 +235715,7 @@ zonedirector.avadacom.com$image
 ||s1.adzonestatic.com^
 ||s1.barrosbueno.com.br^
 ||s1.bkjn.nl^
+||s1.bss.2gis.com^
 ||s1.carnext.com^
 ||s1.carryonx.de^
 ||s1.citypass.net^
@@ -237131,6 +237302,7 @@ zonedirector.avadacom.com$image
 ||sats.mailbrew.com^
 ||sats.manager-magazin.de^
 ||sats.spiegel.de^
+||satualumni.itb.ac.id/api/client-logs
 ||saturno.nutrijuliamenezes.com.br^
 ||sauder-us.attn.tv^
 ||sav.stape.io^
@@ -237560,6 +237732,7 @@ zonedirector.avadacom.com$image
 ||sciencedart.com^
 ||sciencefix.blog^
 ||sciencerevenue.com^$3p
+||sciencevault.net^
 ||sciencex.com/api/location/
 ||scientific-python.org^
 ||scientificshirt.com^
@@ -238281,6 +238454,7 @@ zonedirector.avadacom.com$image
 ||seamless.wtaxgroup.co^
 ||seamlesssalon.com^
 ||seao.business.samsung.com^
+||seaotterplay.com^
 ||search-api.fie.future.net.uk^
 ||search-api.fie.futurecdn.net/js/*/master-*/analytics-library-entry-getCustomTrackingId.js
 ||search-api.joongna.com/v*/ga/log|
@@ -239360,6 +239534,7 @@ zonedirector.avadacom.com$image
 ||sendgrid.com^
 ||sendgrid.employeelinkapp.com^
 ||sendhark.com^
+||sendinblast.com^
 ||sendinblue.com^
 ||sendingspire.com^
 ||sendlane.com^
@@ -239631,6 +239806,7 @@ zonedirector.avadacom.com$image
 ||sephora-qa.branchstaging.com^
 ||sephora.cnstrc.com^
 ||sephora.com.ssl.d1.sc.omtrdc.net^
+||sephora.com/js/ufe/isomorphic/thirdparty/fp.min.js
 ||sephora.demdex.net^
 ||sephora.tt.omtrdc.net^
 ||sephoraau.zendesk.com^
@@ -245971,6 +246147,7 @@ zonedirector.avadacom.com$image
 ||silent-basis.pro^
 ||silentcredit.com^
 ||silentjackal.com^
+||silentsingle.com^
 ||siliconlabs.sc.omtrdc.net^
 ||siliconlabs.tt.omtrdc.net^
 ||siliconslow.com^
@@ -246523,6 +246700,7 @@ zonedirector.avadacom.com$image
 ||skilledview.com^
 ||skillfuldrop.com^
 ||skillfullyfrugal.com^
+||skillpuppy.com^
 ||skillshare.com/events/track
 ||skillshouse.actonservice.com^
 ||skillsoft-codecademy.fides-cdn.ethyca.com^
@@ -251521,9 +251699,12 @@ zonedirector.avadacom.com$image
 ||socialprofitmachine.com^$3p
 ||socialprooff.com^
 ||socialrank.fr/client/$3p
+||socialsend.net^
 ||socialshopwave.com^
 ||socialsnowball.io^
 ||socialtrack.co^$3p
+||socialxup.com/api/sale-accounts
+||socialxup.com/api/track
 ||sociaplus.com^$3p
 ||societe-des-avis-garantis.fr^
 ||society.discoverylandco.com^
@@ -263391,6 +263572,7 @@ zonedirector.avadacom.com$image
 ||stat.guiasjuridicas.es^
 ||stat.indidata.com^
 ||stat.interestfree.com.au^
+||stat.ip.sb^
 ||stat.iteye.com^
 ||stat.jetsetter.com^
 ||stat.jogaszvilag.hu^
@@ -266432,6 +266614,9 @@ zonedirector.avadacom.com$image
 ||stlhf.hometeamluxuryrentals.com^
 ||stliom.vidaxl.cz^
 ||stlkh.janeiredale.com^
+||stloadi.live/errors
+||stloadi.live/events
+||stloadi.live/stat
 ||stlog*-local.kakao.com^
 ||stlog.d.dmkt-sp.jp^
 ||stlog.dmarket.docomo.ne.jp^
@@ -267042,6 +267227,7 @@ zonedirector.avadacom.com$image
 ||streams.cablecar.sph.com.sg^
 ||streams.yext.com^
 ||streamsend.com^$3p
+||streamsports99.su/assets/trackingManager.*.js
 ||streamstats.prd.dlive.tv^
 ||streamta.pe/stat/
 ||streamta.site/stat/
@@ -267794,7 +267980,6 @@ zonedirector.avadacom.com$image
 ||support.huawei.com/enterprisesearch/3rdParty/opensource/analytics/
 ||support.labcorp.com^
 ||support.me^
-||support.microsoft.com/*/ms.analytics-web-*.min.js
 ||support.norton.com.edgekey.net^
 ||support.norton.com^
 ||support.panasonic.eu^
@@ -268172,6 +268357,7 @@ zonedirector.avadacom.com$image
 ||swann.attn.tv^
 ||swanntechsupport.zendesk.com^
 ||swansonvitamins.workers.dev^
+||swanwebcreations.com^
 ||swapan.tradecosmix.com^
 ||swappie.api.kustomerapp.com^
 ||swarm.video/j79z9kzty.js
@@ -268341,6 +268527,7 @@ zonedirector.avadacom.com$image
 ||swogo.net^
 ||swolverine-us.attn.tv^
 ||swoop.com^
+||swordblock.com^
 ||swordfish.elvietanny.com^
 ||swordfish.floofs.com^
 ||swordfish.holzschuhe.at^
@@ -268854,6 +269041,7 @@ zonedirector.avadacom.com$image
 ||t.*/v1/lst/universal-script?ph=$script
 ||t.10er-tagesticket.de^
 ||t.12thman.com^
+||t.2x.nz^
 ||t.360.audion.fm^
 ||t.360playvid.info^
 ||t.451.io^
@@ -270633,7 +270821,7 @@ zonedirector.avadacom.com$image
 ||tags.tiq.rbcinsurance.com^
 ||tags.tiq.rbcprivateinsurance.com^
 ||tags.tiq.worldprotect.com^
-||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp|brother-usa.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|thesun.co.uk|anantara.com|iflscience.com|calvinklein.ca|taylor.com|news.com.au|agoda.com|vodafone.com.tr|huawei.com|the-sun.com|lavazza.com
+||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp|brother-usa.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|anantara.com|iflscience.com|calvinklein.ca|taylor.com|news.com.au|agoda.com|vodafone.com.tr|huawei.com|the-sun.com|lavazza.com|greenmangamingbundles.com
 ||tags.tiqcdn.com/utag/*/utag.sync.js$domain=yousee.dk|sibreal.org|calvinklein.ca|hosteurope.de|news.com.au|lavazza.com
 ||tags.tiqcdn.com/utag/*/utag.v.js
 ||tags.tiqcdn.com^
@@ -271219,6 +271407,7 @@ zonedirector.avadacom.com$image
 ||targetbay.com^
 ||targeted-messages.triptease.io^
 ||targetemsecure.blob.core.windows.net^
+||targetfax.com^
 ||targetfuel.com^$3p
 ||targeting.api.drift.com^
 ||targeting.focas.jp^
@@ -271682,7 +271871,6 @@ zonedirector.avadacom.com$image
 ||tdgobe.uk.urth.co^
 ||tdgobe.urth.co^
 ||tdi.cartoonnetwork.com^
-||tdid.m.qq.com^
 ||tdinsurance.intelliresponse.com^
 ||tdjvod.chevignon.com.co^
 ||tdk.petsplace.nl^
@@ -271986,6 +272174,7 @@ zonedirector.avadacom.com$image
 ||telemetry.adsninja.ca^
 ||telemetry.algolia.com^
 ||telemetry.am.pictet.com^
+||telemetry.anytype.io^
 ||telemetry.api.playstation.com^
 ||telemetry.api.swiftkey.com^
 ||telemetry.api.wmcdp.io^$3p
@@ -272003,6 +272192,7 @@ zonedirector.avadacom.com$image
 ||telemetry.chrobinson.com^
 ||telemetry.codefusion.technology^
 ||telemetry.commonspirit.org^
+||telemetry.data.nvidia.com^
 ||telemetry.dematic.com^
 ||telemetry.docusign.net^
 ||telemetry.doitbeststore.com^
@@ -272146,6 +272336,7 @@ zonedirector.avadacom.com$image
 ||tenere.loop11.com^
 ||tengbt.healthhelper.kr^
 ||tengointernet.actonservice.com^
+||tengrinews.kz/build/assets/analytic-
 ||tenhourweek.com^
 ||tenicor-us.attn.tv^
 ||tenilstats.turner.com^
@@ -272775,6 +272966,7 @@ zonedirector.avadacom.com$image
 ||themediacdn.com^
 ||themediashop-d.openx.net^
 ||themedicarefamily17184.activehosted.com^
+||themegoats.com^
 ||thememattic.com^
 ||themepicker.com^
 ||themeruby.com^
@@ -273325,6 +273517,7 @@ zonedirector.avadacom.com$image
 ||tinycounter.com^$3p
 ||tinyhousetalk.kit.com^
 ||tinylytics.app^
+||tinylytics.app^$3p
 ||tinymce.com^
 ||tinyns.me^
 ||tinypass.com/checkout/offer/trackShow
@@ -278793,6 +278986,7 @@ zonedirector.avadacom.com$image
 ||transactionale.com^$3p
 ||transactions.sendowl.com^
 ||transatclients.ciamlogin.com^
+||transcend.io/collect
 ||transcend.io^
 ||transcy.io^
 ||transfermarkt.technology^
@@ -279209,6 +279403,7 @@ zonedirector.avadacom.com$image
 ||trio.autosanthana.com^
 ||triodos.piwik.pro^
 ||triolabs.io^
+||trip.com/*/monitor/log
 ||trip.com/bee/collect
 ||trip.com/bf.gif?
 ||trip.com/restapi/soa2/*/clog
@@ -279229,6 +279424,7 @@ zonedirector.avadacom.com$image
 ||tripadvisor.com^
 ||tripbits.com^
 ||tripcdn.com/bee/collect$domain=trip.com
+||tripcdn.com/modules/ibu/xtracker/
 ||tripcrafters.com^
 ||triple-it.nl^
 ||triplelift-match.dotomi.com^
@@ -279739,6 +279935,7 @@ zonedirector.avadacom.com$image
 ||trk.stroeermediabrands.de^
 ||trk.supermarketnews.com^
 ||trk.svr-algorix.com^
+||trk.swipey.me^
 ||trk.swolegripz.com^
 ||trk.tabucbd.com^
 ||trk.tbivision.com^
@@ -281807,6 +282004,7 @@ zonedirector.avadacom.com$image
 ||umami.syg.ma^
 ||umami.tellyou.today^
 ||umami.vidcore.net^
+||umami.vidfast.
 ||umami.vidfast.pro^
 ||umami.vidup.to^
 ||umami.wakarimasen.moe^
@@ -283747,6 +283945,7 @@ zonedirector.avadacom.com$image
 ||v.fastcdn.co^
 ||v.fbplay.vip^
 ||v.gc5.in^
+||v.ipinfo.io^
 ||v.minu.be^
 ||v.myvoleo.com^
 ||v.oney.es^
@@ -284342,6 +284541,8 @@ zonedirector.avadacom.com$image
 ||vertx.locally.com^
 ||vervaunt.com^
 ||vervetrials.com^
+||verybark.com^$redirect=noop.js,script
+||verybouncy.com^
 ||veryfast.litimgs.com^
 ||verygood.systems^
 ||verygoodvault.com^
@@ -284819,6 +285020,7 @@ zonedirector.avadacom.com$image
 ||viewlift.com^
 ||viewlog-hvv.champds.com^
 ||viewmedica.com^
+||viewresource.com^
 ||views-dual.hulu.com^
 ||views.2222.ro^
 ||views.arabnews.com^
@@ -285859,6 +286061,7 @@ zonedirector.avadacom.com$image
 ||vsn-analytics.aparentmedia.com^
 ||vsnt.net^
 ||vsogz.sokolovelaw.com^
+||vsonic.click/api/views/track
 ||vsp.widen.net^
 ||vspglobal.us-4.evergage.com^
 ||vsqce.converse.com^
@@ -286142,6 +286345,7 @@ zonedirector.avadacom.com$image
 ||w.gdfarg.com^
 ||w.gdfsntgr.com^
 ||w.ilfattoquotidiano.it^
+||w.inmobi.com^
 ||w.irs03.com^
 ||w.knuffelwuff.co.uk^
 ||w.likebtn.com^
@@ -286376,6 +286580,8 @@ zonedirector.avadacom.com$image
 ||wallet.chain.com^
 ||walletconnect.com^
 ||walletconnect.org^
+||wallethacks.com/js/t/|
+||wallethacks.com/js/w
 ||walleypay.com^
 ||wallkit.net^
 ||wallkit.net^*/user/event
@@ -292443,6 +292649,7 @@ zonedirector.avadacom.com$image
 ||xbshje.smartbag.com.br^
 ||xbwpfs.fotocasa.es^
 ||xc3.services.livejournal.com/ljcounter/
+||xcafe.com/track/impression?
 ||xcar.com.cn/exp/
 ||xcdn.next.co.uk.edgekey.net^
 ||xcdn.next.co.uk^
