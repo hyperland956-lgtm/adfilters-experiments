@@ -1,7 +1,7 @@
 # Title: AdGuard Base Filter - Without EasyList (Optimized) (DNS/hosts format)
-# Version: 2026-08-23T03:52:24Z
+# Version: 2026-08-30T09:00:55Z
 # Homepage: https://github.com/shubham/adfilters
-# Domains: 5,100
+# Domains: 5,080
 #
 0.0.0.0 004f7f2622.d1b0ccfa6c.com
 0.0.0.0 0101434a46.6e8f64dd63.com
@@ -48,8 +48,8 @@
 0.0.0.0 1b88cc6bce.7898a9d175.com
 0.0.0.0 1bac84d323.4ac38e317e.com
 0.0.0.0 1bx3a4s2.xyz
-0.0.0.0 1cv9wms6.xyz
 0.0.0.0 1f753164dd.9fe32291ce.com
+0.0.0.0 1f7wwaex9rbh.com
 0.0.0.0 1f80923c5e.934285023e.com
 0.0.0.0 1g.8un3nbur69v8vvnn.cyou
 0.0.0.0 1hl.hxjwiwl6j6hc8yb.cfd
@@ -326,7 +326,6 @@
 0.0.0.0 8wp91cpf.xyz
 0.0.0.0 8xp.j6wi5xn6hvtn7prce82o52f.cfd
 0.0.0.0 8xykxu7.jfgrpuy5f326nlcovcg.cyou
-0.0.0.0 8yqqgn5g.xyz
 0.0.0.0 8zft.bv7mt8ifmomphr8yxkv7g1.cyou
 0.0.0.0 9.f2kif7rht23wkr6kwqftuw99m1u7.cyou
 0.0.0.0 90390e7e02.02e4a0ea60.com
@@ -388,7 +387,6 @@
 0.0.0.0 a.catchlucky.cc
 0.0.0.0 a.celeb.st
 0.0.0.0 a.cenont.xyz
-0.0.0.0 a.chmsrv.com
 0.0.0.0 a.claryne.xyz
 0.0.0.0 a.clickintact.com
 0.0.0.0 a.crme7srv.com
@@ -432,6 +430,7 @@
 0.0.0.0 a.playa.to
 0.0.0.0 a.pornchum.com
 0.0.0.0 a.pornhex.com
+0.0.0.0 a.pur.agency
 0.0.0.0 a.rule34.porn
 0.0.0.0 a.shemale99.com
 0.0.0.0 a.stailisyti.space
@@ -470,7 +469,6 @@
 0.0.0.0 aboveaveragefinallycast.com
 0.0.0.0 ac.fapnado.xxx
 0.0.0.0 acquaintjokinglyscoring.com
-0.0.0.0 acs.theluxegallery.shop
 0.0.0.0 ad-api.mannixmarketing.com
 0.0.0.0 ad-server.linkvertise.com
 0.0.0.0 ad-specs.guoshipartners.com
@@ -513,7 +511,6 @@
 0.0.0.0 adokutcontextual.com
 0.0.0.0 adpaths.com
 0.0.0.0 adpluto.com
-0.0.0.0 ads-banner.s3.ap-south-1.amazonaws.com
 0.0.0.0 ads-configs-cdn.openweb.com
 0.0.0.0 ads-dot-fbc-web-2018.uc.r.appspot.com
 0.0.0.0 ads-media.gameforge.com
@@ -525,6 +522,7 @@
 0.0.0.0 ads.datateam.co.uk
 0.0.0.0 ads.digital.disneyadvertising.com
 0.0.0.0 ads.djc.com
+0.0.0.0 ads.dzeko11.st
 0.0.0.0 ads.eurozet.pl
 0.0.0.0 ads.fnch.ch
 0.0.0.0 ads.greengeeks.com
@@ -649,7 +647,6 @@
 0.0.0.0 b.bzl9ype75j18gl.cfd
 0.0.0.0 b.find-me-girl.com
 0.0.0.0 b.gzupload.com
-0.0.0.0 b.januarytubs.store
 0.0.0.0 b.kvg15c8jnju4m95u.cyou
 0.0.0.0 b.luwoz6ptxxjphzhz.cyou
 0.0.0.0 b.m86x5owlft7j19uc.cfd
@@ -687,6 +684,7 @@
 0.0.0.0 banners.myads.ge
 0.0.0.0 bb374653e7.0256d2ea99.com
 0.0.0.0 bb4ytxk9.xyz
+0.0.0.0 bbm-ad-stack-production.up.railway.app
 0.0.0.0 bbnfcfrvjs.com
 0.0.0.0 bce61da3e0.158e65a1db.com
 0.0.0.0 bd3e812f5b.ff2528e9d8.com
@@ -703,8 +701,6 @@
 0.0.0.0 bidmyqps.xyz
 0.0.0.0 biggestplayer.cachefly.net
 0.0.0.0 bizyazanlariz.goaserv.com
-0.0.0.0 bj2rrrjb.xyz
-0.0.0.0 bj6535jz.xyz
 0.0.0.0 bktpcross.com
 0.0.0.0 blakeunwanted.com
 0.0.0.0 blank080227.shop
@@ -777,7 +773,6 @@
 0.0.0.0 bulten.goaserv.com
 0.0.0.0 bulten.goasrv.com
 0.0.0.0 bundle.ppas.monster
-0.0.0.0 bundle.ppass.xyz
 0.0.0.0 burclar12.goaserv.com
 0.0.0.0 bursa.conxxx.pro
 0.0.0.0 bushcraftitaliablog.goaserv.com
@@ -794,10 +789,10 @@
 0.0.0.0 byluizaalfama.go-static.info
 0.0.0.0 byoeg.ck99n4uvwmi73uu.cyou
 0.0.0.0 byoung.goasrv.com
+0.0.0.0 byracucosopenu.com
 0.0.0.0 byznys.goasrv.com
 0.0.0.0 bzit7.goasrv.com
 0.0.0.0 c.3h3ixbj15kz1finbc2htigvzzgmy.cfd
-0.0.0.0 c.bdutrfpls.com
 0.0.0.0 c.down.tube
 0.0.0.0 c.gzupload.com
 0.0.0.0 c041.go-static.info
@@ -927,6 +922,7 @@
 0.0.0.0 cdn.kanjp.com
 0.0.0.0 cdn.lcwss.com
 0.0.0.0 cdn.mtinsqq.com
+0.0.0.0 cdn.myth.dev
 0.0.0.0 cdn.nsuky.com
 0.0.0.0 cdn.nuqwe.com
 0.0.0.0 cdn.oo-t.com
@@ -1039,7 +1035,6 @@
 0.0.0.0 click-rtb2-apac.affinity.net
 0.0.0.0 click-rtb2-apac.mobidick.xyz
 0.0.0.0 click-rtb2-eu.affinity.net
-0.0.0.0 click-rtb2-eu.mobidick.xyz
 0.0.0.0 click-rtb2-useast.affinity.net
 0.0.0.0 click-rtb2-useast.delivrdsp.ai
 0.0.0.0 click-rtb2-useast.mobidick.xyz
@@ -1178,6 +1173,7 @@
 0.0.0.0 cpm.upremium.asia
 0.0.0.0 cpm.vistarsagency.com
 0.0.0.0 cpm.voisetech.com
+0.0.0.0 cpm.wxadserve.xyz
 0.0.0.0 cptmemfoco.go-static.info
 0.0.0.0 cq928y5mflqq.9wu8vigxo2hb45.cfd
 0.0.0.0 cqf.ftrqzvz16iyr23ur7jt5kbc.cyou
@@ -1258,6 +1254,7 @@
 0.0.0.0 d2lzu2a5ishr7o.cloudfront.net
 0.0.0.0 d2nrdy2pg3k168.cloudfront.net
 0.0.0.0 d2ovgc4ipdt6us.cloudfront.net
+0.0.0.0 d2pf0ys5xus6n.cloudfront.net
 0.0.0.0 d2psma0az3acui.cloudfront.net
 0.0.0.0 d318g7p3azvr44.cloudfront.net
 0.0.0.0 d31uxzurj3z4fa.cloudfront.net
@@ -1525,7 +1522,6 @@
 0.0.0.0 emacsbinw64.goasrv.com
 0.0.0.0 email.exawpn.com
 0.0.0.0 embedx.name
-0.0.0.0 ember-cf-netlify.cdn-x.net
 0.0.0.0 emea.goaserv.com
 0.0.0.0 emember.southjersey.goaserv.com
 0.0.0.0 emile-loubet.elycee.goasrv.com
@@ -1698,7 +1694,6 @@
 0.0.0.0 fdf.awefweegfxwergexw.icu
 0.0.0.0 fdsg4234.goasrv.com
 0.0.0.0 fe1ykpaf.xyz
-0.0.0.0 featured.premiermedia.net
 0.0.0.0 feedads.feedblitz.com
 0.0.0.0 fefd.go-static.info
 0.0.0.0 feicaiguojiyulechengbeiyong.goasrv.com
@@ -1746,6 +1741,7 @@
 0.0.0.0 filter-eu.adquint.com
 0.0.0.0 filter-eu.adsaay.com
 0.0.0.0 filter-eu.advertoix.com
+0.0.0.0 filter-eu.adverttise.com
 0.0.0.0 filter-eu.appmonsta.ai
 0.0.0.0 filter-eu.bid4advertising.com
 0.0.0.0 filter-eu.bidargo.com
@@ -1770,12 +1766,15 @@
 0.0.0.0 filter.acedigitalads.com
 0.0.0.0 filter.aderbid.co
 0.0.0.0 filter.adexone.com
+0.0.0.0 filter.adlunar.com
 0.0.0.0 filter.admozartppc.com
 0.0.0.0 filter.adoptimix.com
 0.0.0.0 filter.adora.network
 0.0.0.0 filter.adquint.com
+0.0.0.0 filter.adscholars.com
 0.0.0.0 filter.adtapmedia.com
 0.0.0.0 filter.adverttise.com
+0.0.0.0 filter.adxcircle.com
 0.0.0.0 filter.appmonsta.ai
 0.0.0.0 filter.audienceye.com
 0.0.0.0 filter.bid4advertising.com
@@ -1800,6 +1799,7 @@
 0.0.0.0 filter.pyrrhicmechntech.com
 0.0.0.0 filter.ripamatic.com
 0.0.0.0 filter.srvqk.com
+0.0.0.0 filter.tenxads.com
 0.0.0.0 filter.themediapoint.xyz
 0.0.0.0 filter.torchbrowser.com
 0.0.0.0 filter.trackifyy.com
@@ -1988,7 +1988,6 @@
 0.0.0.0 gfkconnect.goaserv.com
 0.0.0.0 gfny7e.v37cviyje9vwn37.cyou
 0.0.0.0 gggpppht.com
-0.0.0.0 gh8fiugo.xyz
 0.0.0.0 ghidorah.goasrv.com
 0.0.0.0 ghost.goasrv.com
 0.0.0.0 ghostemane.goasrv.com
@@ -2034,7 +2033,6 @@
 0.0.0.0 go.lize.bid
 0.0.0.0 go.redgifs.com
 0.0.0.0 go.waveblossom.com
-0.0.0.0 go1.3mre.work
 0.0.0.0 go1.reachsrv.com
 0.0.0.0 go1.trakit18.com
 0.0.0.0 go1.trakit22.com
@@ -2179,7 +2177,6 @@
 0.0.0.0 haven-life.goasrv.com
 0.0.0.0 haw.goaserv.com
 0.0.0.0 haydioynayalim.goaserv.com
-0.0.0.0 hbjl23w8.xyz
 0.0.0.0 hbook.goasrv.com
 0.0.0.0 hbp516n2mrbeu.35gkj9954pob3i37.cyou
 0.0.0.0 hbx.media.net
@@ -2402,7 +2399,6 @@
 0.0.0.0 intranet.notifysrv.com
 0.0.0.0 investigations.go-static.info
 0.0.0.0 io.fapnow.xxx
-0.0.0.0 ioruwh09.xyz
 0.0.0.0 ip356694986.ahcdn.com
 0.0.0.0 ip52.go-static.info
 0.0.0.0 ipk8.i469r3ukrhjokmzrh77oqt7pwuvzfhhv8x42.cyou
@@ -2481,7 +2477,6 @@
 0.0.0.0 jcgogo.goaserv.com
 0.0.0.0 jcip2.go-static.info
 0.0.0.0 jdauthc.goaserv.com
-0.0.0.0 jdvzwpsfnjphs.com
 0.0.0.0 je2.1c5f1htu9fzkbx8j.cfd
 0.0.0.0 jess-embrut.goasrv.com
 0.0.0.0 jesusenriquelosada.goasrv.com
@@ -2601,7 +2596,6 @@
 0.0.0.0 koimuna.x.go-static.info
 0.0.0.0 koisuru-working-mama.goaserv.com
 0.0.0.0 kpe18r.b9fcim9nzve9u2j1eyezycce.cyou
-0.0.0.0 kpqlrfyy.xyz
 0.0.0.0 kps.ff.goaserv.com
 0.0.0.0 kps.go-static.info
 0.0.0.0 kpwwmgix.bo4qlh8u5zi59l21glpm6p.cyou
@@ -2642,7 +2636,6 @@
 0.0.0.0 l.5ihilk8u6wbohb.cyou
 0.0.0.0 l.71mnjocvbcxb1jv.cfd
 0.0.0.0 l.9jruc7tilmjpmmy.cyou
-0.0.0.0 l0cpto94.xyz
 0.0.0.0 l1btkzh7rf3y.8jftebcmv5hoyrtontkmiwt4qm4b.cyou
 0.0.0.0 l1oeoguxy.fwq52gimb2cbp2r6uifzp46kpntltth.cyou
 0.0.0.0 l1v2m4fnuz8ce7955b72xb.16eq4pk9zxgzu4vojk.cyou
@@ -2677,16 +2670,15 @@
 0.0.0.0 lejiuyule.goaserv.com
 0.0.0.0 leobien.goaserv.com
 0.0.0.0 lepe.go-static.info
-0.0.0.0 lepidpomps.com
 0.0.0.0 lerner.goaserv.com
 0.0.0.0 les-belles-femmes.go-static.info
 0.0.0.0 lesalon.goasrv.com
 0.0.0.0 lewd.ws
-0.0.0.0 lib-wp.dev
 0.0.0.0 license.brandnewapp.pro
 0.0.0.0 lifelinuxbr.goasrv.com
 0.0.0.0 lifeofnett.go-static.info
 0.0.0.0 liftyad.xyz
+0.0.0.0 lightlypowerfulgourmet.com
 0.0.0.0 liiofhwfx.c81mm9t4tkxxk815n2kgwi1twl8.cfd
 0.0.0.0 linker.hr
 0.0.0.0 linux-mint.ru.goaserv.com
@@ -2755,7 +2747,6 @@
 0.0.0.0 login.pops.gg
 0.0.0.0 login.revbid.net
 0.0.0.0 login.ripamatic.com
-0.0.0.0 login.rtxplatform.com
 0.0.0.0 login.supernova.inc
 0.0.0.0 login.surfboardinteractive.com
 0.0.0.0 login.syd-1.goaserv.com
@@ -2841,6 +2832,7 @@
 0.0.0.0 matomegj.go-static.info
 0.0.0.0 mawu.azigiheadquarters.xyz
 0.0.0.0 max-adserv.com
+0.0.0.0 max21.info
 0.0.0.0 maxesads.com
 0.0.0.0 mc.vmk6e9phjbfilui.cfd
 0.0.0.0 mdl.sedis.goasrv.com
@@ -2854,6 +2846,7 @@
 0.0.0.0 mediadstream.com
 0.0.0.0 medium-while.com
 0.0.0.0 megapred.com
+0.0.0.0 mejewusodovuca.com
 0.0.0.0 mellow-habit.com
 0.0.0.0 memobook.go-static.info
 0.0.0.0 mernorsk.goasrv.com
@@ -3065,7 +3058,6 @@
 0.0.0.0 orlapolana.goasrv.com
 0.0.0.0 oru3ybl7.xcevcuvuic4k5617vw1cczqh5w73.cyou
 0.0.0.0 ou9m2e2f4hhc.8hw49hipgurimmzrcv8qh6r1e.cfd
-0.0.0.0 ourtown.toledoparent.com
 0.0.0.0 ourtown.westportjournal.com
 0.0.0.0 outpush.net
 0.0.0.0 ouzhoubeiyoumeiyoujijun.goaserv.com
@@ -3078,6 +3070,7 @@
 0.0.0.0 ovyei1vciv.bje14qlhiwvmlnr27fmxgu5fek3.cfd
 0.0.0.0 ox.mequoda.com
 0.0.0.0 oxuo84nyp3v.8oglbl4zlr76m7ncgjig693kleh.cyou
+0.0.0.0 ozoj.com
 0.0.0.0 ozu9c8rlygo8zj8xy4hr.kecit2rc5pnzwcumye.cyou
 0.0.0.0 p.4xicjlqo4uj9uuhm173p.cyou
 0.0.0.0 p.7xccjif6mm6zrf7go6y6z.cyou
@@ -3211,7 +3204,6 @@
 0.0.0.0 purp.sukaporn.com
 0.0.0.0 push.bvsrv.com
 0.0.0.0 push.newsvot.com
-0.0.0.0 push.yieldradius.io
 0.0.0.0 pusqfnqjeekvd.website
 0.0.0.0 pvl.whwxom4lv2qume97.cyou
 0.0.0.0 pwr-ads.com
@@ -3239,7 +3231,6 @@
 0.0.0.0 ql.cvciz8ityuz4g99ybionlol.cyou
 0.0.0.0 qlp.czfhou822nye2zwuotpoxm.cyou
 0.0.0.0 qnoyy3849.i84g1yziwtzbxlox.cfd
-0.0.0.0 qooohwwd.xyz
 0.0.0.0 qoqv.com
 0.0.0.0 qortex.ai
 0.0.0.0 qovua60gue.tubewolf.com
@@ -3268,7 +3259,6 @@
 0.0.0.0 reachableads.com
 0.0.0.0 rec.deezer.com
 0.0.0.0 recontent.services.tvn.pl
-0.0.0.0 recordedfuseexecuted.com
 0.0.0.0 redakcija.alo.rs
 0.0.0.0 redir.bluespringcoast.com
 0.0.0.0 redir.hightid.xyz
@@ -3276,9 +3266,11 @@
 0.0.0.0 rek.www.wp.pl
 0.0.0.0 reklama.shinden.eu
 0.0.0.0 relevanceads.com
+0.0.0.0 relieved-understanding.com
 0.0.0.0 remark.dirtyships.net
 0.0.0.0 reptile.delopoulos.gr
 0.0.0.0 res.adx.opera.com
+0.0.0.0 res.oa.opera.com
 0.0.0.0 resu8.hjfile.cn
 0.0.0.0 results.safeusercheck.com
 0.0.0.0 rev5h5lkgvlkr.etbgc71fv2p3lor6cz.cfd
@@ -3308,7 +3300,6 @@
 0.0.0.0 rtb-apac-v4.adoptimix.com
 0.0.0.0 rtb-apac-v4.affinity.net
 0.0.0.0 rtb-apac-v4.blastmedia.site
-0.0.0.0 rtb-apac-v4.frequency33media.com
 0.0.0.0 rtb-apac-v4.infinityexplorers.com
 0.0.0.0 rtb-apac-v4.mobidick.xyz
 0.0.0.0 rtb-apac-v4.prertbdir.com
@@ -3318,6 +3309,7 @@
 0.0.0.0 rtb-apac-v4.themediapoint.net
 0.0.0.0 rtb-apac-v4.voisetech.com
 0.0.0.0 rtb-apac-v4.yieldoz.com
+0.0.0.0 rtb-apac.admeridianopenrtb.com
 0.0.0.0 rtb-apac.affinity.net
 0.0.0.0 rtb-apac.cpmme.com
 0.0.0.0 rtb-apac.freevpnplanet.com
@@ -3368,7 +3360,6 @@
 0.0.0.0 rtb-eu.cortexbid.com
 0.0.0.0 rtb-eu.cpmme.com
 0.0.0.0 rtb-eu.freevpnplanet.com
-0.0.0.0 rtb-eu.frequency33media.com
 0.0.0.0 rtb-eu.hueadsortb.com
 0.0.0.0 rtb-eu.mobidick.xyz
 0.0.0.0 rtb-eu.optumads.com
@@ -3378,8 +3369,6 @@
 0.0.0.0 rtb-eu.rtbyield.com
 0.0.0.0 rtb-eu.santaads.com
 0.0.0.0 rtb-eu.voisetech.com
-0.0.0.0 rtb-eu.wecall-server.com
-0.0.0.0 rtb-eu.yieldoz.com
 0.0.0.0 rtb-useast-v4.admozartexchange.com
 0.0.0.0 rtb-useast-v4.adnexusmarketing.com
 0.0.0.0 rtb-useast-v4.adoptimix.com
@@ -3395,16 +3384,14 @@
 0.0.0.0 rtb-useast-v4.greedygame.com
 0.0.0.0 rtb-useast-v4.infinityexplorers.com
 0.0.0.0 rtb-useast-v4.liftmyads.com
-0.0.0.0 rtb-useast-v4.logicalmind.online
 0.0.0.0 rtb-useast-v4.mobidick.xyz
 0.0.0.0 rtb-useast-v4.nasrev.com
 0.0.0.0 rtb-useast-v4.optumads.com
 0.0.0.0 rtb-useast-v4.prertbdir.com
 0.0.0.0 rtb-useast-v4.pubsfusion.com
 0.0.0.0 rtb-useast-v4.purestreamads.com
-0.0.0.0 rtb-useast-v4.rnkclkres.com
 0.0.0.0 rtb-useast-v4.rtbyield.com
-0.0.0.0 rtb-useast-v4.santaads.com
+0.0.0.0 rtb-useast-v4.strongmetrics.io
 0.0.0.0 rtb-useast-v4.tropintech.com
 0.0.0.0 rtb-useast-v4.vistarsagency.com
 0.0.0.0 rtb-useast-v4.voisetech.com
@@ -3431,7 +3418,6 @@
 0.0.0.0 rtb-useast.mobidick.xyz
 0.0.0.0 rtb-useast.optumads.com
 0.0.0.0 rtb-useast.prertbdir.com
-0.0.0.0 rtb-useast.rnkclkres.com
 0.0.0.0 rtb-useast.rtbflairads.com
 0.0.0.0 rtb-useast.santaads.com
 0.0.0.0 rtb-useast.wxadserve.xyz
@@ -3487,7 +3473,6 @@
 0.0.0.0 s.b7q9v8z.com
 0.0.0.0 s.bussyhunter.com
 0.0.0.0 s.cant3am.com
-0.0.0.0 s.chmsrv.com
 0.0.0.0 s.clearskyrhythm.com
 0.0.0.0 s.crme7srv.com
 0.0.0.0 s.draqarys.com
@@ -3497,8 +3482,6 @@
 0.0.0.0 s.dsjbna.com
 0.0.0.0 s.dsr577.com
 0.0.0.0 s.dsr9gv.com
-0.0.0.0 s.dsreb7.com
-0.0.0.0 s.dss29f.com
 0.0.0.0 s.dsukwb.com
 0.0.0.0 s.dszjza.com
 0.0.0.0 s.eln33b.com
@@ -3555,6 +3538,7 @@
 0.0.0.0 sab.fast.ge
 0.0.0.0 sableviolet.com
 0.0.0.0 sainwertapr.com
+0.0.0.0 sam.msn.com
 0.0.0.0 samsungtvads.com
 0.0.0.0 sat.cellordion3.net
 0.0.0.0 sat.dipamaid.net
@@ -3567,6 +3551,7 @@
 0.0.0.0 sdg.desihamster.pro
 0.0.0.0 sdhahs.com
 0.0.0.0 seccc.jasjas.xyz
+0.0.0.0 seminarycentral.org
 0.0.0.0 serv.bvsrv.com
 0.0.0.0 serve.affiliate.heurekashopping.sk
 0.0.0.0 serve.faithlifeads.com
@@ -3577,12 +3562,11 @@
 0.0.0.0 servedby.cricketworld.com
 0.0.0.0 servedby.engineeringnews.co.za
 0.0.0.0 servedby.filmamo.com
+0.0.0.0 servedby.healthcarescene.com
 0.0.0.0 servedby.imagineobx.com
 0.0.0.0 servedby.insideradverts.com
-0.0.0.0 servedby.livingmagonline.com
 0.0.0.0 servedby.mannixmarketing.com
 0.0.0.0 servedby.miningweekly.com
-0.0.0.0 servedby.mondiale.co.uk
 0.0.0.0 servedby.myadsmyanmar.com
 0.0.0.0 servedby.pinktriangle.ca
 0.0.0.0 servedby.polity.org.za
@@ -3723,7 +3707,6 @@
 0.0.0.0 swell080227.shop
 0.0.0.0 sync.adkernel.com
 0.0.0.0 syndication.dynsrvtbg.com
-0.0.0.0 syndication.exdynsrv.com
 0.0.0.0 t.3kpe67e6picnqfpzpp.cyou
 0.0.0.0 t.asiantrk.name
 0.0.0.0 t.bbexwxh978vugbij4zctewh5o9bnbj4ohmmpxk.cfd
@@ -3747,6 +3730,7 @@
 0.0.0.0 t.steptrck.site
 0.0.0.0 t.trackora.space
 0.0.0.0 t.traxivo.uno
+0.0.0.0 t.trckforge.site
 0.0.0.0 t.y6no3j288wblwiub7.cyou
 0.0.0.0 t8.1ufztt6mkpt1p1krt3.cfd
 0.0.0.0 t83my.m6l9ih1x259pzcv.cyou
@@ -3759,7 +3743,6 @@
 0.0.0.0 targaubs.com
 0.0.0.0 target.hidabroot.org
 0.0.0.0 tc72vx6m6xqm8jwpoow2yfl9.y7rl72l281fz174.cyou
-0.0.0.0 tdhvk8we.xyz
 0.0.0.0 tds.bid
 0.0.0.0 te2.t6rce6nnty2y2qewtg3fjvkyf7e88ubrfnt3.cyou
 0.0.0.0 techaddom8132.com
@@ -3888,6 +3871,7 @@
 0.0.0.0 trendguardian.go-static.info
 0.0.0.0 tri-c.goasrv.com
 0.0.0.0 troll-bridge.goasrv.com
+0.0.0.0 tron.bbw-porn-video.com
 0.0.0.0 tropel.go-static.info
 0.0.0.0 trustkiwi.com
 0.0.0.0 ts.sopornvideos.com
@@ -3967,7 +3951,6 @@
 0.0.0.0 unkqf.goaserv.com
 0.0.0.0 unlimitedskil.blog.goaserv.com
 0.0.0.0 uno-and-friends.br.go-static.info
-0.0.0.0 untimely-proof.pro
 0.0.0.0 uoukc.7kbwiy7yggpiw56vpiz.cyou
 0.0.0.0 uoydzaom.xyz
 0.0.0.0 up.tbllem.com
@@ -4011,7 +3994,6 @@
 0.0.0.0 v250.goaserv.com
 0.0.0.0 v83766654.goasrv.com
 0.0.0.0 v97k262y6.op97e7c6bu32c26r79t1mrxyp56.cfd
-0.0.0.0 vahqmyowjp.com
 0.0.0.0 vampyrejibmen.com
 0.0.0.0 vardochomsorg.go-static.info
 0.0.0.0 varikoz.goaserv.com
@@ -4190,6 +4172,7 @@
 0.0.0.0 wlrmzcfmrg2it9koclnc.63hgwmuu5ozlxornytw.cyou
 0.0.0.0 wmhn8cpz814zz4.kw5xxgk4kkru2h2ji1zoto4qq.cfd
 0.0.0.0 wn.goasrv.com
+0.0.0.0 wnwtfmpsmslwi.site
 0.0.0.0 wonderfulyesterday.com
 0.0.0.0 workplaceplus.goaserv.com
 0.0.0.0 workspace.tbllprem.com
@@ -4454,7 +4437,6 @@
 0.0.0.0 xml-eu-v4.orbitmacro-site.online
 0.0.0.0 xml-eu-v4.pathloud-hq.online
 0.0.0.0 xml-eu-v4.pink-quantum.pro
-0.0.0.0 xml-eu-v4.pubsfusion.com
 0.0.0.0 xml-eu-v4.qovolta.com
 0.0.0.0 xml-eu-v4.quiet-071b.info
 0.0.0.0 xml-eu-v4.re-media.info
@@ -4498,7 +4480,6 @@
 0.0.0.0 xml-eu-v4.xmlorbit.com
 0.0.0.0 xml-eu-v4.yieldoz.com
 0.0.0.0 xml-eu-v4.zorbitads.com
-0.0.0.0 xml-eu.adexone.com
 0.0.0.0 xml-eu.adoptimix.com
 0.0.0.0 xml-eu.adora.network
 0.0.0.0 xml-eu.adscholars.com
@@ -4516,6 +4497,7 @@
 0.0.0.0 xml-eu.corespin-lab.online
 0.0.0.0 xml-eu.creziamedia.com
 0.0.0.0 xml-eu.dataverixa.com
+0.0.0.0 xml-eu.dollopsdigital.com
 0.0.0.0 xml-eu.dove-node.info
 0.0.0.0 xml-eu.dropmoonrock.online
 0.0.0.0 xml-eu.edit-review.online
@@ -4639,6 +4621,7 @@
 0.0.0.0 xml-v4.hypercast-shop.online
 0.0.0.0 xml-v4.insightadz.com
 0.0.0.0 xml-v4.jasminreader.online
+0.0.0.0 xml-v4.kraftiworks.com
 0.0.0.0 xml-v4.kvicads.com
 0.0.0.0 xml-v4.leaf-logical.online
 0.0.0.0 xml-v4.leapgrid.info
@@ -4743,6 +4726,7 @@
 0.0.0.0 xml.audienceye.com
 0.0.0.0 xml.auraspeedmicro.online
 0.0.0.0 xml.axiombid.com
+0.0.0.0 xml.bappaads.com
 0.0.0.0 xml.bear7395.pro
 0.0.0.0 xml.bid4advertising.com
 0.0.0.0 xml.blastmedia.site
@@ -4809,7 +4793,6 @@
 0.0.0.0 xml.rtbmedweb.com
 0.0.0.0 xml.rtbnext.com
 0.0.0.0 xml.rtxplatform.com
-0.0.0.0 xml.safesearchguard.com
 0.0.0.0 xml.santaads.com
 0.0.0.0 xml.saroadexchange.com
 0.0.0.0 xml.sellglass-lab.online
@@ -4863,7 +4846,6 @@
 0.0.0.0 y.j1rt9ueklk1xogv8eqk2ez3fjm7.cfd
 0.0.0.0 y2vfr9mzx7wxqlxvfu.3jgyicowryr7kcm.cyou
 0.0.0.0 y4.o2v2nj7l366i9ihty6oq2ofrixm1fly.cyou
-0.0.0.0 y7bo6nwk.xyz
 0.0.0.0 y8y6itup4huv.cctp68zu4b3oxrofl74z9g.cyou
 0.0.0.0 yak.juicydevils.gr
 0.0.0.0 yakutiya.goaserv.com
@@ -4923,7 +4905,6 @@
 0.0.0.0 yinlang.go-static.info
 0.0.0.0 yishengbodoudizhu.goasrv.com
 0.0.0.0 yishengbozhuyewangzhan.goasrv.com
-0.0.0.0 yjibimcrcylrg.website
 0.0.0.0 ykokfoyc1v.v6fxgcjj6wk58ftiytm.cyou
 0.0.0.0 ykukx.1z962eokwutk7rpi2n6legcm.cyou
 0.0.0.0 ymhy2.qpumpfxhqx14ypecx9cp1q8p.cfd
@@ -4940,7 +4921,6 @@
 0.0.0.0 yrjvrhw7cg84eh8j.emv3qtl986wv6q.cfd
 0.0.0.0 yrz85t2br8fvlj.4z3y59cbxoqqp3xq.cyou
 0.0.0.0 yt6k33.x3xxm8i5h935ryubgpyc3b1kv.cyou
-0.0.0.0 yt7ztgi0.xyz
 0.0.0.0 yteiq.zcok7117voqo35mz4yffzu72ji.cfd
 0.0.0.0 yueyangwangluobaijiale.goaserv.com
 0.0.0.0 yukikoroom.blog.go-static.info
@@ -5092,6 +5072,7 @@
 0.0.0.0 zu.nb.go-static.info
 0.0.0.0 zuanyingbocai.goaserv.com
 0.0.0.0 zucaishijiebeitouzhu.goaserv.com
+0.0.0.0 zugasezuryjoxo.com
 0.0.0.0 zuikuaihuangguanzhengwangkaihu.go-static.info
 0.0.0.0 zuixinzuqiusaishishipin.goaserv.com
 0.0.0.0 zulidoodles.go-static.info
@@ -5102,4 +5083,3 @@
 0.0.0.0 zxportal.go-static.info
 0.0.0.0 zzlocalsquared.com
 0.0.0.0 zzr4.r71y66246rxwozt18u9nvjy6x4blx44v8pbv.cfd
-0.0.0.0 zzyqkeniw.com
