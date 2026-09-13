@@ -1,7 +1,7 @@
 # Title: Advanced Tracking Protection (DNS/hosts format)
-# Version: 2026-09-06T07:43:46Z
+# Version: 2026-09-13T08:06:36Z
 # Homepage: https://github.com/shubham/adfilters
-# Domains: 192,662
+# Domains: 192,699
 #
 0.0.0.0 -084-gls-223-www-9-k-0brasil.net.daraz.com
 0.0.0.0 -access-logs-1.net.daraz.com
@@ -10703,6 +10703,7 @@
 0.0.0.0 7k2ptpeyg9qyudfto.ay.delivery
 0.0.0.0 7lbd4.armandthiery.fr
 0.0.0.0 7lqhx9sr.micpn.com
+0.0.0.0 7lzwgj.donaukurier.de
 0.0.0.0 7mrohxmwmi.kameleoon.io
 0.0.0.0 7msii23cds-dsn.algolia.net
 0.0.0.0 7mx.eider.com
@@ -14302,6 +14303,7 @@
 0.0.0.0 a2.americasavingsexperts.com
 0.0.0.0 a2.avomeen.com
 0.0.0.0 a2.borgentech.com
+0.0.0.0 a2.cineflix.st
 0.0.0.0 a2.espncdn.com
 0.0.0.0 a2.optincdn.com
 0.0.0.0 a2.slotxbros.com
@@ -23262,6 +23264,7 @@
 0.0.0.0 analytics.bestreviews.com
 0.0.0.0 analytics.betterplaces.nl
 0.0.0.0 analytics.bgr.com
+0.0.0.0 analytics.bhaskarsaikia.in
 0.0.0.0 analytics.bi.encuentra24.com
 0.0.0.0 analytics.biezen.nl
 0.0.0.0 analytics.bigdata.samsung.com
@@ -33662,6 +33665,7 @@
 0.0.0.0 bed2ef43577989ccaa5eda88f6053a6e.safeframe.googlesyndication.com
 0.0.0.0 bed31e7047fd32c9f86a6b30b44bbab0.safeframe.googlesyndication.com
 0.0.0.0 bedb7fb7a13521bb3305848eb8536acb.safeframe.googlesyndication.com
+0.0.0.0 beddingdownbaby.com
 0.0.0.0 beddn.gundrymd.com
 0.0.0.0 bedfafa2111974ac74fa3dc023abf19f.safeframe.googlesyndication.com
 0.0.0.0 bedjet-copy-1-copy-1.gorgias.help
@@ -34471,6 +34475,7 @@
 0.0.0.0 bid.adx.com.ru
 0.0.0.0 bid.atmtd.com
 0.0.0.0 bid.contextweb.com
+0.0.0.0 bid.ctv.house
 0.0.0.0 bid.empowerlocal.co
 0.0.0.0 bid.essrtb.com
 0.0.0.0 bid.g.doubleclick.net
@@ -34581,6 +34586,7 @@
 0.0.0.0 bigmarker.com
 0.0.0.0 bigolive.tv
 0.0.0.0 bigpenisguide.com
+0.0.0.0 bigpicframing.com
 0.0.0.0 bigpress.net
 0.0.0.0 bigscoots-staging.com
 0.0.0.0 bigscoots.com
@@ -34592,6 +34598,7 @@
 0.0.0.0 bigworldfashion.com
 0.0.0.0 bigwprod.api.useinsider.com
 0.0.0.0 bijkep.hotelesestelar.com
+0.0.0.0 bijouxbee.com
 0.0.0.0 bik.gov.tr
 0.0.0.0 bikapi.bikayi.app
 0.0.0.0 bikayi.app
@@ -34689,6 +34696,7 @@
 0.0.0.0 biorender.ada.support
 0.0.0.0 biot.byads.co
 0.0.0.0 biotechne.my.salesforce-scrt.com
+0.0.0.0 biotechnologysciences.com
 0.0.0.0 biotrust-gen.ada.support
 0.0.0.0 bioz.com
 0.0.0.0 bipog.perfectwhitetee.com
@@ -35111,7 +35119,9 @@
 0.0.0.0 blue.thelivechatsoftware.com
 0.0.0.0 blue.unitedbyblue.com
 0.0.0.0 blueairsupport.zendesk.com
+0.0.0.0 bluebellbooks.com
 0.0.0.0 bluebillywig.com
+0.0.0.0 bluebirdteam.com
 0.0.0.0 bluebottlecoffeesupport.zendesk.com
 0.0.0.0 bluebusiness.actonservice.com
 0.0.0.0 bluecava.com
@@ -36177,6 +36187,7 @@
 0.0.0.0 broadwaydirect.us-7.evergage.com
 0.0.0.0 broadwayhollywood-us.attn.tv
 0.0.0.0 broan-nutone.locally.com
+0.0.0.0 broflask.com
 0.0.0.0 broker.bankinter.com.cdn.cloudflare.net
 0.0.0.0 broker.datazoom.io
 0.0.0.0 broker.stuffserve.me
@@ -37893,6 +37904,7 @@
 0.0.0.0 cacklehatchery-us.attn.tv
 0.0.0.0 caclick.baidu.com
 0.0.0.0 cact.sg.fr
+0.0.0.0 cactus.jd.com
 0.0.0.0 cactus.joybuy.com
 0.0.0.0 cad4869780443bf053f78975bc22575f.safeframe.googlesyndication.com
 0.0.0.0 cad8a7c920e31465f2eb4107a6508b41.safeframe.googlesyndication.com
@@ -44382,6 +44394,7 @@
 0.0.0.0 cloudwaysapps.com
 0.0.0.0 cloudwayssites.com
 0.0.0.0 cloudwp.io
+0.0.0.0 cloudx.io
 0.0.0.0 clover.com
 0.0.0.0 clover.luckycharmgold.com
 0.0.0.0 cloverkeys.com
@@ -48798,7 +48811,6 @@
 0.0.0.0 csync.loopme.me
 0.0.0.0 csync.smartadserver.com
 0.0.0.0 csync.smilewanted.com
-0.0.0.0 csyqts.tmon.co.kr
 0.0.0.0 cszwz7y7t6-dsn.algolia.net
 0.0.0.0 ct-costco.com
 0.0.0.0 ct-dev.taskhuman.com
@@ -56532,7 +56544,6 @@
 0.0.0.0 dc8884e02a56.w.hcaptcha.com
 0.0.0.0 dc89e623-e8f8-430c-86f5-1b99b9d5b9c6.rlets.com
 0.0.0.0 dc8na2hxrj29i.cloudfront.net
-0.0.0.0 dc8xl0ndzn2cb.cloudfront.net
 0.0.0.0 dc963bfccb4349fc713dea9f60032e4b.safeframe.googlesyndication.com
 0.0.0.0 dc982b92707b6d9dece3.cf-prod-us-proxy.proxyhog.com
 0.0.0.0 dc98c1550fb38fdc8b6c.cf-prod-us-proxy.proxyhog.com
@@ -58320,6 +58331,7 @@
 0.0.0.0 disturbia-us.reamaze.io
 0.0.0.0 disturbia.co.uk
 0.0.0.0 disturbia.reamaze.io
+0.0.0.0 disutgh7q0ncc.cloudfront.net
 0.0.0.0 dit.whatsapp.net
 0.0.0.0 dit.whatsapp.net.iberostar.com
 0.0.0.0 divee.ai
@@ -65169,6 +65181,7 @@
 0.0.0.0 events.pickzen.com
 0.0.0.0 events.plumbv.com
 0.0.0.0 events.plus.yandex.net
+0.0.0.0 events.plutus.ninja
 0.0.0.0 events.polarbyte.com
 0.0.0.0 events.popinfo.jp
 0.0.0.0 events.practo.com
@@ -71356,6 +71369,7 @@
 0.0.0.0 get.yugengamers.com
 0.0.0.0 get4click.ru
 0.0.0.0 getadmiral.com
+0.0.0.0 getads.ru
 0.0.0.0 getaliveblue-ss.olladeals.com
 0.0.0.0 getalma.eu
 0.0.0.0 getambassador.com
@@ -81097,6 +81111,7 @@
 0.0.0.0 hermes-df-prod.eu.auth0.com
 0.0.0.0 hermes.adopsboost.com
 0.0.0.0 hermes.allo-media.net
+0.0.0.0 hermes.jd.com
 0.0.0.0 hernandocounty-us.govstack.com
 0.0.0.0 hero.easy-tlush.co.il
 0.0.0.0 hero.shakedmetal.co.il
@@ -93893,6 +93908,7 @@
 0.0.0.0 lnd.qsc.com
 0.0.0.0 lndata.labor.md.gov
 0.0.0.0 lndg.page
+0.0.0.0 lndrsapi.com
 0.0.0.0 lnezkw.iturbo.fr
 0.0.0.0 lnfqk.showerenvy.com
 0.0.0.0 lng.xiaohongshu.com
@@ -99242,6 +99258,7 @@
 0.0.0.0 log-e80a5b5c.us.v2.we-stats.com
 0.0.0.0 log-forwarder.product-page-layouts.vpsvc.com
 0.0.0.0 log-gateway.zoom.us
+0.0.0.0 log-h5.imdada.cn
 0.0.0.0 log-hl.snssdk.com
 0.0.0.0 log-ird.outbrain.com
 0.0.0.0 log-lb.skyperfectv.co.jp
@@ -99294,6 +99311,7 @@
 0.0.0.0 log.bloodsugars.live
 0.0.0.0 log.bunjang.co.kr
 0.0.0.0 log.calgary.ca
+0.0.0.0 log.calomeal.com
 0.0.0.0 log.china.cn
 0.0.0.0 log.cizion.com
 0.0.0.0 log.classting.com
@@ -99519,7 +99537,6 @@
 0.0.0.0 logger.21wiz.com
 0.0.0.0 logger.adthrive.com
 0.0.0.0 logger.applovefrom.com
-0.0.0.0 logger.bzu.kr
 0.0.0.0 logger.cloudmobi.net
 0.0.0.0 logger.co.kr
 0.0.0.0 logger.eigene.io
@@ -105130,6 +105147,7 @@
 0.0.0.0 mercury.books.com.tw
 0.0.0.0 mercury.cname.getrockerbox.com
 0.0.0.0 mercury.coupang.com
+0.0.0.0 mercury.jd.com
 0.0.0.0 mercuryace.com
 0.0.0.0 mercuryhealthcare.com
 0.0.0.0 mercy.net.ssl.sc.omtrdc.net
@@ -106259,6 +106277,7 @@
 0.0.0.0 metrics.dunkindonuts.com
 0.0.0.0 metrics.e-abbott.com
 0.0.0.0 metrics.e-wie-einfach.de
+0.0.0.0 metrics.earlygame.com
 0.0.0.0 metrics.earrieta.dev
 0.0.0.0 metrics.eascanada.com
 0.0.0.0 metrics.eastcentral.aaa.com
@@ -116108,6 +116127,7 @@
 0.0.0.0 orpggb.esprit.at
 0.0.0.0 orqhz.alexandrebirman.com
 0.0.0.0 orquestracdn.btgpactual.com
+0.0.0.0 orsdls.di.runestone.samsung.com
 0.0.0.0 orsds.ziavia.com
 0.0.0.0 orsmfg.notino.de
 0.0.0.0 ort.wellsfargo.com.edgekey.net
@@ -119617,6 +119637,7 @@
 0.0.0.0 pla-tk.flipkart.net
 0.0.0.0 pla.fwdcdn.com
 0.0.0.0 pla.pearlinsurance.com
+0.0.0.0 pla.uqload.vc
 0.0.0.0 pla.wigglepixel.nl
 0.0.0.0 plab-blog-stats-api.ash-h-a5e.workers.dev
 0.0.0.0 place-hold.it
@@ -125306,6 +125327,7 @@
 0.0.0.0 request.verisign.com
 0.0.0.0 requestmetrics.com
 0.0.0.0 requestquote.w3apps.co
+0.0.0.0 rer4.com
 0.0.0.0 rerjk.bugmd.com
 0.0.0.0 rertrc.abc-mart.net
 0.0.0.0 res-1.cdn.office.net
@@ -126180,7 +126202,6 @@
 0.0.0.0 rndgc.takemeche.com
 0.0.0.0 rndtech.de
 0.0.0.0 rnengage.com
-0.0.0.0 rnffgv.wemakeprice.com
 0.0.0.0 rnfytdve.batteribyen.dk
 0.0.0.0 rnfytdve.batterionline.no
 0.0.0.0 rnfytdve.batterionline.se
@@ -126866,6 +126887,7 @@
 0.0.0.0 rta2.metro.co.uk
 0.0.0.0 rta2.metro.co.uk.edgekey.net
 0.0.0.0 rta2.mol.im
+0.0.0.0 rta2.newscientist.com
 0.0.0.0 rta2.newscitentist.com.edgekey.net
 0.0.0.0 rta2.newzit.com
 0.0.0.0 rtactivate.com
@@ -139303,6 +139325,7 @@
 0.0.0.0 shc-p-001.sitecorecontenthub.cloud
 0.0.0.0 shdid.me
 0.0.0.0 she-g8f.pages.dev
+0.0.0.0 shealth-analytics-api.samsunghealth.com
 0.0.0.0 sheargovernor.com
 0.0.0.0 sheba.dhakapharmachy.com
 0.0.0.0 sheep.littleboat.digital
@@ -146006,6 +146029,7 @@
 0.0.0.0 soggysponge.com
 0.0.0.0 sogtm.academy.org.il
 0.0.0.0 sogtm.colman.ac.il
+0.0.0.0 sogu.tripster.ru
 0.0.0.0 sohan.sodaibari.com
 0.0.0.0 sohatv.vn
 0.0.0.0 sohiuc.sheego.de
@@ -165031,6 +165055,7 @@
 0.0.0.0 sunmedia.tv
 0.0.0.0 sunny.org
 0.0.0.0 sunnyhealthfitness.zendesk.com
+0.0.0.0 sunnylettings.com
 0.0.0.0 sunnyside.prismic.io
 0.0.0.0 sunrise.adnanagic.com
 0.0.0.0 sunrise.sm-project.com
@@ -165215,6 +165240,7 @@
 0.0.0.0 survicate.com
 0.0.0.0 survivalrealtymedia.com
 0.0.0.0 suse.searchunify.com
+0.0.0.0 sushivolant.com
 0.0.0.0 suspended.hawkhost.com
 0.0.0.0 suspension-superstore.myconvermax.com
 0.0.0.0 suspension.com
@@ -169292,12 +169318,14 @@
 0.0.0.0 techads.nazifshop.com
 0.0.0.0 techadv.actonservice.com
 0.0.0.0 techbook.de.ssl.sc.omtrdc.net
+0.0.0.0 techcatcher.com
 0.0.0.0 techconverter.com
 0.0.0.0 techdignity.com
 0.0.0.0 techdrivethru.com
 0.0.0.0 techdsp.ru
 0.0.0.0 techgifts.tradeshow.globalsources.com
 0.0.0.0 techlab-cdn.com
+0.0.0.0 techmix.net
 0.0.0.0 technical-service.net
 0.0.0.0 technical.kyzen.com
 0.0.0.0 techno.technostorm.de
@@ -169828,6 +169856,7 @@
 0.0.0.0 textmygov.com
 0.0.0.0 textrecruit.com
 0.0.0.0 textrequest.com
+0.0.0.0 texturehunt.com
 0.0.0.0 texturetrick.com
 0.0.0.0 teyourmarketing.trungaleegan.com
 0.0.0.0 teyvmb.moniquelhuillier.com
@@ -171506,6 +171535,7 @@
 0.0.0.0 topcvf.partners-finances.be
 0.0.0.0 topicalcartel.com
 0.0.0.0 topicit.net
+0.0.0.0 topicjungle.com
 0.0.0.0 toplineads.com
 0.0.0.0 toplink-895145543199.us-central1.run.app
 0.0.0.0 toplist.cz
@@ -173571,6 +173601,7 @@
 0.0.0.0 track.duelbits.com
 0.0.0.0 track.dunedinincomegrowth.co.uk
 0.0.0.0 track.dunstan.media
+0.0.0.0 track.dws.com
 0.0.0.0 track.dws.de
 0.0.0.0 track.dws.edgekey.net
 0.0.0.0 track.e-family.ro
@@ -178229,6 +178260,7 @@
 0.0.0.0 tutbc1.www.tapmyback.com
 0.0.0.0 tutmo5uktw33uf5qpgo5rio2ym0bmifr.lambda-url.eu-west-1.on.aws
 0.0.0.0 tutorials.karachitutor.com
+0.0.0.0 tutorshelf.com
 0.0.0.0 tuttletwins-us.attn.tv
 0.0.0.0 tuttocitta.it
 0.0.0.0 tuttofarma.zendesk.com
@@ -178398,6 +178430,7 @@
 0.0.0.0 twochihuahuas.com
 0.0.0.0 twocircles-client.com
 0.0.0.0 twoeej.carrefour.fr
+0.0.0.0 twofishweb.com
 0.0.0.0 twpcbx.ullapopken.at
 0.0.0.0 twptxs.teknikhouse.se
 0.0.0.0 twsdne.petenkoiratarvike.com
@@ -179753,14 +179786,17 @@
 0.0.0.0 ur.b.inhaabit.com
 0.0.0.0 ur.trackingjourney.com
 0.0.0.0 urano.dbdnetwork.it
+0.0.0.0 uranus.jd.com
 0.0.0.0 urbanairship.com
 0.0.0.0 urbancarryholstershelp.zendesk.com
 0.0.0.0 urbandictionary.ai
 0.0.0.0 urbanlaurel.com
+0.0.0.0 urbanopus.net
 0.0.0.0 urcaq.eberjey.com
 0.0.0.0 urdam.hillcrestmemorialgarden.com
 0.0.0.0 urdap.forever21.com
 0.0.0.0 urdupoint-d.openx.net
+0.0.0.0 ureca.samsungapps.com
 0.0.0.0 urehgr.halekulani.com
 0.0.0.0 ureoaw.netthandelen.no
 0.0.0.0 ureruadebis.papawash.com
@@ -185956,6 +185992,7 @@
 0.0.0.0 wl-suppliers.app.cvent.com
 0.0.0.0 wl.arenacommerce.com
 0.0.0.0 wl.bl.frequentvalues.com.au
+0.0.0.0 wl.jd.com
 0.0.0.0 wl.joybuy.com
 0.0.0.0 wl.writeless.ai
 0.0.0.0 wl.yna.co.kr
