@@ -1,7 +1,7 @@
 # Title: Advanced Tracking Protection (DNS/hosts format)
-# Version: 2026-09-27T09:02:21Z
+# Version: 2026-10-04T09:28:47Z
 # Homepage: https://github.com/shubham/adfilters
-# Domains: 192,087
+# Domains: 192,110
 #
 0.0.0.0 -084-gls-223-www-9-k-0brasil.net.daraz.com
 0.0.0.0 -access-logs-1.net.daraz.com
@@ -19629,6 +19629,7 @@
 0.0.0.0 addkt-d.openx.net
 0.0.0.0 addmee.net
 0.0.0.0 addmotortech.zendesk.com
+0.0.0.0 addmoves.com
 0.0.0.0 addnow.com
 0.0.0.0 addons.business
 0.0.0.0 addoor.net
@@ -22944,6 +22945,7 @@
 0.0.0.0 analytic.hawaii.aaa.com
 0.0.0.0 analytic.hotelclub.com
 0.0.0.0 analytic.imlive.com
+0.0.0.0 analytic.is
 0.0.0.0 analytic.kim-tetzlaff.dk
 0.0.0.0 analytic.newmexico.aaa.com
 0.0.0.0 analytic.northernnewengland.aaa.com
@@ -25285,6 +25287,7 @@
 0.0.0.0 api-rvsf.bayengage.com
 0.0.0.0 api-sd.prd.frasersgroup.services
 0.0.0.0 api-sdint.prd.frasersgroup.services
+0.0.0.0 api-sdk.beaconbank.jp
 0.0.0.0 api-sdp.legaseriea.it.edgekey.net
 0.0.0.0 api-server-3.goaffpro.com
 0.0.0.0 api-sg.tingot.com
@@ -29584,6 +29587,7 @@
 0.0.0.0 arthurbrent.kindencoludens.nl
 0.0.0.0 arthurbrent.vandervelden.com
 0.0.0.0 arthurbrent.werkenbijambiq.nl
+0.0.0.0 arthustler.net
 0.0.0.0 artibot.ai
 0.0.0.0 artichokehq.com
 0.0.0.0 article-cms-api.incrowdsports.com
@@ -31740,6 +31744,7 @@
 0.0.0.0 axon.ai
 0.0.0.0 axon.neurograph.io
 0.0.0.0 axonix.com
+0.0.0.0 axonsite.com
 0.0.0.0 axoqjt.gommadiretto.it
 0.0.0.0 axoqvl.daf-shoes.com
 0.0.0.0 axosbank.locatorsearch.net
@@ -36169,6 +36174,7 @@
 0.0.0.0 browser.sentry-cdn.com
 0.0.0.0 browsercfg-drcn.cloud.dbankcloud.cn
 0.0.0.0 browserguides.net
+0.0.0.0 browsertdidticket.m.qq.com
 0.0.0.0 browsify.net
 0.0.0.0 browsing.doamore.com
 0.0.0.0 browsiprod.com
@@ -47671,7 +47677,6 @@
 0.0.0.0 countdown.bestfreecdn.com
 0.0.0.0 countdown.conversionbear.com
 0.0.0.0 counter-growthbook.minute-ly.com
-0.0.0.0 counter-mdpr.freetls.fastly.net
 0.0.0.0 counter.1gb.ru
 0.0.0.0 counter.1i.kz
 0.0.0.0 counter.24log.es
@@ -58869,6 +58874,7 @@
 0.0.0.0 dpm.zebestof.com
 0.0.0.0 dpmsrv.com
 0.0.0.0 dpovcw.the-body-shop.co.jp
+0.0.0.0 dppesulohfqre.cloudfront.net
 0.0.0.0 dppublishinginc.actonservice.com
 0.0.0.0 dprwd.adorama.com
 0.0.0.0 dpservice.fidelity.com.edgekey.net
@@ -59470,6 +59476,7 @@
 0.0.0.0 dustaclean-ss.checkoutera.com
 0.0.0.0 dustapro-ss.topashopo.com
 0.0.0.0 dustavacuum-ss.checkoutera.com
+0.0.0.0 dusthorses.com
 0.0.0.0 dustydime.com
 0.0.0.0 dustyhammer.com
 0.0.0.0 dutch-passion.postaffiliatepro.com
@@ -61635,6 +61642,7 @@
 0.0.0.0 edriving.actonservice.com
 0.0.0.0 edrone.me
 0.0.0.0 edsawa.simplynursery.com
+0.0.0.0 edshowpigs.com
 0.0.0.0 edsights.com
 0.0.0.0 edsightsapi.edsights.com
 0.0.0.0 edtrainingcenter.actonservice.com
@@ -63126,6 +63134,7 @@
 0.0.0.0 endeavorbusinessmedia.actonservice.com
 0.0.0.0 endeavorhealth.org
 0.0.0.0 endgl.cgenetool.com
+0.0.0.0 endhairfall.com
 0.0.0.0 endjb.trendozashop.com
 0.0.0.0 endlesshandbaglinked.com
 0.0.0.0 endlesspens-us.attn.tv
@@ -70395,6 +70404,7 @@
 0.0.0.0 gatewayticketing.com
 0.0.0.0 gather.donga.com
 0.0.0.0 gathercustomers.com
+0.0.0.0 gatherer.m.qq.com
 0.0.0.0 gator.io
 0.0.0.0 gator.uba.ap-southeast-1.volces.com
 0.0.0.0 gator.volces.com
@@ -72003,7 +72013,6 @@
 0.0.0.0 gnrnc.intermobilifurniture.ro
 0.0.0.0 gnsdp.toms.com
 0.0.0.0 gnshwf.room-park.ru
-0.0.0.0 gnsnpaw.com
 0.0.0.0 gntn-pgd.it
 0.0.0.0 gnuavcpc.woods.se
 0.0.0.0 gnv2.net
@@ -80646,6 +80655,7 @@
 0.0.0.0 heartlight.org
 0.0.0.0 heartsyncmedia.com
 0.0.0.0 heatmap-events-collector.instapage.com
+0.0.0.0 heatmap-tracking-do-to-s3-worker-prod.flipdesk.workers.dev
 0.0.0.0 heatmap.com
 0.0.0.0 heatmap.emma.tools
 0.0.0.0 heatmap.enkomion.com
@@ -82263,6 +82273,7 @@
 0.0.0.0 hypercarart.com
 0.0.0.0 hyperdisk.actonservice.com
 0.0.0.0 hyperdx.io
+0.0.0.0 hyperfrost.net
 0.0.0.0 hyperia.sk
 0.0.0.0 hyperice.zendesk.com
 0.0.0.0 hyperion.regiogroei.cloud
@@ -99041,6 +99052,7 @@
 0.0.0.0 log.mmstat.com
 0.0.0.0 log.mofa.go.kr
 0.0.0.0 log.musical.ly
+0.0.0.0 log.news.baidu.com
 0.0.0.0 log.newsvine.com
 0.0.0.0 log.nordot.jp
 0.0.0.0 log.oceanzz.xyz
@@ -101183,6 +101195,7 @@
 0.0.0.0 marathondataco.com
 0.0.0.0 marathonwatchus-us.attn.tv
 0.0.0.0 marblediscussion.com
+0.0.0.0 marbleseeds.com
 0.0.0.0 marceline.wantsext.me
 0.0.0.0 march.landing.ni.com
 0.0.0.0 marchex.io
@@ -110704,6 +110717,7 @@
 0.0.0.0 nanostats.nanopress.it
 0.0.0.0 nanthealth.actonservice.com
 0.0.0.0 nantucketma.api.civicclerk.com
+0.0.0.0 nao.kagane.to
 0.0.0.0 naoforge.net.jumia.com.ng
 0.0.0.0 naot.locally.com
 0.0.0.0 naouzqe.impervadns.net
@@ -122072,6 +122086,7 @@
 0.0.0.0 pulselive.com
 0.0.0.0 pulsembed.eu
 0.0.0.0 pulsepoint-match.dotomi.com
+0.0.0.0 pulsepoint.ideal.house
 0.0.0.0 pulsepoint.org
 0.0.0.0 pulseresearch.com
 0.0.0.0 pultegroup.demdex.net
@@ -129884,6 +129899,7 @@
 0.0.0.0 scholar.google.com
 0.0.0.0 scholarloop.com
 0.0.0.0 scholarlyiq.com
+0.0.0.0 scholarsark.com
 0.0.0.0 scholastic.com.ssl.sc.omtrdc.net
 0.0.0.0 scholasticinc.tt.omtrdc.net
 0.0.0.0 schoolbundle365.com
@@ -163928,6 +163944,7 @@
 0.0.0.0 stream-925.optimove.net
 0.0.0.0 stream-960.optimove.net
 0.0.0.0 stream-log.dditscdn.com
+0.0.0.0 stream-log.profilepassport.jp
 0.0.0.0 stream.aidemsrv.com
 0.0.0.0 stream.borza.com
 0.0.0.0 stream.cadmore.media
@@ -167855,6 +167872,7 @@
 0.0.0.0 tapioni.com
 0.0.0.0 tapir.albertaguardtraining.ca
 0.0.0.0 tapnative.com
+0.0.0.0 tapoutmusic.com
 0.0.0.0 tapper.ai
 0.0.0.0 tappx.com
 0.0.0.0 taptapnetworks.com
@@ -169537,6 +169555,7 @@
 0.0.0.0 theberean.org
 0.0.0.0 thebestfetishsites.com
 0.0.0.0 thebestpaints.com
+0.0.0.0 thebicyclehut.com
 0.0.0.0 thebigvan.com
 0.0.0.0 thebiltmorecompany.us-7.evergage.com
 0.0.0.0 theboeingcompany.tt.omtrdc.net
@@ -173035,6 +173054,7 @@
 0.0.0.0 track.conesulacademy.com
 0.0.0.0 track.connectwise.com
 0.0.0.0 track.contently.com
+0.0.0.0 track.convertfox.com
 0.0.0.0 track.cordial.io
 0.0.0.0 track.cornerstonebuildingbrands.com
 0.0.0.0 track.cosplayware.com
@@ -174536,6 +174556,7 @@
 0.0.0.0 tracking.domapostas.bet
 0.0.0.0 tracking.dominanteladies.de
 0.0.0.0 tracking.doyoulovesalt.com
+0.0.0.0 tracking.dpmlol.com
 0.0.0.0 tracking.dpstampede.com
 0.0.0.0 tracking.dr-10.com
 0.0.0.0 tracking.dr-8.com
@@ -175800,6 +175821,7 @@
 0.0.0.0 traffinity.pro
 0.0.0.0 traffmovie.com
 0.0.0.0 trafico.prensaiberica.es
+0.0.0.0 trafik.koopit.ist
 0.0.0.0 trafmag.com
 0.0.0.0 traid.jixie.io
 0.0.0.0 trail-001.schleich-s.com
@@ -189938,6 +189960,7 @@
 0.0.0.0 ymvikp.estadao.com.br
 0.0.0.0 ymviwl.just4camper.de
 0.0.0.0 ymvmx.mygrooveguide.com
+0.0.0.0 ymzu9eeo1y.ru
 0.0.0.0 ynabassets.com
 0.0.0.0 ynagqs.vidaxl.pl
 0.0.0.0 yndhi.com
